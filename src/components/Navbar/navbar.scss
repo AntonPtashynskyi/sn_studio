@@ -1,0 +1,79 @@
+.navBar {
+    @apply text-black px-[10px] flex justify-between py-4 bg-navBarBgColor fixed top-0 left-0 right-0;
+}
+
+.menuButton {
+    @apply text-black;
+}
+
+.logo {
+}
+
+.menu-btn {
+    height: 32px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+    background: black;
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    margin-top: 13px;
+
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotateY(180deg);
+
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.menu-btn span::before {
+    margin-top: -12px;
+}
+
+.menu-btn span::after {
+    margin-top: 12px;
+}
+
+.menu-btn.active span {
+    background: transparent;
+}
+
+.menu-btn.active span::before {
+    margin-top: 0;
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.menu-btn.active span::after {
+    margin-top: 0;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.menu-btn.active {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}

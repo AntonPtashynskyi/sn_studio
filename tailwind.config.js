@@ -1,18 +1,26 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        neutralBg: "var(--neutralBg)",
+        onNeutralBg: "var(--onNeutralBg)",
+        primaryBg: "var(--primaryBg)",
+        onPrimaryBg: "var(--onPrimaryBg)",
+        h2TextColor: "#F1F1F1",
+        h3TextColor: "#BEBEBE",
+        filterWhiteColor:
+          "invert(88%) sepia(96%) saturate(6285%) hue-rotate(188deg) brightness(116%) contrast(103%);",
+        textColor: "#000000",
+        navBarBgColor: "rgba(241, 241, 241, .4)",
       },
     },
   },
-  plugins: [],
-}
+  plugins: ["prettier-plugin-tailwindcss"],
+};

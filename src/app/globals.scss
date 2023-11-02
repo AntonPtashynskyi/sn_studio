@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-neutral-900: rgb(51, 51, 51);
+    --color-neutral-100: rgb(204, 204, 204);
+  }
+}
+
+.theme-light {
+  --neutralBg: theme("colors.white");
+  --onNeutralBg: var(--color-neutral-900);
+  --primaryBg: theme("colors.gray.500");
+  --onPrimaryBg: var(--color-neutral-100);
+}
+
+.theme-dark {
+  --neutralBg: theme("colors.black");
+  --onNeutralBg: var(--color-neutral-100);
+  --primaryBg: theme("colors.black");
+  --onPrimaryBg: var(--color-neutral-100);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper {
+  padding: 0 10px;
+
+  @media (min-width: 768px) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 60px;
+  }
+}
