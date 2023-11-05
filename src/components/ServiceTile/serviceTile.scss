@@ -1,0 +1,28 @@
+.service-title {
+    @apply z-50 relative text-[64px] uppercase;
+}
+
+.tile {
+    @apply text-white relative block mb-[60px] last:mb-0;
+
+    .image {
+        @apply h-[280px] md:h-[350px];
+        background-size: cover;
+
+        &.brows {
+            background-image: url("/assets/images/services/service--brows.jpg");
+        }
+
+        &.eyelashes {
+            background-image: url("/assets/images/services/service--eyelashes.jpg");
+        }
+
+        &.pmu {
+            background-image: url("/assets/images/services/service--pmu.jpg");
+        }
+    }
+}
+
+.arrow-more {
+    filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(115deg) brightness(108%) contrast(108%);
+}

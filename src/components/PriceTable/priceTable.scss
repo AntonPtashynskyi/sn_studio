@@ -1,0 +1,29 @@
+.table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    tr {
+        width: 200px;
+    }
+}
+
+.price {
+    @apply flex flex-col border-solid border-borderColor border-t-2  md:border-t-4;
+
+    &:nth-child(2n + 1) {
+        background-color: rgba(241, 241, 241, 0.521);
+    }
+
+    &--title {
+        @apply text-h3TextColor uppercase text-[32px];
+    }
+
+    &--category {
+        @apply flex-[2] text-[20px] flex items-center;
+    }
+
+    &--amount {
+        @apply flex-1 text-end text-priceColor text-[24px] flex justify-end items-end;
+    }
+}

@@ -1,12 +1,71 @@
 .navBar {
-    @apply text-black px-[10px] flex justify-between py-4 bg-navBarBgColor fixed top-0 left-0 right-0;
+    @apply text-black px-[10px] py-4 bg-navBarBgColor fixed top-0 left-0 right-0 z-[9999] flex justify-between flex-col;
+
+    &.active {
+        @apply bg-white;
+    }
 }
 
 .menuButton {
     @apply text-black;
 }
 
-.logo {
+.menu-wrapper {
+    @apply h-0 scale-0 flex items-center justify-center flex-col;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    overflow-y: auto;
+    display: none;
+    padding-top: 60px;
+    padding-bottom: 200px;
+
+    &.active {
+        display: block;
+        height: 100%;
+        min-height: 100vh;
+        transform: scaleY(1);
+        margin-top: 64px;
+        background-color: white;
+    }
+
+    .menu {
+        @apply flex justify-center items-center flex-col text-mobileMenu;
+        margin-bottom: 50px;
+    }
+}
+
+.course-btn {
+    position: relative;
+    display: block;
+    &::after {
+        content: "";
+        position: absolute;
+        right: -15px;
+        top: 15px;
+        background-image: url("/assets/svg/arrow--icon.svg");
+        background-size: contain;
+        width: 8px;
+        height: 5px;
+        transition: all 0.3s ease;
+    }
+    &.active {
+        ~ .courses-menu {
+            height: 100%;
+            transform: scaleY(1);
+        }
+
+        &::after {
+            content: "";
+            transform: rotate(-180deg);
+        }
+    }
+
+    ~ .courses-menu {
+        height: 0;
+        transform: scaleY(0);
+        transition: transform 0.3s ease;
+    }
 }
 
 .menu-btn {

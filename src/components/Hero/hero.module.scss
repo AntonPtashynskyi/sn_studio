@@ -1,18 +1,18 @@
 .hero {
-    // background-image: url("/public/assets/images/hero/hero--mobile.jpg");
     background-image: url("/assets/images/hero/hero--mobile.jpg");
     background-size: cover;
-    height: 100vh;
-    max-height: 600px;
+    height: 80vh;
+    padding-bottom: 60px;
     @apply flex items-end;
 
     .text {
         color: #fff;
-        font-size: 80px;
+        font-size: clamp(40px, 20vw, 80px);
         font-style: normal;
         font-weight: 600;
         line-height: normal;
         text-transform: uppercase;
         line-height: 95%;
+        opacity: 0.4;
     }
 }
