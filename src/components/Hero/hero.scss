@@ -1,11 +1,13 @@
 .hero {
+    overflow: hidden;
     background-image: url("/assets/images/hero/hero--mobile.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     height: 80vh;
     padding-bottom: 60px;
     @apply flex items-end;
 
-    .text {
+    &__text {
         color: #fff;
         font-size: clamp(40px, 20vw, 80px);
         font-style: normal;
@@ -14,5 +16,17 @@
         text-transform: uppercase;
         line-height: 95%;
         opacity: 0.4;
+    }
+
+    &__brows_page {
+        background-image: url("/assets/images/services/service--brows.jpg");
+    }
+
+    &__eyelashes_page {
+        background-image: url("/assets/images/services/service--brows.jpg");
+    }
+
+    &__permanent_page {
+        background-image: url("/assets/images/services/service--brows.jpg");
     }
 }

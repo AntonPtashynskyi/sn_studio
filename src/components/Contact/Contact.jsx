@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-
 import Image from "next/image";
+
 import instagramLogo from "../../../public/assets/svg/instagram--in_brows.svg";
 import emailLogo from "../../../public/assets/svg/email--logo.svg";
 import "./contact.scss";

@@ -1,0 +1,41 @@
+.service {
+    &--image-block {
+        @apply relative w-full h-[333px];
+    }
+
+    &--title {
+        @apply text-[32px] my-5 uppercase leading-[95%];
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &--content-block {
+        @apply text-sm text-justify;
+    }
+
+    &--decorative-number {
+        @apply absolute bottom-0 right-0 z-50 text-[100px] font-semibold text-bigNumber;
+    }
+
+    &--list {
+        @apply list-disc pl-7 mt-2;
+    }
+
+    &--details-block {
+        @apply flex flex-col pt-5;
+    }
+
+    &--detail {
+        @apply flex justify-between text-xl;
+
+        p {
+            @apply uppercase;
+        }
+
+        span {
+            @apply font-medium min-w-[110px];
+        }
+    }
+}

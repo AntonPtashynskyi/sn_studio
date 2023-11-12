@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 import "./navbar.scss";
@@ -15,9 +16,9 @@ export const Navbar = () => {
     <>
       <header className={`${open} navBar`}>
         <div className="flex justify-between items-center z-[9999] relative">
-          <div className="">
+          <Link href="/">
             <Image src={logo} alt="In brows" width="auto" height="auto" />
-          </div>
+          </Link>
           <div
             className={`${open} menu-btn`}
             onClick={() =>
@@ -32,8 +33,24 @@ export const Navbar = () => {
         <div className="flex flex-col justify-between flex-grow h-full">
           <nav>
             <ul className="menu">
-              <li>SERVICE / PRICES</li>
-              <li>PRODUCTS</li>
+              <li>
+                <Link
+                  href="/#services"
+                  className="link"
+                  onClick={() => setOpen("")}
+                >
+                  Usługi
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#price"
+                  className="link"
+                  onClick={() => setOpen("")}
+                >
+                  Cennik
+                </Link>
+              </li>
               <li className="flex flex-col justify-center items-center">
                 <p
                   className={`course-btn ${coursesIsOpen}`}
@@ -43,16 +60,38 @@ export const Navbar = () => {
                     )
                   }
                 >
-                  COURSES
+                  Szkolenia
                 </p>
                 <ul className="courses-menu text-xs uppercase">
-                  <li className="my-6">SZKOLENIE Z LAMINACJI RZĘS </li>
+                  <li className="my-6">
+                    <Link
+                      href="/szkolenie_laminacja_rzes"
+                      className="link"
+                      onClick={() => setOpen("")}
+                    >
+                      SZKOLENIE Z LAMINACJI RZĘS
+                    </Link>
+                  </li>
                   <li className="my-6 border-b-[1px]">
-                    SZKOLENIE Z LAMINACJI BRWI{" "}
+                    <Link
+                      href="/szkolenie_laminacja_brwi"
+                      className="link"
+                      onClick={() => setOpen("")}
+                    >
+                      SZKOLENIE Z LAMINACJI BRWI
+                    </Link>
                   </li>
                 </ul>
               </li>
-              <li>CONTACT</li>
+              <li>
+                <Link
+                  href="/#contact"
+                  className="link"
+                  onClick={() => setOpen("")}
+                >
+                  Kontakt
+                </Link>
+              </li>
             </ul>
           </nav>
           <div className="flex items-center flex-col">

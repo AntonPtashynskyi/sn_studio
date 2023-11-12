@@ -1,0 +1,28 @@
+.section {
+    @apply pt-[100px];
+
+    &--links {
+        @apply flex flex-col;
+
+        .link {
+            @apply relative py-7 px-5 flex justify-between items-center bg-borderColor;
+
+            &:nth-child(2n) {
+                background-color: rgb(247, 247, 247);
+            }
+
+            .title {
+                @apply block uppercase text-[32px];
+            }
+
+            .arrow {
+                display: block;
+                background-image: url("/assets/svg/arrow--more.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                width: 15px;
+                height: 30px;
+            }
+        }
+    }
+}
