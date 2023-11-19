@@ -10,6 +10,7 @@ import "./browsPage.scss";
 import styledBrows from "../../../public/assets/images/services/brows_style.jpg";
 import laminationBrows from "../../../public/assets/images/services/brows_lamination.jpg";
 import regulationBrows from "../../../public/assets/images/services/brows_paint.jpg";
+import heroBrows from "../../../public/assets/images/hero/hero--brows.jpg";
 
 const links = [
   {
@@ -32,7 +33,7 @@ const links = [
 const BrowsPage = () => {
   return (
     <>
-      <HeroSection className="brows_page" title="Brows" />
+      <HeroSection className="brows_page" title="Brows" bgImage={heroBrows} />
       <ServiceDescription
         title="Stylizacja </br><span>brwi</span>"
         key="1"

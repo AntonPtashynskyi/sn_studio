@@ -32,6 +32,15 @@ module.exports = {
           },
         ],
       },
+      backgroundSize: {
+        auto: "auto",
+        cover: "cover",
+        contain: "contain",
+        "50%": "50%",
+      },
+      flex: {
+        2: "2 2 0%",
+      },
     },
   },
   plugins: ["prettier-plugin-tailwindcss"],

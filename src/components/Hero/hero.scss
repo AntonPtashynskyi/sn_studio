@@ -5,7 +5,7 @@
     background-repeat: no-repeat;
     height: 80vh;
     padding-bottom: 60px;
-    @apply flex items-end;
+    @apply flex items-end md:h-[100vh] md:bg-50% md:bg-right-top md:pb-0 md:min-h-[600px] md:bg-none;
 
     &__text {
         color: #fff;
@@ -16,17 +16,169 @@
         text-transform: uppercase;
         line-height: 95%;
         opacity: 0.4;
+
+        @apply md:hidden;
     }
 
-    &__brows_page {
-        background-image: url("/assets/images/services/service--brows.jpg");
+    // &__brows_page {
+    //     background-image: url("/assets/images/services/service--brows.jpg");
+    // }
+
+    // &__eyelashes_page {
+    //     background-image: url("/assets/images/services/service--brows.jpg");
+    // }
+
+    // &__permanent_page {
+    //     background-image: url("/assets/images/services/service--brows.jpg");
+    // }
+
+    .menu-container {
+        @apply hidden md:visible;
+
+        &--left {
+            @apply md:flex-1 md:h-full;
+
+            .link {
+                @apply uppercase text-3xl font-light block py-2 hover:bg-navBarBgColor pl-16;
+            }
+        }
+
+        &--right {
+            @apply md:flex-2 md:h-full relative;
+            // background-image: url("/assets/images/hero/hero--desctop.jpg");
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // background-size: cover;
+        }
     }
 
-    &__eyelashes_page {
-        background-image: url("/assets/images/services/service--brows.jpg");
+    .scroll-down-container {
+        @apply w-full absolute bottom-3 left-0 right-0;
+
+        .scroll-prompt {
+            z-index: 998;
+            bottom: -10px;
+            margin-left: -80px;
+            width: 160px;
+            height: 160px;
+
+            .scroll-prompt-arrow-container {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                margin-left: -18px;
+                animation-name: bounce;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+            }
+            .scroll-prompt-arrow {
+                animation-name: opacity;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+            }
+            .scroll-prompt-arrow:last-child {
+                animation-direction: reverse;
+                margin-top: -6px;
+            }
+            .scroll-prompt-arrow > div {
+                width: 36px;
+                height: 36px;
+                border-right: 8px solid #bebebe;
+                border-bottom: 8px solid #bebebe;
+                transform: rotate(45deg) translateZ(1px);
+            }
+        }
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
     }
 
-    &__permanent_page {
-        background-image: url("/assets/images/services/service--brows.jpg");
+    10% {
+        opacity: 0.1;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    30% {
+        opacity: 0.3;
+    }
+
+    40% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    60% {
+        opacity: 0.6;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(3px);
+    }
+
+    20% {
+        transform: translateY(6px);
+    }
+
+    30% {
+        transform: translateY(9px);
+    }
+
+    40% {
+        transform: translateY(12px);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    60% {
+        transform: translateY(18px);
+    }
+
+    70% {
+        transform: translateY(21px);
+    }
+
+    80% {
+        transform: translateY(24px);
+    }
+
+    90% {
+        transform: translateY(27px);
+    }
+
+    100% {
+        transform: translateY(30px);
     }
 }

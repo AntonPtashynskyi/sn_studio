@@ -6,6 +6,7 @@ import { SectionLinks } from "@/components/SectionLinks/SectionLinks";
 import { ServiceDescription } from "@/components/ServiceDescription/ServiceDescription";
 
 import styledEyelashes from "../../../public/assets/images/services/eyelashes_lamination.jpg";
+import eyelashes from "../../../public/assets/images/hero/hero--eyelashes.jpg";
 
 const links = [
   {
@@ -28,7 +29,11 @@ const links = [
 const EyelashesPage = () => {
   return (
     <>
-      <HeroSection className="eyelashes_page" title="Rzęsy" />
+      <HeroSection
+        className="eyelashes_page"
+        title="Rzęsy"
+        bgImage={eyelashes}
+      />
       <ServiceDescription
         title="Stylizacja </br><span>rzęs</span>"
         key="1"

@@ -1,12 +1,13 @@
+import React from "react";
 import { HeroSection } from "@/components/Hero/HeroSection";
 import { ServiceDescription } from "@/components/ServiceDescription/ServiceDescription";
-import React from "react";
-
-import pmuBrows from "../../../public/assets/images/services/brows_pmu.jpg";
-import pmuLips from "../../../public/assets/images/services/lips_pmu.jpg";
 import { SectionLinks } from "@/components/SectionLinks/SectionLinks";
 import { Section } from "@/components/Section/Section";
 import { Contact } from "@/components/Contact/Contact";
+
+import pmuBrows from "../../../public/assets/images/services/brows_pmu.jpg";
+import pmuLips from "../../../public/assets/images/services/lips_pmu.jpg";
+import heroPMU from "../../../public/assets/images/hero/hero--pmu.jpg";
 
 const links = [
   {
@@ -29,7 +30,11 @@ const links = [
 const PmuPage = () => {
   return (
     <>
-      <HeroSection className="permanent_page" title="Makijaż permanentny" />
+      <HeroSection
+        className="permanent_page"
+        title="Makijaż permanentny"
+        bgImage={heroPMU}
+      />
       <ServiceDescription
         title="Makijaż permanentny </br><span>brwi</span>"
         key="1"

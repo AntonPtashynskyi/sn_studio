@@ -1,8 +1,8 @@
 .navBar {
-    @apply text-black px-[10px] py-2 bg-navBarBgColor fixed top-0 left-0 right-0 z-[9999] flex justify-between flex-col;
+    @apply text-black px-[10px] py-2 bg-navBarBgColor fixed top-0 left-0 right-0 z-[9999] flex justify-between flex-col md:translate-x-[-100%];
 
     &.active {
-        @apply bg-white;
+        @apply bg-white md:bg-navBarBgColor;
     }
 }
 
@@ -11,7 +11,7 @@
 }
 
 .menu-wrapper {
-    @apply h-0 scale-0 flex items-center justify-center flex-col;
+    @apply h-0 scale-0 flex items-center justify-center flex-col md:hidden;
     position: fixed;
     inset: 0;
     z-index: 9999;
@@ -21,12 +21,8 @@
     padding-bottom: 200px;
 
     &.active {
-        display: block;
-        height: 100%;
-        min-height: 100vh;
         transform: scaleY(1);
-        margin-top: 41px;
-        background-color: white;
+        @apply block h-full min-h-[100vh] mt-[41px] bg-white md:hidden;
     }
 
     .menu {
@@ -75,6 +71,8 @@
     height: 25px;
     width: 30px;
     cursor: pointer;
+
+    @apply md:hidden;
 }
 
 .menu-btn span,
