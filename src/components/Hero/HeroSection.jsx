@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import "./hero.scss";
-import logo from "../../../public/assets/svg/logo--in_brows.svg";
+import logo from "../../../public/assets/svg/logo--strocked.svg";
 import heroImage from "../../../public/assets/images/hero/hero--desktop.jpg";
 
 export const HeroSection = ({ title, className, bgImage = heroImage }) => {
@@ -14,11 +14,8 @@ export const HeroSection = ({ title, className, bgImage = heroImage }) => {
           className="hero__text"
           dangerouslySetInnerHTML={{ __html: title }}
         ></p>
-        <div className="menu-container--left">
-          <div className="ml-16 mt-9 w-[200px] h-[100px] relative">
-            <Image src={logo} alt="In brows" fill={true} objectFit="contain" />
-          </div>
-          <nav className="mt-9">
+        <div className="menu-container--top">
+          <nav className="flex gap-[20px] w-full justify-center items-center">
             <Link href="/" key="home-page" className="link">
               <p className="title">Główna</p>
               <span className="arrow"></span>
@@ -61,10 +58,13 @@ export const HeroSection = ({ title, className, bgImage = heroImage }) => {
             </Link>
           </nav>
         </div>
-        <div className="menu-container--right">
-          <Image src={bgImage} alt="In brows" fill={true} objectFit="cover" />
+        <div className="menu-container--bottom flex">
+          <div className="main-logo">
+            <Image src={logo} alt="In brows" />
+          </div>
+          <div className="copy"></div>
         </div>
-        <div className="scroll-down-container">
+        {/* <div className="scroll-down-container">
           <div className="scroll-prompt">
             <div class="scroll-prompt-arrow-container">
               <div class="scroll-prompt-arrow">
@@ -75,7 +75,7 @@ export const HeroSection = ({ title, className, bgImage = heroImage }) => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -4,8 +4,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 80vh;
-    padding-bottom: 60px;
-    @apply flex items-end md:h-[100vh] md:bg-50% md:bg-right-top md:pb-0 md:min-h-[600px] md:bg-none;
+
+    @media (min-width: 1024px) {
+        background-image: url("/assets/images/hero/background--hero.jpg");
+        height: 100vh;
+    }
 
     &__text {
         color: #fff;
@@ -35,20 +38,30 @@
     .menu-container {
         @apply hidden md:visible;
 
-        &--left {
-            @apply md:flex-1 md:h-full;
+        &--top {
+            @apply flex bg-black md:h-[150px];
 
             .link {
-                @apply uppercase text-3xl font-light block py-2 hover:bg-navBarBgColor pl-16;
+                @apply uppercase text-white font-light h-full px-8 flex justify-center items-center hover:bg-navBarBgColor transition-all;
             }
         }
 
-        &--right {
-            @apply md:flex-2 md:h-full relative;
-            // background-image: url("/assets/images/hero/hero--desctop.jpg");
-            // background-position: center;
-            // background-repeat: no-repeat;
-            // background-size: cover;
+        &--bottom {
+            @apply flex h-full;
+
+            .main-logo {
+                @apply flex-1;
+
+                img {
+                    @apply absolute w-[28%] left-12 top-1/2 opacity-50 -translate-y-1/2;
+                    filter: invert(97%) sepia(100%) saturate(0%) hue-rotate(66deg) brightness(105%) contrast(104%);
+                }
+            }
+
+            .copy {
+                @apply flex-1;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
         }
     }
 
