@@ -62,7 +62,24 @@ export const HeroSection = ({ title, className, bgImage = heroImage }) => {
           <div className="main-logo">
             <Image src={logo} alt="In brows" />
           </div>
-          <div className="copy"></div>
+          <div className="content">
+            <div className="container">
+              <div className="image">
+                <Image
+                  src={heroImage}
+                  alt="In brows"
+                  className="relative -top-[130px]"
+                />
+              </div>
+              <div className="copy">
+                <h1>Cześć, wołają mi Inna!</h1>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium nisi tenetur eligendi, quos repudiandae dolores?
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         {/* <div className="scroll-down-container">
           <div className="scroll-prompt">

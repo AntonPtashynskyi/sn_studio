@@ -1,6 +1,7 @@
 .service {
     &--image-block {
-        @apply relative w-full h-[333px];
+        aspect-ratio: 1/1;
+        @apply relative w-full h-[333px] md:h-[500px] md:max-w-[500px];
     }
 
     &--title {
@@ -12,7 +13,7 @@
     }
 
     &--content-block {
-        @apply text-sm text-justify;
+        @apply text-sm text-justify md:flex md:flex-col md:max-w-[700px] md:p-0;
     }
 
     &--decorative-number {
@@ -24,11 +25,11 @@
     }
 
     &--details-block {
-        @apply flex flex-col pt-5;
+        @apply flex flex-col pt-5 md:flex-row md:flex-wrap md:items-start md:mt-auto;
     }
 
     &--detail {
-        @apply flex justify-between text-xl;
+        @apply flex justify-between text-xl md:gap-2;
 
         p {
             @apply uppercase;

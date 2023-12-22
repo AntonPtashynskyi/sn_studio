@@ -7,8 +7,8 @@ import arrow from "../../../public/assets/svg/arrow--more.svg";
 
 export const ServiceTile = ({ title, path, number, styleClass }) => {
   return (
-    <Link href={path} className="tile">
-      <div className={`${styleClass} image`}>
+    <Link href={path} className="tile flex-1">
+      <div className={`${styleClass} image relative`}>
         <div className="absolute inset-0 bg-white bg-opacity-30"></div>
         <h3 className="service-title">{title}</h3>
         <div className="w-[115px] h-[60] py-[10px] bg-black absolute left-0 bottom-0 flex justify-center items-center">

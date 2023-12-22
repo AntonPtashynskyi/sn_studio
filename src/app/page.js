@@ -10,24 +10,26 @@ export default function Home() {
     <>
       <HeroSection title="In </br> Brows" />
       <Section title="Usługi" id="services">
-        <ServiceTile
-          title="Brwi"
-          number="01"
-          path="eyebrows-styling"
-          styleClass="brows"
-        />
-        <ServiceTile
-          title="Rzęsy"
-          number="02"
-          path="eyelashes-styling"
-          styleClass="eyelashes"
-        />
-        <ServiceTile
-          title="Pmu"
-          number="03"
-          path="permanent-makeup"
-          styleClass="pmu"
-        />
+        <div className="lg:flex wrapper md:gap-[3rem]">
+          <ServiceTile
+            title="Brwi"
+            number="01"
+            path="eyebrows-styling"
+            styleClass="brows"
+          />
+          <ServiceTile
+            title="Rzęsy"
+            number="02"
+            path="eyelashes-styling"
+            styleClass="eyelashes"
+          />
+          <ServiceTile
+            title="Pmu"
+            number="03"
+            path="permanent-makeup"
+            styleClass="pmu"
+          />
+        </div>
       </Section>
       <Section title="Cennik" id="price">
         <PriceTable />

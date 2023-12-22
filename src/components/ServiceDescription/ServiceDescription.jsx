@@ -13,12 +13,12 @@ export const ServiceDescription = ({
   time,
 }) => {
   return (
-    <div className="mt-[100px]">
+    <div className="content mt-[100px] md:flex md:justify-around wrapper">
       <div className="service--image-block">
         <Image alt={title} src={imageSrc} objectFit="cover" fill={true} />
         <span className="service--decorative-number ">{positionNumber}</span>
       </div>
-      <div className="service--content-block wrapper">
+      <div className="service--content-block wrapper ">
         <h2
           className="service--title"
           dangerouslySetInnerHTML={{ __html: title }}

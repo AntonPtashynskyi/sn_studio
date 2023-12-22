@@ -58,9 +58,44 @@
                 }
             }
 
-            .copy {
-                @apply flex-1;
+            .content {
+                @apply flex flex-1 justify-center items-center;
                 background-color: rgba(0, 0, 0, 0.5);
+
+                .container {
+                    @apply flex justify-end bg-black w-4/5 py-[50px] px-[40px];
+
+                    .image {
+                        @apply flex-1 mr-8;
+                    }
+
+                    .copy {
+                        @apply flex flex-col justify-center gap-10 flex-1 text-white;
+
+                        h1 {
+                            @apply text-[32px];
+                        }
+
+                        p {
+                            @apply text-[18px] relative;
+
+                            &::before,
+                            &::after {
+                                content: "\0022";
+                                font-size: 40px;
+                                position: absolute;
+                                top: -10px;
+                                left: -20px;
+                            }
+
+                            &::after {
+                                top: unset;
+                                left: unset;
+                                right: -20px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
