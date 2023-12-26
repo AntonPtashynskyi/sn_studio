@@ -6,16 +6,23 @@ import "./hero.scss";
 import logo from "../../../public/assets/svg/logo--strocked.svg";
 import heroImage from "../../../public/assets/images/hero/hero--desktop.jpg";
 
-export const HeroSection = ({ title, className, bgImage = heroImage }) => {
+export const HeroSection = ({
+  title,
+  className,
+  bgImage = heroImage,
+  h1Title,
+  description,
+  h2Title,
+}) => {
   return (
     <section>
-      <div className={`hero hero__${className}`}>
+      <div className={`hero hero__${className} flex flex-col justify-end`}>
         <p
           className="hero__text"
           dangerouslySetInnerHTML={{ __html: title }}
         ></p>
         <div className="menu-container--top">
-          <nav className="flex gap-[20px] w-full justify-center items-center">
+          <nav className="flex gap-[20px] w-full justify-center items-center max-w-[70%] mx-auto">
             <Link href="/" key="home-page" className="link">
               <p className="title">Główna</p>
               <span className="arrow"></span>
@@ -60,39 +67,21 @@ export const HeroSection = ({ title, className, bgImage = heroImage }) => {
         </div>
         <div className="menu-container--bottom flex">
           <div className="main-logo">
-            <Image src={logo} alt="In brows" />
+            <div className="ml-16 self-start mt-[20%]">
+              <Image src={logo} alt="In brows" />
+              <h1 className="text-[40px]">{h1Title}</h1>
+              <p className="text-2xl max-w-[50%]">{description}</p>
+              <span className="decorative-title">{h2Title}</span>
+            </div>
           </div>
           <div className="content">
-            <div className="container">
-              <div className="image">
-                <Image
-                  src={heroImage}
-                  alt="In brows"
-                  className="relative -top-[130px]"
-                />
-              </div>
-              <div className="copy">
-                <h1>Cześć, wołają mi Inna!</h1>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Praesentium nisi tenetur eligendi, quos repudiandae dolores?
-                </p>
-              </div>
-            </div>
+            <Image
+              src={heroImage}
+              alt="In brows"
+              className="h-full object-cover"
+            />
           </div>
         </div>
-        {/* <div className="scroll-down-container">
-          <div className="scroll-prompt">
-            <div class="scroll-prompt-arrow-container">
-              <div class="scroll-prompt-arrow">
-                <div></div>
-              </div>
-              <div class="scroll-prompt-arrow">
-                <div></div>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

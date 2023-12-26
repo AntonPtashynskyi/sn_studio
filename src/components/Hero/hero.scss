@@ -3,10 +3,11 @@
     background-image: url("/assets/images/hero/hero--mobile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 100svh;
 
-    @media (min-width: 1024px) {
-        background-image: url("/assets/images/hero/background--hero.jpg");
+    @media (min-width: 768px) {
+        background-image: none;
+        background-color: #f6f6eb;
         height: 100vh;
     }
 
@@ -39,28 +40,38 @@
         @apply hidden md:visible;
 
         &--top {
-            @apply flex bg-black md:h-[150px];
+            // box-shadow: 0px 2px 3px 0px rgba(195, 195, 195, 1);
+            @apply hidden md:flex bg-white md:h-[150px];
+
+            &.active {
+                @apply fixed top-0 left-0 right-0 z-50;
+            }
 
             .link {
-                @apply uppercase text-white font-light h-full px-8 flex justify-center items-center hover:bg-navBarBgColor transition-all;
+                @apply uppercase text-black font-bold h-full px-8 flex flex-1 justify-center items-center hover:bg-navBarBgColor transition-all;
             }
         }
 
         &--bottom {
-            @apply flex h-full;
+            @apply hidden md:flex h-full;
 
             .main-logo {
-                @apply flex-1;
+                @apply flex-2 flex items-center;
 
                 img {
-                    @apply absolute w-[28%] left-12 top-1/2 opacity-50 -translate-y-1/2;
-                    filter: invert(97%) sepia(100%) saturate(0%) hue-rotate(66deg) brightness(105%) contrast(104%);
+                    @apply opacity-50 w-[50%];
+                    // filter: invert(97%) sepia(100%) saturate(0%) hue-rotate(66deg) brightness(105%) contrast(104%);
+                }
+
+                .decorative-title {
+                    @apply hidden md:block font-bold text-heroDecorativeTitleColor uppercase absolute bottom-0 leading-none;
+                    font-size: clamp(160px, 16vw, 400px);
                 }
             }
 
             .content {
-                @apply flex flex-1 justify-center items-center;
-                background-color: rgba(0, 0, 0, 0.5);
+                @apply flex flex-1 justify-end items-center;
+                // background-color: #f5d5cb;
 
                 .container {
                     @apply flex justify-end bg-black w-4/5 py-[50px] px-[40px];
@@ -98,135 +109,5 @@
                 }
             }
         }
-    }
-
-    .scroll-down-container {
-        @apply w-full absolute bottom-3 left-0 right-0;
-
-        .scroll-prompt {
-            z-index: 998;
-            bottom: -10px;
-            margin-left: -80px;
-            width: 160px;
-            height: 160px;
-
-            .scroll-prompt-arrow-container {
-                position: absolute;
-                top: 0;
-                left: 50%;
-                margin-left: -18px;
-                animation-name: bounce;
-                animation-duration: 1.5s;
-                animation-iteration-count: infinite;
-            }
-            .scroll-prompt-arrow {
-                animation-name: opacity;
-                animation-duration: 1.5s;
-                animation-iteration-count: infinite;
-            }
-            .scroll-prompt-arrow:last-child {
-                animation-direction: reverse;
-                margin-top: -6px;
-            }
-            .scroll-prompt-arrow > div {
-                width: 36px;
-                height: 36px;
-                border-right: 8px solid #bebebe;
-                border-bottom: 8px solid #bebebe;
-                transform: rotate(45deg) translateZ(1px);
-            }
-        }
-    }
-}
-
-@keyframes opacity {
-    0% {
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 0.1;
-    }
-
-    20% {
-        opacity: 0.2;
-    }
-
-    30% {
-        opacity: 0.3;
-    }
-
-    40% {
-        opacity: 0.4;
-    }
-
-    50% {
-        opacity: 0.5;
-    }
-
-    60% {
-        opacity: 0.6;
-    }
-
-    70% {
-        opacity: 0.7;
-    }
-
-    80% {
-        opacity: 0.8;
-    }
-
-    90% {
-        opacity: 0.9;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-
-    10% {
-        transform: translateY(3px);
-    }
-
-    20% {
-        transform: translateY(6px);
-    }
-
-    30% {
-        transform: translateY(9px);
-    }
-
-    40% {
-        transform: translateY(12px);
-    }
-
-    50% {
-        transform: translateY(15px);
-    }
-
-    60% {
-        transform: translateY(18px);
-    }
-
-    70% {
-        transform: translateY(21px);
-    }
-
-    80% {
-        transform: translateY(24px);
-    }
-
-    90% {
-        transform: translateY(27px);
-    }
-
-    100% {
-        transform: translateY(30px);
     }
 }
