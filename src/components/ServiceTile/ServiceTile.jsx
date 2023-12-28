@@ -7,22 +7,20 @@ import arrow from "../../../public/assets/svg/arrow--more.svg";
 
 export const ServiceTile = ({ title, path, number, styleClass }) => {
   return (
-    <Link href={path} className="tile flex-1">
-      <div className={`${styleClass} image relative`}>
-        <div className="absolute inset-0 bg-white bg-opacity-30"></div>
+    <Link href={path} className="tile flex-1 group">
+      <div className={`${styleClass} image relative md:flex`}>
         <h3 className="service-title">{title}</h3>
-        <div className="w-[115px] h-[60] py-[10px] bg-black absolute left-0 bottom-0 flex justify-center items-center">
+        <div className="opacity-layout absolute inset-0 bg-white bg-opacity-30 group-hover:bg-opacity-0 transition-all"></div>
+        <div className="arrow-more__container">
           <Image
             src={arrow}
             width={40}
             height={40}
             alt="arrow"
-            className="arrow-more z-50 relative"
+            className="arrow-more"
           />
         </div>
-        <span className="z-50 text-[128px] absolute right-1 bottom-1 font-semibold color-bigNumber leading-[100%]">
-          {number}
-        </span>
+        <span className="tile__decorative-number">{number}</span>
       </div>
     </Link>
   );

@@ -1,12 +1,31 @@
+.service-wrapper {
+    @screen lg {
+        .tile:first-child .image,
+        .tile:first-child .opacity-layout {
+            @apply rounded-tl-[3rem] rounded-bl-[3rem];
+        }
+
+        .tile:last-child .image,
+        .tile:last-child .opacity-layout {
+            @apply rounded-tr-[3rem] rounded-br-[3rem];
+        }
+    }
+}
+
 .service-title {
-    @apply z-50 relative text-[64px] uppercase;
+    @apply z-50 relative text-[64px] uppercase aspect-square md:flex md:justify-center md:items-center group-hover:-translate-y-4 transition-all;
 }
 
 .tile {
-    @apply text-white relative block mb-[60px] last:mb-0;
+    @apply text-white relative block mb-[40px] md:mb-0 last:mb-0;
+
+    &__decorative-number {
+        @apply z-50 absolute right-1 bottom-1 font-semibold leading-[100%];
+        font-size: 7rem;
+    }
 
     .image {
-        @apply h-[280px] md:h-[350px];
+        @apply h-[280px] md:h-[300px];
         background-size: cover;
 
         &.brows {
@@ -23,6 +42,11 @@
     }
 }
 
+.arrow-more__container {
+    @apply w-[115px] h-[60] py-[10px] bg-black absolute left-0 bottom-0 flex justify-center items-center md:hidden;
+}
+
 .arrow-more {
+    @apply z-50 relative;
     filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(115deg) brightness(108%) contrast(108%);
 }

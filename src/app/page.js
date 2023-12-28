@@ -16,8 +16,8 @@ export default function Home() {
         description="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
         h2Title="Cześć!"
       />
-      <Section title="Usługi" id="services">
-        <div className="lg:flex wrapper md:gap-[3rem]">
+      <Section title="Usługi" id="services" className="decorative-right">
+        <div className="lg:flex wrapper service-wrapper">
           <ServiceTile
             title="Brwi"
             number="01"

@@ -21,7 +21,9 @@ export const HeroSection = ({
           className="hero__text"
           dangerouslySetInnerHTML={{ __html: title }}
         ></p>
-        <div className="menu-container--top">
+        <div className="menu-container--top ">
+          {/* <Link href="/" key="home-page" className="flex ml-2">
+          </Link> */}
           <nav className="flex gap-[20px] w-full justify-center items-center max-w-[70%] mx-auto">
             <Link href="/" key="home-page" className="link">
               <p className="title">Główna</p>

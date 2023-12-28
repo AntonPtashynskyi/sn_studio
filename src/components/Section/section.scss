@@ -1,3 +1,16 @@
+.section {
+    position: relative;
+
+    &.decorative-right {
+        &::after {
+            content: "";
+            @apply absolute shadow-inner w-[80%] h-1/2 top-1/2 right-0 -translate-y-1/2 rounded-tl-[6rem] rounded-bl-[6rem];
+
+            background: #f6f6eb;
+        }
+    }
+}
+
 .section-title {
     font-size: clamp(40px, 15vw, 80px);
     font-weight: 500;
