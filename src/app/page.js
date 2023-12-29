@@ -38,7 +38,7 @@ export default function Home() {
           />
         </div>
       </Section>
-      <Section title="Cennik" id="price">
+      <Section title="Cennik" id="price" className="decorative-left">
         <PriceTable />
       </Section>
       <Section title="Szkolenia">

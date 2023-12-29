@@ -4,7 +4,7 @@ import "./section.scss";
 export const Section = ({ title, children, id, className }) => {
   return (
     <section
-      className={`py-[4rem] lg:pt-[10rem] lg:pb-0 section ${className}`}
+      className={`py-[4rem] lg:py-[10rem] lg:pb-0 lg:mb-40 section ${className}`}
       id={id}
     >
       <div className="container relative z-50">

@@ -9,46 +9,57 @@
 }
 
 .prices {
-    .price:nth-child(2n + 1) .price--title {
+    @screen lg {
+        @apply py-12 grid grid-cols-2 gap-y-8 gap-x-8;
+    }
+
+    .price:nth-child(2n + 1) .price--title::before {
         background-color: #f5d5cb;
         color: white;
     }
 }
 
 .price {
-    @apply flex flex-col relative transition-all;
+    @apply flex flex-col grow px-7;
 
-    &:hover {
-        // background: rgb(250, 235, 215);
-        // background: linear-gradient(360deg, rgba(250, 235, 215, 1) 0%, rgba(148, 187, 233, 0) 100%);
+    &--block {
+        @apply flex flex-row md:p-4 rounded-[3rem] transition-all lg:bg-[#e5e5da];
+
+        &:hover {
+            @apply shadow-baseShadow;
+
+            .decorative-pill {
+                @apply shadow-baseHoverShadow;
+            }
+        }
+
+        .decorative-pill {
+            @apply hidden lg:block min-w-[70px] w-[10%] h-[100%] max-h-[150px] rounded-[3rem] bg-[#f5d5cb] shadow-baseShadow transition-all;
+            // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+        }
     }
-    // border-solid border-borderColor border-t-2  md:border-t-4
-
-    &.wrapper {
-        @apply md:flex-row;
-    }
-
-    // &:nth-child(2n + 1) {
-    //     background-color: rgba(241, 241, 241, 0.2);
-    // }
 
     &--title {
-        @apply text-h3TextColor cursor-pointer uppercase text-[32px] md:aspect-[16/9] md:min-w-[25%] md:bg-slate-200 rounded-tr-[2rem] rounded-tl-[2rem] rounded-br-[2rem] p-4 group-hover:-translate-y-[3rem] group-hover:-rotate-3 transition-all shadow-inner;
-        font-size: 4.5rem;
+        @apply relative text-black text-[2rem] lg:text-[4rem] cursor-pointer uppercase md:min-w-[25%] leading-none;
+        // font-size: 4.5rem;
         font-weight: 500;
-        color: #9e9e9e;
-        background-color: #f6f6eb;
+        // background-color: #f6f6eb;
+
+        // &::before {
+        //     content: "";
+        //     @apply absolute -left-5 w-[75px] h-[210px] bg-[#f6f6eb] rounded-[3rem];
+        // }
     }
 
     &--description {
-        @apply py-2 px-5 flex-1 md:max-w-[60%] md:self-center md:border-solid md:border md:rounded-[3rem] group-hover:bg-zinc-200;
+        @apply py-2 pr-5 pl-2 flex-1 select-none;
     }
 
     &--category {
-        @apply flex-[2] text-[20px] flex items-center;
+        @apply text-[16px] flex items-center  m-0;
     }
 
     &--amount {
-        @apply flex-1 text-end text-priceColor text-[24px] flex justify-end items-end;
+        @apply flex-1 text-end text-priceColor text-[18px] flex justify-end items-end;
     }
 }
