@@ -26,10 +26,10 @@
         @apply flex flex-row md:p-4 rounded-[3rem] transition-all lg:bg-[#e5e5da];
 
         &:hover {
-            @apply shadow-baseShadow;
+            @apply md:shadow-baseShadow;
 
             .decorative-pill {
-                @apply shadow-baseHoverShadow;
+                @apply md:shadow-baseHoverShadow;
             }
         }
 
@@ -41,14 +41,7 @@
 
     &--title {
         @apply relative text-black text-[2rem] lg:text-[4rem] cursor-pointer uppercase md:min-w-[25%] leading-none;
-        // font-size: 4.5rem;
         font-weight: 500;
-        // background-color: #f6f6eb;
-
-        // &::before {
-        //     content: "";
-        //     @apply absolute -left-5 w-[75px] h-[210px] bg-[#f6f6eb] rounded-[3rem];
-        // }
     }
 
     &--description {

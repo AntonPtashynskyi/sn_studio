@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Slide } from "../Slide/Slide";
 
 import arrow from "../../../public/assets/svg/arrow--more.svg";
+import course_1 from "../../../public/assets/images/courses/course_1.jpg";
 import "./courses.scss";
 
 import "swiper/css";
@@ -21,6 +22,7 @@ export const Courses = () => {
           slidesPerView={1}
           centeredSlides={true}
           spaceBetween={20}
+          loop={true}
           navigation={{ nextEl: ".arrow-right", prevEl: ".arrow-left" }}
           pagination={{
             clickable: true,
@@ -34,6 +36,8 @@ export const Courses = () => {
               title="SZKOLENIA Z LAMINACJI RZĘS!"
               copy="Duża dawka więdzy!"
               bgClassName="lips"
+              imageSrc={course_1}
+              imageAlt="Brows Course"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -47,10 +51,7 @@ export const Courses = () => {
         </Swiper>
       </div>
       <div className="flex justify-center gap-2 wrapper py-1">
-        <button
-          onClick={() => {}}
-          className={`arrow-left py-3 px-1 bg-black text-white cursor-pointer w-[50%] flex justify-center items-center`}
-        >
+        <button onClick={() => {}} className={`arrow arrow-left `}>
           <Image
             src={arrow}
             width={40}
@@ -60,10 +61,7 @@ export const Courses = () => {
           />
         </button>
 
-        <button
-          onClick={() => {}}
-          className="arrow-right py-3 px-1 bg-black text-white cursor-pointer w-[50%] flex justify-center items-center"
-        >
+        <button onClick={() => {}} className="arrow arrow-right ">
           <Image
             src={arrow}
             width={40}

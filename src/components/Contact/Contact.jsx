@@ -8,10 +8,10 @@ import "./contact.scss";
 
 export const Contact = () => {
   return (
-    <div className="wrapper flex flex-col gap-6">
+    <div className="wrapper contact-wrapper">
       <Link
         href="https://www.instagram.com/in_brows__/"
-        className="flex items-center bg-borderColor py-[25px] px-[20px] gap-6"
+        className="contact-link"
       >
         <Image
           src={instagramLogo}
@@ -20,11 +20,11 @@ export const Contact = () => {
           alt="In brows instagram"
           className="image-contact"
         />
-        <p className="text-[20px] font-light text-white">in_brows__</p>
+        <p className="text-[20px] font-light text-black">in_brows__</p>
       </Link>
       <Link
         href="https://www.instagram.com/in_brows__/"
-        className="flex items-center bg-borderColor py-[25px] px-[20px] gap-6"
+        className="contact-link"
       >
         <Image
           src={emailLogo}
@@ -33,7 +33,7 @@ export const Contact = () => {
           alt="In brows instagram"
           className="image-contact"
         />
-        <p className="text-[20px] font-light text-white">
+        <p className="text-[20px] font-light text-black">
           snissarinna@gmail.com
         </p>
       </Link>

@@ -1,6 +1,11 @@
 .slide-container {
-    @apply w-full h-[450px] px-[10px] py-2 flex justify-end flex-col bg-slate-300;
+    @apply flex flex-col md:flex-row p-4 md:p-8 w-full h-[450px] bg-[#FDFDFB] rounded-[3rem] shadow-baseShadow;
 }
 
 .block-text {
+    @apply flex-1;
+}
+
+.block-image {
+    @apply flex-1 rounded-[3rem] relative overflow-hidden after:shadow-baseShadow after:inset-0 after:absolute after:rounded-[3rem];
 }

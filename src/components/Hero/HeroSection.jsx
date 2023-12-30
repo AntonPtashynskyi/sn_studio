@@ -22,12 +22,9 @@ export const HeroSection = ({
           dangerouslySetInnerHTML={{ __html: title }}
         ></p>
         <div className="menu-container--top ">
-          {/* <Link href="/" key="home-page" className="flex ml-2">
-          </Link> */}
           <nav className="flex gap-[20px] w-full justify-center items-center max-w-[70%] mx-auto">
             <Link href="/" key="home-page" className="link">
               <p className="title">Główna</p>
-              <span className="arrow"></span>
             </Link>
             <Link
               href="/eyebrows-styling"
@@ -35,7 +32,6 @@ export const HeroSection = ({
               className="link"
             >
               <p className="title">Brwi</p>
-              <span className="arrow"></span>
             </Link>
             <Link
               href="/eyelashes-styling"
@@ -43,7 +39,6 @@ export const HeroSection = ({
               className="link"
             >
               <p className="title">Rzesy</p>
-              <span className="arrow"></span>
             </Link>
             <Link
               href="/permanent-makeup"
@@ -51,19 +46,15 @@ export const HeroSection = ({
               className="link"
             >
               <p className="title">Permanent</p>
-              <span className="arrow"></span>
             </Link>
             <Link href="/#price" key="price" className="link">
               <p className="title">Cennik</p>
-              <span className="arrow"></span>
             </Link>
             <Link href="/szkolenia" key="szkolenia" className="link">
               <p className="title">Szkolenia</p>
-              <span className="arrow"></span>
             </Link>
             <Link href="/#contact" key="contact" className="link">
               <p className="title">Contact</p>
-              <span className="arrow"></span>
             </Link>
           </nav>
         </div>

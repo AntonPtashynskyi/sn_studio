@@ -8,7 +8,7 @@ export const Section = ({ title, children, id, className }) => {
       id={id}
     >
       <div className="container relative z-50">
-        <h2 className="section-title text-h2TextColor uppercase wrapper select-none text-center">
+        <h2 className="section-title text-h2TextColor uppercase wrapper select-none text-center mb-[3rem]">
           {title}
         </h2>
         {children}

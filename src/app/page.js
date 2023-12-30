@@ -44,7 +44,7 @@ export default function Home() {
       <Section title="Szkolenia">
         <Courses />
       </Section>
-      <Section title="Kontakt" id="contact">
+      <Section title="Kontakt" id="contact" className="decorative-button">
         <Contact />
       </Section>
     </>

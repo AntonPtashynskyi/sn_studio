@@ -5,7 +5,7 @@
         &.decorative-right {
             &::after {
                 content: "";
-                @apply absolute shadow-baseShadow w-[80%] h-1/2 top-1/2 right-0 -translate-y-1/2 rounded-tl-[6rem] rounded-bl-[6rem];
+                @apply absolute shadow-baseShadow w-[80%] h-1/2 top-[10%] right-0 rounded-tl-[6rem] rounded-bl-[6rem];
 
                 background: #f6f6eb;
             }
@@ -15,7 +15,16 @@
     &.decorative-left {
         &::after {
             content: "";
-            @apply absolute shadow-baseShadow w-[95%] md:w-[80%] h-full top-[50%] md:top-[65%] left-0 -translate-y-1/2 rounded-tr-[6rem] rounded-br-[6rem];
+            @apply absolute shadow-baseShadow w-[95%] md:w-[80%] h-full top-[0%] md:top-[10%] left-0 rounded-tr-[6rem] rounded-br-[6rem];
+
+            background: #f6f6eb;
+        }
+    }
+
+    &.decorative-button {
+        &::after {
+            content: "";
+            @apply absolute shadow-baseShadow w-[100%] h-full top-[5%] md:top-[10%] rounded-tl-[3rem] rounded-tr-[3rem] md:rounded-tl-[6rem] md:rounded-tr-[6rem];
 
             background: #f6f6eb;
         }

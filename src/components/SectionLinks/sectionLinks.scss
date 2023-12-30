@@ -2,17 +2,28 @@
     @apply pt-[100px];
 
     &--links {
-        @apply flex flex-col;
-
         .link {
-            @apply relative py-7 px-5 flex justify-between items-center bg-borderColor;
+            @apply flex-1 relative py-7 px-5 flex justify-center items-center bg-[#FDFDFB] shadow-baseShadow hover:shadow-baseHoverShadow transition-all;
+
+            &:first-child {
+                @apply rounded-tr-[2rem] rounded-tl-[2rem] rounded-br-[0rem] md:rounded-tl-[3rem] md:rounded-bl-[3rem] md:rounded-tr-[0rem];
+            }
+
+            &:last-child {
+                @apply rounded-tr-[0rem] rounded-bl-[3rem] rounded-br-[3rem] md:rounded-tr-[3rem] md:rounded-br-[3rem] md:rounded-bl-[0rem];
+            }
 
             &:nth-child(2n) {
-                background-color: rgb(247, 247, 247);
+                background-color: #f5d5cb;
+
+                .title {
+                    color: white;
+                }
             }
 
             .title {
-                @apply block uppercase text-[32px];
+                @apply block uppercase text-[#B8B8B8];
+                font-size: clamp(32px, 2vw, 64px);
             }
 
             .arrow {
@@ -22,6 +33,7 @@
                 background-repeat: no-repeat;
                 width: 15px;
                 height: 30px;
+                margin-left: 3rem;
             }
         }
     }

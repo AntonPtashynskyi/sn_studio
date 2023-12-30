@@ -25,7 +25,7 @@
     }
 
     .image {
-        @apply h-[280px] md:h-[300px];
+        @apply h-[280px] md:h-[300px] rounded-[2rem] lg:rounded-none;
         background-size: cover;
 
         &.brows {
