@@ -1,0 +1,32 @@
+.course-tile-container {
+    @apply  flex pt-14 gap-7 flex-col lg:flex-row items-center justify-center;
+}
+
+.course-tile {
+    @apply flex flex-col bg-darkBgColor rounded-[2rem] flex-1 p-[20px] w-full;
+
+    &:nth-child(even) {
+        @apply bg-lightBgColor;
+
+        .course-tile--time, .course-tile--link {
+            @apply bg-darkBgColor;
+        }
+    
+    }
+
+    &--time {
+        @apply py-[8px] px-[20px] rounded-[2rem] bg-lightBgColor self-end select-none;
+    }
+
+    &--title {
+        @apply uppercase text-[48px] leading-none font-light mb-7;
+    }
+
+    &--description {
+        @apply text-[16px] max-w-[70%] mb-14;
+    }
+
+    &--link {
+        @apply text-[20px] text-center w-full rounded-[2rem] bg-lightBgColor cursor-pointer py-3 hover:shadow-md transition-all;
+    }
+}

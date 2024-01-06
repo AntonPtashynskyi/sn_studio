@@ -7,6 +7,10 @@
     --color-neutral-900: rgb(51, 51, 51);
     --color-neutral-100: rgb(204, 204, 204);
   }
+
+  ::selection {
+    @apply bg-lightBgColor;
+  }
 }
 
 .theme-light {

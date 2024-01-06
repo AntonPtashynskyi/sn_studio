@@ -15,6 +15,8 @@ module.exports = {
         onPrimaryBg: "var(--onPrimaryBg)",
         bigNumber: "#F1F1F1",
         heroDecorativeTitleColor: "rgba(219, 184, 184, 0.15)",
+        lightBgColor: "#F6F6EB",
+        darkBgColor: "#F5D5CB",
         h2TextColor: "rgb(219 184 184)",
         h3TextColor: "#BEBEBE",
         priceColor: "#7C7C7C;",
