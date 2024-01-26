@@ -34,6 +34,9 @@ const PmuPage = () => {
         className="permanent_page"
         title="Makijaż permanentny"
         bgImage={heroPMU}
+        h1Title="Makiaż permanentny!"
+        description="Na co trzeba uważać? I czy warto robić? "
+        h2Title="PMU!"
       />
       <ServiceDescription
         title="Makijaż permanentny </br><span>brwi</span>"

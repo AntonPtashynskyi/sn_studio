@@ -33,20 +33,25 @@ const EyelashesPage = () => {
         className="eyelashes_page"
         title="Rzęsy"
         bgImage={eyelashes}
+        h1Title="Natrualne rzęsy właśnie to czego szukasz!"
+        description="Jak najlepiew dbać i jakie zabiegi warto robić"
+        h2Title="Rzęsy!"
       />
-      <ServiceDescription
-        title="Stylizacja </br><span>rzęs</span>"
-        key="1"
-        imageSrc={styledEyelashes}
-        positionNumber="01"
-        copyOne="Laminacja rzęs to zabieg kosmetyczny, celem którego jest podkreślenie naturalnego piękna rzęs poprzez podkręcenie i uniesienie ich od nasady za pomocą specjalnych wałków i preparatów. W rezultacie uzyskujemy uniesione i podkręcone naturalne rzęsy, efekt utrzymuje się nawet do 2 miesięcy."
-        copyTwo="<li>Dobór odpowiedniego skrętu rzęs.</li>
+      <div className="content-block">
+        <ServiceDescription
+          title="Stylizacja </br><span>rzęs</span>"
+          key="1"
+          imageSrc={styledEyelashes}
+          positionNumber="01"
+          copyOne="Laminacja rzęs to zabieg kosmetyczny, celem którego jest podkreślenie naturalnego piękna rzęs poprzez podkręcenie i uniesienie ich od nasady za pomocą specjalnych wałków i preparatów. W rezultacie uzyskujemy uniesione i podkręcone naturalne rzęsy, efekt utrzymuje się nawet do 2 miesięcy."
+          copyTwo="<li>Dobór odpowiedniego skrętu rzęs.</li>
         <li> Koloryzacje rzęs</li>
         <li>Odżywienie rzęs za pomocą botoksu</li>"
-        price="140 zł"
-        time="60-90min"
-      />
-      <SectionLinks urlsArray={links} />
+          price="140 zł"
+          time="60-90min"
+        />
+        <SectionLinks urlsArray={links} />
+      </div>
       <Section title="Contact">
         <Contact />
       </Section>

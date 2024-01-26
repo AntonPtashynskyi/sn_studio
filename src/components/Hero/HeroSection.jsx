@@ -16,7 +16,9 @@ export const HeroSection = ({
 }) => {
   return (
     <section>
-      <div className={`hero hero__${className} flex flex-col justify-end`}>
+      <div
+        className={`hero hero__${className} flex flex-col justify-start py-[3rem] md:py-0`}
+      >
         <p
           className="hero__text"
           dangerouslySetInnerHTML={{ __html: title }}
@@ -60,19 +62,19 @@ export const HeroSection = ({
         </div>
         <div className="menu-container--bottom flex">
           <div className="main-logo">
-            <div className="ml-16 self-start mt-[20%]">
+            <div className="ml-16 self-start mt-[20%] w-full">
               <Image src={logo} alt="In brows" />
               <h1 className="text-[40px]">{h1Title}</h1>
               <p className="text-2xl max-w-[50%]">{description}</p>
               <span className="decorative-title">{h2Title}</span>
             </div>
           </div>
-          <div className="content">
-            <Image
+          <div className={`content content__${className}`}>
+            {/* <Image
               src={heroImage}
               alt="In brows"
               className="h-full object-cover"
-            />
+            /> */}
           </div>
         </div>
       </div>

@@ -33,8 +33,14 @@ const links = [
 const BrowsPage = () => {
   return (
     <>
-      <HeroSection className="brows_page" title="Brows" bgImage={heroBrows} />
-      <div className="content-block md:flex md:flex-col container">
+      <HeroSection
+        className="brows_page"
+        title="Brows"
+        h1Title="Najlepsze brwi"
+        description="Jak zdobyć najkepszy kształt"
+        h2Title="Brwi!"
+      />
+      <div className="content-block">
         <ServiceDescription
           title="Stylizacja </br><span>brwi</span>"
           key="1"

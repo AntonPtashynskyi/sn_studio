@@ -10,7 +10,7 @@
 
 .prices {
     @screen lg {
-        @apply py-12 grid grid-cols-2 gap-y-8 gap-x-8;
+        @apply grid grid-cols-2 gap-y-8 gap-x-8;
     }
 
     .price:nth-child(2n + 1) .price--title::before {
@@ -20,10 +20,10 @@
 }
 
 .price {
-    @apply flex flex-col grow px-7;
+    @apply flex flex-col grow lg:px-7;
 
     &--block {
-        @apply flex flex-row md:p-4 rounded-[3rem] transition-all lg:bg-[#e5e5da];
+        @apply flex flex-row md:p-4 rounded-[2rem] transition-all duration-300 lg:bg-[#e5e5da];
 
         &:hover {
             @apply md:shadow-baseShadow;
@@ -35,12 +35,11 @@
 
         .decorative-pill {
             @apply hidden lg:block min-w-[70px] w-[10%] h-[100%] max-h-[150px] rounded-[3rem] bg-[#f5d5cb] shadow-baseShadow transition-all;
-            // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
         }
     }
 
     &--title {
-        @apply relative text-black text-[2rem] lg:text-[4rem] cursor-pointer uppercase md:min-w-[25%] leading-none;
+        @apply relative text-black text-[2rem] lg:text-[2.5rem] cursor-pointer uppercase md:min-w-[25%] leading-none;
         font-weight: 500;
     }
 

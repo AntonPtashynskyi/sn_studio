@@ -1,10 +1,10 @@
 import { Contact } from "@/components/Contact/Contact";
 import { CourseTile } from "@/components/CourseTile/CourseTile";
-import { Courses } from "@/components/Courses/Courses";
 import { HeroSection } from "@/components/Hero/HeroSection";
 import { PriceTable } from "@/components/PriceTable/PriceTable";
 import { Section } from "@/components/Section/Section";
 import { ServiceTile } from "@/components/ServiceTile/ServiceTile";
+import { SocialBanner } from "@/components/SocialBanner/SocialBanner";
 
 export default function Home() {
   return (
@@ -12,28 +12,45 @@ export default function Home() {
       <HeroSection
         title="In </br> Brows"
         className="main-page"
-        h1Title="What is Lorem Ipsum?
-"
+        h1Title="What is Lorem Ipsum?"
         description="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
         h2Title="Cześć!"
       />
-
-      <section className="py-[4rem] lg:py-[10rem] container wrapper">
-        <h2 className="text-bigNumber text-8xl uppercase font-medium">Szkolenia</h2>
-        <p className="max-w-[80%] text-2xl font-light">
-          Wybierz szkolenie dla Siebie i zmień swoją zawodową karierę.
-          <br/>
-          Skontaktuj się ze mną w celu umuwiena się na <a href="" className="text-[#EDC385] font-semibold">bezpłatną konsultację</a>
-        </p>
-        <div className="course-tile-container">
-           <CourseTile time="10h ~" title="Laminacja brwi" description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"/>
-          <CourseTile time="10h ~" title="Laminacja brwi" description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"/>
-          <CourseTile time="10h ~" title="Laminacja brwi" description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"/> 
+      <section className="main-section">
+        <div className="wrapper container">
+          <h2 className="section-title">Szkolenia</h2>
+          <p className="lg:max-w-[80%] text-lg md:text-2xl font-light">
+            Wybierz szkolenie dla Siebie i zmień swoją zawodową karierę.
+            <br />
+            Skontaktuj się ze mną w celu umuwiena się na{" "}
+            <a href="" className="text-[#EDC385] font-semibold">
+              bezpłatną konsultację
+            </a>
+          </p>
+          <div className="course-tile-container">
+            <CourseTile
+              time="10h ~"
+              title="Laminacja brwi"
+              description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"
+            />
+            <CourseTile
+              time="10h ~"
+              title="Laminacja brwi"
+              description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"
+            />
+            <CourseTile
+              time="10h ~"
+              title="Laminacja brwi"
+              description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"
+            />
+          </div>
         </div>
       </section>
-
-      <Section title="Usługi" id="services" className="decorative-right">
-        <div className="lg:flex wrapper service-wrapper">
+      {/* <Section id="social"> */}
+      <SocialBanner />
+      {/* </Section> */}
+      <Section title="Usługi" id="services">
+        <div className="lg:flex service-wrapper">
           <ServiceTile
             title="Brwi"
             number="01"
@@ -54,13 +71,11 @@ export default function Home() {
           />
         </div>
       </Section>
-      <Section title="Cennik" id="price" className="decorative-left">
+      <Section title="Cennik" id="price">
         <PriceTable />
       </Section>
-      <Section title="Szkolenia">
-        <Courses />
-      </Section>
-      <Section title="Kontakt" id="contact" className="decorative-button">
+
+      <Section title="Kontakt" id="contact">
         <Contact />
       </Section>
     </>

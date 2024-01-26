@@ -1,5 +1,5 @@
 .navBar {
-    @apply text-black px-[10px] py-2 bg-navBarBgColor fixed top-0 left-0 right-0 z-[9999] flex justify-between flex-col md:translate-x-[-100%];
+    @apply text-black px-[10px] py-4 bg-navBarBgColor fixed top-0 left-0 right-0 z-[9999] flex justify-between flex-col md:translate-x-[-100%] backdrop-blur-sm;
 
     &.active {
         @apply bg-white md:bg-navBarBgColor;
@@ -11,7 +11,7 @@
 }
 
 .menu-wrapper {
-    @apply h-0 scale-0 flex items-center justify-center flex-col md:hidden;
+    @apply h-0 scale-0 flex items-center justify-center flex-col md:hidden max-h-[80vh] overflow-y-auto;
     position: fixed;
     inset: 0;
     z-index: 9999;
@@ -35,7 +35,7 @@
     }
 }
 
-.course-btn {
+.interactive-btn {
     @apply uppercase relative block;
     &::after {
         content: "";

@@ -8,7 +8,7 @@ import "./contact.scss";
 
 export const Contact = () => {
   return (
-    <div className="wrapper contact-wrapper">
+    <div className="contact-wrapper">
       <Link
         href="https://www.instagram.com/in_brows__/"
         className="contact-link"

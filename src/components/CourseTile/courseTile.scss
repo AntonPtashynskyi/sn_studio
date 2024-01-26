@@ -1,5 +1,5 @@
 .course-tile-container {
-    @apply  flex pt-14 gap-7 flex-col lg:flex-row items-center justify-center;
+    @apply flex pt-6 md:pt-14 gap-7 flex-col lg:flex-row items-center justify-center;
 }
 
 .course-tile {
@@ -8,10 +8,10 @@
     &:nth-child(even) {
         @apply bg-lightBgColor;
 
-        .course-tile--time, .course-tile--link {
+        .course-tile--time,
+        .course-tile--link {
             @apply bg-darkBgColor;
         }
-    
     }
 
     &--time {
@@ -19,7 +19,7 @@
     }
 
     &--title {
-        @apply uppercase text-[48px] leading-none font-light mb-7;
+        @apply uppercase text-[36px] md:text-[48px] leading-none font-light mb-7;
     }
 
     &--description {

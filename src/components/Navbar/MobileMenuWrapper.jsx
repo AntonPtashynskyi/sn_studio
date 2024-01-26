@@ -7,6 +7,7 @@ import facebook from "../../../public/assets/svg/facebook--in_brows.svg";
 
 export const MobileMenuWrapper = ({ open }) => {
   const [coursesIsOpen, setShowCourses] = useState("");
+  const [servicesIsOpen, setShowServices] = useState("");
 
   return (
     <div className={`menu-wrapper ${open}`}>
@@ -14,22 +15,54 @@ export const MobileMenuWrapper = ({ open }) => {
         <nav>
           <ul className="menu">
             <li>
-              <Link
-                href="/#services"
-                className="link"
-                onClick={() => setOpen("")}
-              >
-                Usługi
-              </Link>
-            </li>
-            <li>
               <Link href="/#price" className="link" onClick={() => setOpen("")}>
                 Cennik
               </Link>
             </li>
             <li className="flex flex-col justify-center items-center">
               <p
-                className={`course-btn ${coursesIsOpen}`}
+                className={`interactive-btn ${servicesIsOpen}`}
+                onClick={() =>
+                  setShowServices((prev) => (prev === "active" ? "" : "active"))
+                }
+              >
+                Usługi
+              </p>
+              <ul className="courses-menu text-xs uppercase">
+                <li className="my-6">
+                  {" "}
+                  <Link
+                    href="eyebrows-styling"
+                    className="link"
+                    onClick={() => setOpen("")}
+                  >
+                    Brwi
+                  </Link>
+                </li>
+                <li className="my-6">
+                  <Link
+                    href="eyelashes-styling"
+                    className="link"
+                    onClick={() => setOpen("")}
+                  >
+                    Rzęsy
+                  </Link>
+                </li>
+                <li className="my-6">
+                  {" "}
+                  <Link
+                    href="permanent-makeup"
+                    className="link"
+                    onClick={() => setOpen("")}
+                  >
+                    PMU
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            <li className="flex flex-col justify-center items-center">
+              <p
+                className={`interactive-btn ${coursesIsOpen}`}
                 onClick={() =>
                   setShowCourses((prev) => (prev === "active" ? "" : "active"))
                 }

@@ -13,37 +13,39 @@ export const ServiceDescription = ({
   time,
 }) => {
   return (
-    <div className="content mt-[100px] md:flex md:justify-around wrapper">
-      <div className="service--image-block">
-        <Image alt={title} src={imageSrc} objectFit="cover" fill={true} />
-        <span className="service--decorative-number">{positionNumber}</span>
-      </div>
-      <div className="service--content-block wrapper ">
-        <h2
-          className="service--title"
-          dangerouslySetInnerHTML={{ __html: title }}
-        ></h2>
-        <p>{copyOne}</p>
-        {copyTwo && (
-          <>
-            <p className="mt-3">Zabieg obejmuje:</p>
-            <ul
-              className="service--list"
-              dangerouslySetInnerHTML={{ __html: copyTwo }}
-            ></ul>
-          </>
-        )}
-        <div className="service--details-block">
-          <div className="service--detail">
-            <p>Cena:</p>
-            <span>{price}</span>
-          </div>
-          <div className="service--detail">
-            <p>Czas:</p>
-            <span>{time}</span>
+    <section className="content-section">
+      <div className="content container mt-[100px] md:mb-[100px] md:flex md:justify-around wrapper">
+        <div className="service--image-block">
+          <Image alt={title} src={imageSrc} objectFit="cover" fill={true} />
+          <span className="service--decorative-number">{positionNumber}</span>
+        </div>
+        <div className="service--content-block wrapper ">
+          <h2
+            className="service--title"
+            dangerouslySetInnerHTML={{ __html: title }}
+          ></h2>
+          <p>{copyOne}</p>
+          {copyTwo && (
+            <>
+              <p className="mt-3">Zabieg obejmuje:</p>
+              <ul
+                className="service--list"
+                dangerouslySetInnerHTML={{ __html: copyTwo }}
+              ></ul>
+            </>
+          )}
+          <div className="service--details-block">
+            <div className="service--detail">
+              <p>Cena:</p>
+              <span>{price}</span>
+            </div>
+            <div className="service--detail">
+              <p>Czas:</p>
+              <span>{time}</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

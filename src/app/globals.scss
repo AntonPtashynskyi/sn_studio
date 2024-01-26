@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "../styles/variables";
+
 @layer base {
   :root {
     --color-neutral-900: rgb(51, 51, 51);
@@ -49,13 +51,22 @@ a {
 }
 
 .wrapper {
-  padding: 0 10px;
+  @apply px-3;
 
   @media (min-width: 768px) {
-    padding: 0 30px;
+    @apply px-8;
   }
 
   @media (min-width: 1024px) {
-    padding: 0 60px;
+    @apply px-16;
+  }
+}
+
+.main-section {
+  @apply py-[3rem] lg:py-[5rem];
+
+  .section-title {
+    @apply text-h2TextColor uppercase font-semibold lg:font-medium mb-[1rem] md:mb-[3rem] shadow-none leading-none;
+    font-size: clamp(3.2rem, 10vw, 7rem);
   }
 }

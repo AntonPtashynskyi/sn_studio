@@ -1,50 +1,50 @@
-.section {
-    position: relative;
+// .section {
+// position: relative;
 
-    @screen lg {
-        &.decorative-right {
-            &::after {
-                content: "";
-                @apply absolute shadow-baseShadow w-[80%] h-1/2 top-[10%] right-0 rounded-tl-[6rem] rounded-bl-[6rem];
+// @screen lg {
+// &.decorative-right {
+//     &::after {
+//         content: "";
+//         @apply absolute shadow-baseShadow w-[80%] h-1/2 top-[10%] right-0 rounded-tl-[6rem] rounded-bl-[6rem];
 
-                background: #f6f6eb;
-            }
-        }
-    }
+//         background: #f6f6eb;
+//     }
+// }
+// }
 
-    &.decorative-left {
-        &::after {
-            content: "";
-            @apply absolute shadow-baseShadow w-[95%] md:w-[80%] h-full top-[0%] md:top-[10%] left-0 rounded-tr-[6rem] rounded-br-[6rem];
+// &.decorative-left {
+//     &::after {
+//         content: "";
+//         @apply absolute shadow-baseShadow w-[95%] md:w-[80%] h-full top-[0%] md:top-[10%] left-0 rounded-tr-[6rem] rounded-br-[6rem];
 
-            background: #f6f6eb;
-        }
-    }
+//         background: #f6f6eb;
+//     }
+// }
 
-    &.decorative-button {
-        &::after {
-            content: "";
-            @apply absolute shadow-baseShadow w-[100%] h-full top-[5%] md:top-[10%] rounded-tl-[3rem] rounded-tr-[3rem] md:rounded-tl-[6rem] md:rounded-tr-[6rem];
+// &.decorative-button {
+//     &::after {
+//         content: "";
+//         @apply absolute shadow-baseShadow w-[100%] h-full top-[5%] md:top-[10%] rounded-tl-[3rem] rounded-tr-[3rem] md:rounded-tl-[6rem] md:rounded-tr-[6rem];
 
-            background: #f6f6eb;
-        }
-    }
-}
+//         background: #f6f6eb;
+//     }
+// }
+// }
 
-.section-title {
-    font-size: clamp(40px, 15vw, 80px);
-    font-weight: 500;
-    line-height: 1;
+// .section-title {
+//     font-size: clamp(40px, 15vw, 80px);
+//     font-weight: 500;
+//     line-height: 1;
 
-    background-color: #b9a199;
-    color: transparent;
-    text-shadow: 0px 2px 3px rgb(251 208 208 / 80%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
+//     background-color: #b9a199;
+//     color: transparent;
+//     text-shadow: 0px 2px 3px rgb(251 208 208 / 80%);
+//     -webkit-background-clip: text;
+//     -moz-background-clip: text;
+//     background-clip: text;
 
-    @media (min-width: 1024px) {
-        font-size: clamp(80px, 10vw, 200px);
-        color: D1D1D1;
-    }
-}
+//     @media (min-width: 1024px) {
+//         font-size: clamp(80px, 10vw, 200px);
+//         color: D1D1D1;
+//     }
+// }

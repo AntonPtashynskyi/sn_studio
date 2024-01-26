@@ -3,7 +3,7 @@
 }
 
 .contact-link {
-    @apply flex flex-1 items-center first:bg-[#F5D5CB] bg-[#FDFDFB] py-[25px] px-[20px] gap-6  rounded-[2rem] shadow-baseShadow hover:shadow-baseHoverShadow transition-all;
+    @apply flex flex-1 items-center first:bg-[#F5D5CB] bg-[#FDFDFB] py-[25px] px-[20px] gap-6  rounded-[2rem] hover:shadow-baseShadow transition-all;
 
     &:first-child {
         @apply rounded-bl-none rounded-br-none md:rounded-bl-[2rem] md:rounded-br-none md:rounded-tr-none;

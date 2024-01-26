@@ -11,6 +11,12 @@
         height: 100vh;
     }
 
+    @media (max-width: 768px) {
+        &__brows_page {
+            background-image: url("/assets/images/hero/hero__brows.jpg");
+        }
+    }
+
     &__text {
         color: #fff;
         font-size: clamp(40px, 20vw, 80px);
@@ -23,10 +29,6 @@
 
         @apply md:hidden;
     }
-
-    // &__brows_page {
-    //     background-image: url("/assets/images/services/service--brows.jpg");
-    // }
 
     // &__eyelashes_page {
     //     background-image: url("/assets/images/services/service--brows.jpg");
@@ -70,8 +72,11 @@
             }
 
             .content {
-                @apply flex flex-1 justify-end items-center;
-                // background-color: #f5d5cb;
+                @apply flex flex-1 justify-end items-center bg-no-repeat bg-cover;
+
+                &__brows_page {
+                    background-image: url("/assets/images/hero/hero__brows.jpg");
+                }
 
                 .container {
                     @apply flex justify-end bg-black w-4/5 py-[50px] px-[40px];
