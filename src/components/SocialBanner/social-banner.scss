@@ -16,5 +16,9 @@
 
     .block--right {
         @apply flex-1 hidden md:block relative;
+
+        .social-image {
+            @apply absolute right-0 max-w-[500px];
+        }
     }
 }

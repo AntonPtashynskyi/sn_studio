@@ -1,31 +1,21 @@
 .service-wrapper {
-    @screen lg {
-        .tile:first-child .image,
-        .tile:first-child .opacity-layout {
-            @apply rounded-tl-[2rem] rounded-bl-[2rem];
-        }
-
-        .tile:last-child .image,
-        .tile:last-child .opacity-layout {
-            @apply rounded-tr-[2rem] rounded-br-[2rem];
-        }
-    }
+    @apply gap-7;
 }
 
 .service-title {
-    @apply z-50 relative text-[46px] lg:text-[64px] uppercase md:flex md:justify-center transition-all;
+    @apply z-20 relative text-[46px] lg:text-[64px] uppercase md:flex md:justify-center transition-all;
 }
 
 .tile {
     @apply text-white relative block mb-[40px] lg:mb-0 last:mb-0;
 
     &__decorative-number {
-        @apply z-50 absolute right-1 bottom-1 font-semibold leading-[100%];
+        @apply z-20 absolute right-1 bottom-1 font-semibold leading-[100%];
         font-size: 7rem;
     }
 
     .image {
-        @apply h-[280px] md:h-[300px] rounded-[2rem] lg:rounded-none;
+        @apply h-[280px] md:h-[300px] rounded-[2rem];
         background-size: cover;
 
         &.brows {
@@ -47,6 +37,6 @@
 }
 
 .arrow-more {
-    @apply z-50 relative;
+    @apply z-20 relative;
     filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(115deg) brightness(108%) contrast(108%);
 }

@@ -13,7 +13,7 @@ export const Navbar = () => {
   return (
     <>
       <header className={`${open} navBar`}>
-        <div className="flex justify-between items-center z-[9999] relative">
+        <div className="flex justify-between items-center z-[50] relative p-4">
           <Link href="/">
             <Image src={logo} alt="In brows" width="auto" height="auto" />
           </Link>

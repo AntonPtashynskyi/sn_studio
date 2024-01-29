@@ -1,7 +1,11 @@
 import React from "react";
 import "./social-banner.scss";
 import Link from "next/link";
+import Image from "next/image";
+
 import { InstagramIcon } from "../Icons/InstagramIcon";
+import instagram_banner from "@public/assets/images/social/social_instagram.png";
+import instagram_face from "@public/assets/images/social/social_instagram_rounded.png";
 
 export const SocialBanner = () => {
   return (
@@ -17,9 +21,22 @@ export const SocialBanner = () => {
               Obserwuj mnie <br />
               na instagramie
             </h2>
-            <InstagramIcon />
+            <div className="images-block flex">
+              <InstagramIcon class_name="absolute z-10 left-0 max-w-[30%]" />
+              <Image
+                src={instagram_face}
+                alt="Instagram Sn_brows"
+                className="max-w-[150px] z-10 object-contain"
+              />
+            </div>
           </div>
-          <div className="block--right"></div>
+          <div className="block--right">
+            <Image
+              src={instagram_banner}
+              alt="Instagram Sn_brows"
+              className="social-image"
+            />
+          </div>
         </Link>
       </div>
     </section>

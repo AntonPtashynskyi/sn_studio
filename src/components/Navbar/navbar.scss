@@ -1,5 +1,5 @@
 .navBar {
-    @apply text-black px-[10px] py-4 bg-navBarBgColor fixed top-0 left-0 right-0 z-[9999] flex justify-between flex-col md:translate-x-[-100%] backdrop-blur-sm;
+    @apply text-black bg-transparent fixed top-0 left-0 right-0 z-[9999] flex justify-between flex-col md:translate-x-[-100%];
 
     &.active {
         @apply bg-white md:bg-navBarBgColor;
@@ -11,10 +11,8 @@
 }
 
 .menu-wrapper {
-    @apply h-0 scale-0 flex items-center justify-center flex-col md:hidden max-h-[80vh] overflow-y-auto;
-    position: fixed;
+    @apply fixed z-40 mt-[41px] h-0 scale-0 flex items-center justify-center flex-col md:hidden max-h-[80vh] overflow-y-auto;
     inset: 0;
-    z-index: 9999;
     overflow-y: auto;
     display: none;
     padding-top: 60px;
@@ -22,7 +20,7 @@
 
     &.active {
         transform: scaleY(1);
-        @apply block h-full min-h-[100vh] mt-[41px] bg-white md:hidden;
+        @apply block h-full min-h-[100vh] bg-white md:hidden;
     }
 
     .menu {
@@ -68,11 +66,7 @@
 }
 
 .menu-btn {
-    height: 25px;
-    width: 30px;
-    cursor: pointer;
-
-    @apply md:hidden;
+    @apply w-[40px] h-[40px] bg-white/50 md:hidden cursor-pointer flex justify-center items-center z-50 rounded-full;
 }
 
 .menu-btn span,
@@ -81,9 +75,9 @@
     background: black;
     content: "";
     position: absolute;
-    width: 30px;
+    width: 19px;
     height: 2px;
-    margin-top: 13px;
+    margin-top: 0;
 
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);

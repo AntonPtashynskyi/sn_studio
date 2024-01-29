@@ -66,7 +66,7 @@ a {
   @apply py-[3rem] lg:py-[5rem];
 
   .section-title {
-    @apply text-h2TextColor uppercase font-semibold lg:font-medium mb-[1rem] md:mb-[3rem] shadow-none leading-none;
+    @apply text-h2TextColor uppercase font-semibold lg:font-medium mb-[1rem] shadow-none leading-none;
     font-size: clamp(3.2rem, 10vw, 7rem);
   }
 }
