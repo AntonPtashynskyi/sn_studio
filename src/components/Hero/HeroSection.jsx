@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 import "./hero.scss";
+
 import logo from "../../../public/assets/svg/logo--strocked.svg";
 import heroImage from "../../../public/assets/images/hero/hero--desktop.jpg";
 
@@ -23,44 +23,7 @@ export const HeroSection = ({
           className="hero__text"
           dangerouslySetInnerHTML={{ __html: title }}
         ></p>
-        <div className="menu-container--top ">
-          <nav className="flex gap-[20px] w-full justify-center items-center max-w-[70%] mx-auto">
-            <Link href="/" key="home-page" className="link">
-              <p className="title">Główna</p>
-            </Link>
-            <Link
-              href="/eyebrows-styling"
-              key="eyebrows_styling"
-              className="link"
-            >
-              <p className="title">Brwi</p>
-            </Link>
-            <Link
-              href="/eyelashes-styling"
-              key="eyelashes_styling"
-              className="link"
-            >
-              <p className="title">Rzesy</p>
-            </Link>
-            <Link
-              href="/permanent-makeup"
-              key="permanent_makeup"
-              className="link"
-            >
-              <p className="title">Permanent</p>
-            </Link>
-            <Link href="/#price" key="price" className="link">
-              <p className="title">Cennik</p>
-            </Link>
-            <Link href="/szkolenia" key="szkolenia" className="link">
-              <p className="title">Szkolenia</p>
-            </Link>
-            <Link href="/#contact" key="contact" className="link">
-              <p className="title">Contact</p>
-            </Link>
-          </nav>
-        </div>
-        <div className="menu-container--bottom flex">
+        <div className="hero-content">
           <div className="main-logo">
             <div className="ml-16 self-start mt-[20%] w-full">
               <Image src={logo} alt="In brows" />
@@ -69,13 +32,7 @@ export const HeroSection = ({
               <span className="decorative-title">{h2Title}</span>
             </div>
           </div>
-          <div className={`content content__${className}`}>
-            {/* <Image
-              src={heroImage}
-              alt="In brows"
-              className="h-full object-cover"
-            /> */}
-          </div>
+          <div className={`content content__${className}`}></div>
         </div>
       </div>
     </section>

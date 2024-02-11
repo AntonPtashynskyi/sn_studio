@@ -10,7 +10,7 @@ export const MobileMenuWrapper = ({ open }) => {
   const [servicesIsOpen, setShowServices] = useState("");
 
   return (
-    <div className={`menu-wrapper ${open}`}>
+    <div className={`mobile-menu-wrapper ${open}`}>
       <div className="flex flex-col justify-between flex-grow h-full">
         <nav>
           <ul className="menu">
@@ -32,7 +32,7 @@ export const MobileMenuWrapper = ({ open }) => {
                 <li className="my-6">
                   {" "}
                   <Link
-                    href="eyebrows-styling"
+                    href="/services"
                     className="link"
                     onClick={() => setOpen("")}
                   >
@@ -41,7 +41,7 @@ export const MobileMenuWrapper = ({ open }) => {
                 </li>
                 <li className="my-6">
                   <Link
-                    href="eyelashes-styling"
+                    href="/services"
                     className="link"
                     onClick={() => setOpen("")}
                   >
@@ -51,7 +51,7 @@ export const MobileMenuWrapper = ({ open }) => {
                 <li className="my-6">
                   {" "}
                   <Link
-                    href="permanent-makeup"
+                    href="/services"
                     className="link"
                     onClick={() => setOpen("")}
                   >
@@ -76,7 +76,7 @@ export const MobileMenuWrapper = ({ open }) => {
                     className="link"
                     onClick={() => setOpen("")}
                   >
-                    SZKOLENIE Z LAMINACJI RZĘS
+                    Szkolenie z laminacji rzęs
                   </Link>
                 </li>
                 <li className="my-6 border-b-[1px]">
@@ -85,7 +85,7 @@ export const MobileMenuWrapper = ({ open }) => {
                     className="link"
                     onClick={() => setOpen("")}
                   >
-                    SZKOLENIE Z LAMINACJI BRWI
+                    Szkolenie z laminacji brwi
                   </Link>
                 </li>
               </ul>

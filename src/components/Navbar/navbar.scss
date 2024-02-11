@@ -1,8 +1,20 @@
 .navBar {
-    @apply text-black bg-transparent fixed top-0 left-0 right-0 z-[9999] flex justify-between flex-col md:translate-x-[-100%];
+    @apply text-black bg-transparent fixed top-0 left-0 right-0 z-[9999] flex justify-between flex-col transition-all duration-300;
 
-    &.active {
-        @apply bg-white md:bg-navBarBgColor;
+    // &.active {
+    //     @apply bg-white md:bg-navBarBgColor;
+    // }
+
+    &.show {
+        @apply translate-y-0;
+    }
+
+    &.hide {
+        @apply -translate-y-full;
+    }
+
+    .mobile-menu {
+        @apply flex md:hidden justify-between items-center z-[50] relative p-4;
     }
 }
 
@@ -10,8 +22,8 @@
     @apply text-black;
 }
 
-.menu-wrapper {
-    @apply fixed z-40 mt-[41px] h-0 scale-0 flex items-center justify-center flex-col md:hidden max-h-[80vh] overflow-y-auto;
+.mobile-menu-wrapper {
+    @apply fixed z-40 h-0 scale-0 flex items-center justify-center flex-col md:hidden max-h-[80vh] overflow-y-auto;
     inset: 0;
     overflow-y: auto;
     display: none;

@@ -1,33 +1,36 @@
 "use client";
-import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React, { useEffect, useState } from "react";
 
 import "./navbar.scss";
-import logo from "../../../public/assets/svg/logo--in_brows.svg";
-import { MobileMenuWrapper } from "./MobileMenuWrapper";
+import "../Hero/hero.scss";
+import MobileMenu from "./MobileMenu";
+import DesktopMenu from "./DesktopMenu";
 
 export const Navbar = () => {
-  const [open, setOpen] = useState("");
+  const [navbarVisible, setNavbarVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      currentScrollY > 500 &&
+        setNavbarVisible(currentScrollY <= lastScrollY || currentScrollY === 0);
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
+  const navbarClassName = navbarVisible ? "show" : "hide";
 
   return (
-    <>
-      <header className={`${open} navBar`}>
-        <div className="flex justify-between items-center z-[50] relative p-4">
-          <Link href="/">
-            <Image src={logo} alt="In brows" width="auto" height="auto" />
-          </Link>
-          <div
-            className={`${open} menu-btn`}
-            onClick={() =>
-              setOpen((prev) => (prev === "active" ? "" : "active"))
-            }
-          >
-            <span></span>
-          </div>
-        </div>
-      </header>
-      <MobileMenuWrapper open={open} />
-    </>
+    <header className={`navBar ${navbarClassName}`}>
+      <MobileMenu />
+      <DesktopMenu />
+    </header>
   );
 };

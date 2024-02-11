@@ -11,12 +11,18 @@ export const ServiceDescription = ({
   copyTwo,
   price,
   time,
+  id,
 }) => {
   return (
-    <section className="content-section">
+    <section className="content-section" id={id}>
       <div className="content container mt-[100px] md:mb-[100px] md:flex md:justify-around wrapper">
         <div className="service--image-block">
-          <Image alt={title} src={imageSrc} objectFit="cover" fill={true} />
+          <Image
+            alt={title}
+            src={imageSrc}
+            style={{ objectFit: "cover" }}
+            fill={true}
+          />
           <span className="service--decorative-number">{positionNumber}</span>
         </div>
         <div className="service--content-block wrapper ">

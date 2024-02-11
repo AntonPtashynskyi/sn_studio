@@ -11,7 +11,6 @@ export const SectionLinks = ({ urlsArray }) => {
           return (
             <Link href={`/${url.path}`} key={url.key} className="link">
               <p className="title">{url.name}</p>
-              {/* <span className="arrow"></span> */}
             </Link>
           );
         })}

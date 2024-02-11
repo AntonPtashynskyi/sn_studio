@@ -37,80 +37,37 @@
     // &__permanent_page {
     //     background-image: url("/assets/images/services/service--brows.jpg");
     // }
+}
 
-    .menu-container {
-        @apply hidden md:visible;
+.menu-container {
+    @apply hidden md:visible;
 
-        &--top {
-            // box-shadow: 0px 2px 3px 0px rgba(195, 195, 195, 1);
-            @apply hidden md:flex bg-white md:h-[100px];
+    @apply hidden md:flex bg-white md:h-[100px] shadow-md;
 
-            &.active {
-                @apply fixed top-0 left-0 right-0 z-50;
-            }
+    &.active {
+        @apply fixed top-0 left-0 right-0 z-50;
+    }
 
-            .link {
-                @apply uppercase text-black font-bold h-full px-8 flex flex-1 justify-center items-center hover:bg-navBarBgColor transition-all;
-            }
+    .navigation-links {
+        @apply flex w-full justify-center items-center max-w-[70%] mx-auto;
+
+        .link {
+            @apply cursor-pointer relative uppercase text-black font-bold h-full px-8 flex flex-1 justify-center items-center hover:bg-[#e5e5da] transition-all text-center;
         }
 
-        &--bottom {
-            @apply hidden md:flex;
-            height: calc(100% - 100px);
-
-            .main-logo {
-                @apply relative flex-2 flex items-center;
-
-                img {
-                    @apply opacity-50 w-[50%];
-                }
-
-                .decorative-title {
-                    @apply hidden md:block font-bold text-heroDecorativeTitleColor uppercase absolute bottom-0 leading-none select-none;
-                    font-size: clamp(160px, 16vw, 400px);
+        .drop-down {
+            &:hover {
+                .drop-down--list {
+                    transform: scale(1, 1);
                 }
             }
 
-            .content {
-                @apply flex flex-1 justify-end items-center bg-no-repeat bg-cover;
+            &--list {
+                @apply absolute block top-full w-full shadow-md transition-all duration-200 origin-top;
+                transform: scale(100%, 0);
 
-                &__brows_page {
-                    background-image: url("/assets/images/hero/hero__brows.jpg");
-                }
-
-                .container {
-                    @apply flex justify-end bg-black w-4/5 py-[50px] px-[40px];
-
-                    .image {
-                        @apply flex-1 mr-8;
-                    }
-
-                    .copy {
-                        @apply flex flex-col justify-center gap-10 flex-1 text-white;
-
-                        h1 {
-                            @apply text-[32px];
-                        }
-
-                        p {
-                            @apply text-[18px] relative;
-
-                            &::before,
-                            &::after {
-                                content: "\0022";
-                                font-size: 40px;
-                                position: absolute;
-                                top: -10px;
-                                left: -20px;
-                            }
-
-                            &::after {
-                                top: unset;
-                                left: unset;
-                                right: -20px;
-                            }
-                        }
-                    }
+                .link {
+                    @apply bg-white py-4 hover:bg-[#e5e5da];
                 }
             }
         }

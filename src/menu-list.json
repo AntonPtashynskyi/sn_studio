@@ -1,0 +1,35 @@
+[
+  {
+    "url": "/",
+    "urlName": "Główna",
+    "key": "home-page"
+  },
+  {
+    "type": "dropdown",
+    "urlName": "Usługi",
+    "urlList": [
+      {
+        "url": "/services#brows",
+        "urlName": "Brwi",
+        "key": "eyebrows_styling"
+      },
+      { "url": "/services", "urlName": "Rzesy", "key": "eyelashes_styling" },
+      { "url": "/services", "urlName": "Permanent", "key": "permanent_makeup" }
+    ]
+  },
+  {
+    "url": "/#price",
+    "urlName": "Cennik",
+    "key": "price"
+  },
+  {
+    "url": "/szkolenia",
+    "urlName": "Szkolenia",
+    "key": "szkolenia"
+  },
+  {
+    "url": "/#contac",
+    "urlName": "Contact",
+    "key": "contact"
+  }
+]
