@@ -6,6 +6,7 @@ import "./globals.scss";
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
+  variable: "--font-montserrat",
 });
 
 export const metadata = {
@@ -16,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={`${montserrat.variable} font-sans`}>
         <Navbar />
         <main className="main-content">{children}</main>
         <Footer />

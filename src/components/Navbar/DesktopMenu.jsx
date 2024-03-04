@@ -16,7 +16,7 @@ const DesktopMenu = () => {
             </Link>
             <Link
               href="/services#brows"
-              key="eyebrows_styling"
+              key="eyebrows_styling_brows"
               className="link"
             >
               <p className="title">Brwi</p>
@@ -32,7 +32,7 @@ const DesktopMenu = () => {
         <Link href="/#price" key="price" className="link">
           <p className="title">Cennik</p>
         </Link>
-        <Link href="/szkolenia" key="szkolenia" className="link">
+        <Link href="/training" key="training" className="link">
           <p className="title">Szkolenia</p>
         </Link>
         <Link href="/#contact" key="contact" className="link">

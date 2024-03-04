@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
+const { nextui } = require("@nextui-org/react");
 
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -26,6 +28,9 @@ module.exports = {
           "invert(88%) sepia(96%) saturate(6285%) hue-rotate(188deg) brightness(116%) contrast(103%);",
         textColor: "#000000",
         navBarBgColor: "rgba(241, 241, 241, .4)",
+      },
+      fontFamily: {
+        sans: ["var(--font-montserrat)"],
       },
       fontSize: {
         mobileMenu: [
@@ -50,5 +55,7 @@ module.exports = {
       },
     },
   },
+  darkMode: "class",
+  plugins: [nextui()],
   plugins: ["prettier-plugin-tailwindcss"],
 };
