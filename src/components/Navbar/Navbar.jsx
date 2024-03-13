@@ -3,10 +3,8 @@ import React, { useEffect, useState } from "react";
 
 import "./navbar.scss";
 import "../Hero/hero.scss";
-import MobileMenu from "./MobileMenu";
-import DesktopMenu from "./DesktopMenu";
 
-export const Navbar = () => {
+export const Navbar = ({children}) => {
   const [navbarVisible, setNavbarVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -25,12 +23,12 @@ export const Navbar = () => {
     };
   }, [lastScrollY]);
 
+
   const navbarClassName = navbarVisible ? "show" : "hide";
 
   return (
-    <header className={`navBar ${navbarClassName}`}>
-      <MobileMenu />
-      <DesktopMenu />
+    <header className={`navBar`}>
+      {children}
     </header>
   );
 };

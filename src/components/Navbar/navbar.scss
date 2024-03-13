@@ -1,16 +1,12 @@
 .navBar {
     @apply text-black bg-transparent fixed top-0 left-0 right-0 z-[9999] flex justify-between flex-col transition-all duration-300;
 
-    // &.active {
-    //     @apply bg-white md:bg-navBarBgColor;
-    // }
-
     &.show {
         @apply translate-y-0;
     }
 
     &.hide {
-        @apply -translate-y-full;
+        @apply md:-translate-y-full;
     }
 
     .mobile-menu {
@@ -23,16 +19,12 @@
 }
 
 .mobile-menu-wrapper {
-    @apply fixed z-40 h-0 scale-0 flex items-center justify-center flex-col md:hidden max-h-[80vh] overflow-y-auto;
+    @apply fixed z-40 min-h-[100vh] flex items-center justify-center flex-col md:hidden max-h-[80vh] overflow-y-auto origin-top translate-x-[100%] duration-300 opacity-0 pointer-events-none;
     inset: 0;
     overflow-y: auto;
-    display: none;
-    padding-top: 60px;
-    padding-bottom: 200px;
 
     &.active {
-        transform: scaleY(1);
-        @apply block h-full min-h-[100vh] bg-white md:hidden;
+        @apply block h-full min-h-[100vh] bg-white md:hidden translate-x-0 opacity-100 pointer-events-auto;
     }
 
     .menu {
@@ -46,7 +38,7 @@
 }
 
 .interactive-btn {
-    @apply uppercase relative block;
+    @apply uppercase relative block duration-300;
     &::after {
         content: "";
         position: absolute;
@@ -56,7 +48,6 @@
         background-size: contain;
         width: 8px;
         height: 5px;
-        transition: all 0.3s ease;
     }
     &.active {
         ~ .courses-menu {

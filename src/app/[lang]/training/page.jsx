@@ -9,7 +9,7 @@ const BrowsPage = () => {
     <>
       <HeroSection
         className="brows_page"
-        title="Brows"
+        title="Reserve best training ever"
         h1Title="Szkolenia"
         description="Najlepszę szkolenie"
         h2Title="Szkolenia!"

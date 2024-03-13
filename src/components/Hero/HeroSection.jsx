@@ -17,7 +17,7 @@ export const HeroSection = ({
   return (
     <section>
       <div
-        className={`hero hero__${className} flex flex-col justify-start py-[3rem] md:py-0`}
+        className={`hero hero__${className} flex flex-col justify-end md:justify-center py-[3rem] md:py-0`}
       >
         <p
           className="hero__text"
