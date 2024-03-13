@@ -14,8 +14,8 @@ export const ServiceDescription = ({
   id,
 }) => {
   return (
-    <section className="content-section" id={id}>
-      <div className="content container mt-[100px] md:mb-[100px] md:flex md:justify-around wrapper">
+    <section className="content-section wrapper" id={id}>
+      <div className="content container md:flex md:justify-center wrapper">
         <div className="service--image-block">
           <Image
             alt={title}
@@ -23,7 +23,7 @@ export const ServiceDescription = ({
             style={{ objectFit: "cover" }}
             fill={true}
           />
-          <span className="service--decorative-number">{positionNumber}</span>
+          {positionNumber && <span className="service--decorative-number">{positionNumber}</span>}
         </div>
         <div className="service--content-block wrapper ">
           <h2

@@ -26,19 +26,16 @@ export default async function Home({params: { lang }}) {
         <div className="lg:flex service-wrapper">
           <ServiceTile
             title={t("brows")}
-            number="01"
             path={`${lang}/services#brows`}
             styleClass="brows"
           />
           <ServiceTile
             title="Rzęsy"
-            number="02"
             path={`${lang}/services#lashes`}
             styleClass="eyelashes"
           />
           <ServiceTile
             title="Pmu"
-            number="03"
             path={`${lang}/services#pmu`}
             styleClass="pmu"
           />

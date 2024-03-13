@@ -20,7 +20,7 @@ export const ServiceTile = ({ title, path, number, styleClass }) => {
             className="arrow-more"
           />
         </div>
-        <span className="tile__decorative-number">{number}</span>
+        {number && <span className="tile__decorative-number">{number}</span>}
       </div>
     </Link>
   );

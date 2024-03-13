@@ -4,7 +4,7 @@ import { AccordionBlock } from "./AccordionBlock";
 
 export const FAQ = () => {
   return (
-    <div className="wrapper container">
+    <div className="container">
       <AccordionBlock
         title="Dla kogo Ten Zabieg ?"
         copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
