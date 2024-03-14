@@ -1,120 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Image from "next/image";
-import Link from "next/link";
 import instagram from "../../../public/assets/svg/instagram--in_brows.svg";
 import facebook from "../../../public/assets/svg/facebook--in_brows.svg";
 import LanguageChanger from "./LanguageSwitcher";
+import MenuLink from "./MenuLink";
+import MobileMenuDropDown from "./MobileMenuDropDown";
 
-const MobileMenuWrapper = ({ open, pageLanguage, setOpen }) => {
-  const [coursesIsOpen, setShowCourses] = useState("");
-  const [servicesIsOpen, setShowServices] = useState("");
+const MobileMenuWrapper = ({ open, pageLanguage, setOpen, t }) => {
+  const closeMobileMenu = () => setOpen("");
 
   return (
     <div className={`mobile-menu-wrapper ${open}`}>
       <div className="flex flex-col justify-center flex-grow h-full">
         <div className="min-h-[80%] overflow-y-scroll py-6 flex flex-col justify-center">
           <nav>
-            <ul className="menu">
-              <li>
-                <Link href={`/${pageLanguage}/`} className="link" onClick={() => setOpen("")}>
-                  Główna
-                </Link>
-              </li>
-              <li>
-                <Link href={`/${pageLanguage}/#price`} className="link" onClick={() => setOpen("")}>
-                  Cennik
-                </Link>
-              </li>
-              <li className="flex flex-col justify-center items-center">
-                <p
-                  className={`interactive-btn ${servicesIsOpen}`}
-                  onClick={() =>
-                    setShowServices((prev) => (prev === "active" ? "" : "active"))
-                  }
-                >
-                  Usługi
-                </p>
-                <ul className="courses-menu text-xs uppercase flex flex-col items-center">
-                  <li className="my-3">
-                    <Link
-                      href={`/${pageLanguage}/services`}
-                      className="link"
-                      onClick={() => setOpen("")}
-                    >
-                      Wzystkie usługi
-                    </Link>
-                  </li>
-                  <li className="my-3">
-                    <Link
-                      href={`/${pageLanguage}/services#brows`}
-                      className="link"
-                      onClick={() => setOpen("")}
-                    >
-                      Brwi
-                    </Link>
-                  </li>
-                  <li className="my-3">
-                    <Link
-                      href={`/${pageLanguage}/services#lashes`}
-                      className="link"
-                      onClick={() => setOpen("")}
-                    >
-                      Rzęsy
-                    </Link>
-                  </li>
-                  <li className="my-3">
-                    {" "}
-                    <Link
-                      href={`/${pageLanguage}/services#pmu`}
-                      className="link"
-                      onClick={() => setOpen("")}
-                    >
-                      PMU
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="flex flex-col justify-center items-center">
-                <p
-                  className={`interactive-btn ${coursesIsOpen}`}
-                  onClick={() =>
-                    setShowCourses((prev) => (prev === "active" ? "" : "active"))
-                  }
-                >
-                  Szkolenia
-                </p>
-                <ul className="courses-menu text-xs uppercase">
-                  <li className="my-6">
-                    <Link
-                      href="/szkolenie_laminacja_rzes"
-                      className="link"
-                      onClick={() => setOpen("")}
-                    >
-                      Szkolenie z laminacji rzęs
-                    </Link>
-                  </li>
-                  <li className="my-6 border-b-[1px]">
-                    <Link
-                      href="/szkolenie_laminacja_brwi"
-                      className="link"
-                      onClick={() => setOpen("")}
-                    >
-                      Szkolenie z laminacji brwi
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link
-                  href="/#contact"
-                  className="link"
-                  onClick={() => setOpen("")}
-                >
-                  Kontakt
-                </Link>
-              </li>
-            </ul>
+            <div className="menu">
+              <MenuLink href={`/${pageLanguage}`} title={t('mainPage')} onClick={closeMobileMenu} />
+              <MenuLink href={`/${pageLanguage}/#price`} title="Cennik" onClick={closeMobileMenu} />
+              <MobileMenuDropDown title="Usługi">
+                  <MenuLink href={`/${pageLanguage}/services`} title="Wzystkie usługi" onClick={closeMobileMenu} />
+                  <MenuLink href={`/${pageLanguage}/services#brows`} title="Brwi" onClick={closeMobileMenu} />
+                  <MenuLink href={`/${pageLanguage}/services#lashes`} title="Rzęsy" onClick={closeMobileMenu} />
+                  <MenuLink href={`/${pageLanguage}/services#pmu`} title="PMU" onClick={closeMobileMenu} />
+              </MobileMenuDropDown>
+              <MobileMenuDropDown title="Szkolenia">
+                  <MenuLink href={`/${pageLanguage}/szkolenie_laminacja_rzes`} title="Szkolenie z laminacji rzęs" onClick={closeMobileMenu} />
+                  <MenuLink href={`/${pageLanguage}/szkolenie_laminacja_brwi`} title="Szkolenie z laminacji brwi" onClick={closeMobileMenu} />
+              </MobileMenuDropDown>
+              <MenuLink href={`/${pageLanguage}/#contact`} title="Kontakt" onClick={closeMobileMenu} />
+            </div>
           </nav>
           <div className="flex items-center flex-col">
             <p className="mb-9">Wroclaw</p>

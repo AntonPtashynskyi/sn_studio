@@ -1,7 +1,8 @@
-import { useTranslation } from "@/app/i18n";
-import Link from "next/link";
 import React from "react";
+import { useTranslation } from "@/app/i18n";
 import LanguageChanger from "./LanguageSwitcher";
+import MenuDropDown from "./MenuDropDown";
+import MenuLink from "./MenuLink";
 
 export default async function DesktopMenu({pageLanguage}) {
   const { t } = await useTranslation(pageLanguage, "pages");
@@ -9,39 +10,18 @@ export default async function DesktopMenu({pageLanguage}) {
   return (
     <div className="menu-container">
       <nav className="navigation-links">
-        <Link href={`/${pageLanguage}`} key="home-page" className="link">
-          <p className="title">{t("main")}</p>
-        </Link>
-        <span className="link drop-down">
-          <p>Usługi </p>
-          <div className="drop-down--list">
-            <Link href={`/${pageLanguage}/services`} key="eyebrows_styling" className="link">
-              <p className="title">Wszystkie usługi</p>
-            </Link>
-            <Link
-              href={`/${pageLanguage}/services#brows`}
-              key="eyebrows_styling_brows"
-              className="link"
-            >
-              <p className="title">Brwi</p>
-            </Link>
-            <Link href={`/${pageLanguage}/services#lashes`} key="eyelashes_styling" className="link">
-              <p className="title">Rzesy</p>
-            </Link>
-            <Link href={`/${pageLanguage}/services#pmu`} key="permanent_makeup" className="link">
-              <p className="title">Permanent</p>
-            </Link>
-          </div>
-        </span>
-        <Link href={`/${pageLanguage}/#price`} key="price" className="link">
-          <p className="title">Cennik</p>
-        </Link>
-        <Link href={`/${pageLanguage}/training`} key="training" className="link">
-          <p className="title">Szkolenia</p>
-        </Link>
-        <Link href={`/${pageLanguage}/#contact`} key="contact" className="link">
-          <p className="title">Contact</p>
-        </Link>
+        <MenuLink href={`/${pageLanguage}`} key="home_page" title={t("main")}/>
+        <MenuDropDown title="Usługi">
+          <MenuLink href={`/${pageLanguage}/services`} key="eyebrows_styling" title="Wszystkie usługi"/>
+          <MenuLink href={`/${pageLanguage}/services#brows`} key="eyebrows_styling_brows" title="Brwi"/>
+          <MenuLink href={`/${pageLanguage}/services#lashes`} key="eyelashes_styling" title="Rzesy"/>
+          <MenuLink href={`/${pageLanguage}/services#pmu`} key="permanent_makeup" title="Permanent"/>
+        </MenuDropDown>
+        <MenuLink href={`/${pageLanguage}/#price`} key="price" title="Cennik"/>
+        <MenuDropDown title="Szkolenia">
+          <MenuLink href={`/${pageLanguage}/training_eyebrow`} key="training_eyebrow" title="Szkolenia z laminacji brwi"/>
+        </MenuDropDown>
+        <MenuLink href={`/${pageLanguage}/#contact`} key="contact" title="Contact"/>
         <LanguageChanger pageLanguage={pageLanguage}/>
       </nav>
     </div>

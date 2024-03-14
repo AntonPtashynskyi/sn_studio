@@ -46,12 +46,6 @@
 
 .menu-container {
     @apply hidden md:flex bg-white md:h-[100px] w-[90%] shadow-md rounded-[10rem] mx-auto mt-6;
-    // Transparent glasses
-    // background: rgba(255, 255, 255, 0.13);
-    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    // backdrop-filter: blur(5px);
-    // -webkit-backdrop-filter: blur(5px);
-    // border: 1px solid rgba(255, 255, 255, 0.3);
 
     &.active {
         @apply fixed top-0 left-0 right-0 z-50;

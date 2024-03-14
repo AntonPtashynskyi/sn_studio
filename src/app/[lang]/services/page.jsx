@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/Hero/HeroSection";
 import { ServiceDescription } from "@/components/ServiceDescription/ServiceDescription";
 import { Contact } from "@/components/Contact/Contact";
 import { Section } from "@/components/Section/Section";
+import { useTranslation } from "@/app/i18n";
 
 import "./browsPage.scss";
 
@@ -13,7 +14,8 @@ import styledEyelashes from "../../../../public/assets/images/services/eyelashes
 import pmuBrows from "../../../../public/assets/images/services/brows_pmu.jpg";
 import pmuLips from "../../../../public/assets/images/services/lips_pmu.jpg";
 
-const ServicesPage = ({params: {lang}}) => {
+const ServicesPage = async ({params: {lang}}) => {
+  const { t } = await useTranslation(lang, "translation");
 
   return (
     <>

@@ -2,7 +2,7 @@ import React from "react";
 import "./faq.scss";
 import { AccordionBlock } from "./AccordionBlock";
 
-export const FAQ = () => {
+export const FAQBrows = ({ t }) => {
   return (
     <div className="container">
       <AccordionBlock
