@@ -31,17 +31,20 @@
         @apply md:hidden;
     }
 
-    &-content {
-        @apply hidden md:block
+    .hero-content {
+        @apply hidden md:flex;
+
+        .left-block {
+            flex: 1;
+        }
+
+        .right-block {
+            flex: 1;
+            background-image: url("/assets/images/services/service--brows.jpg");
+            background-position: center;
+        }
+        
     }
-
-    // &__eyelashes_page {
-    //     background-image: url("/assets/images/services/service--brows.jpg");
-    // }
-
-    // &__permanent_page {
-    //     background-image: url("/assets/images/services/service--brows.jpg");
-    // }
 }
 
 .menu-container {

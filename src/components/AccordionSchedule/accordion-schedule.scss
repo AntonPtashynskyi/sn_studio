@@ -1,4 +1,5 @@
 .accordion-schedule {
+    @apply mb-4 md:mb-6;
 
     .accordion__item {
         @apply px-5 -mb-3 cursor-pointer flex justify-between items-center text-lg uppercase w-full font-bold rounded-[3rem] z-10 relative transition-all duration-200;
@@ -15,13 +16,17 @@
         &.active {
             @apply h-full grid-rows-[1fr] opacity-100 pb-6 mt-3 bg-[#F6F6EB];
         }
+
+        .description-text {
+            @apply py-1 md:py-3 text-base md:text-xl capitalize;
+        }
     }
 
     .left-block {
-        @apply flex gap-10 h-12 justify-center items-center;
+        @apply flex gap-4 md:gap-10 h-12 justify-center items-center;
 
         .number {
-            @apply w-[4rem] md:w-[6rem] border-r text-center text-[#6F6F6F] border-[#6F6F6F];
+            @apply w-[2rem] md:w-[4rem] md:w-[6rem] border-r text-center text-[#6F6F6F] border-[#6F6F6F];
             font-size: clamp(1.3rem, 2vw, 5rem)
         }
 
@@ -30,11 +35,11 @@
         }
 
         .title {
-            @apply text-[#6C6C6C] font-medium font-sans text-2xl;
+            @apply text-[#6C6C6C] font-medium font-sans text-lg md:text-2xl leading-5 text-start;
         }
 
         .description {
-            @apply uppercase text-lg font-normal;
+            @apply uppercase text-xs md:text-lg font-normal;
         }
     }
 
@@ -42,11 +47,11 @@
         @apply relative w-[34px] h-[34px];
 
         &::before {
-            @apply content-[''] w-[34px] h-[2px] bg-[#6C6C6C] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out opacity-70;
+            @apply content-[''] w-[24px] md:w-[34px] h-[2px] bg-[#6C6C6C] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out opacity-70;
         }
 
         &::after {
-            @apply content-[''] w-[34px] h-[2px] bg-[#6C6C6C] absolute top-1/2 left-1/2 -rotate-90 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out opacity-70;
+            @apply content-[''] w-[24px] md:w-[34px] h-[2px] bg-[#6C6C6C] absolute top-1/2 left-1/2 -rotate-90 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-in-out opacity-70;
         }
 
         &.active {

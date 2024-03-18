@@ -21,7 +21,7 @@ const ServicesPage = async ({params: {lang}}) => {
     <>
       <HeroSection
         className="brows_page"
-        title="Brows"
+        h1MobileTitle="Brows"
         h1Title="Najlepsze brwi"
         description="Jak zdobyć najkepszy kształt"
         h2Title="Brwi!"

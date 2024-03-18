@@ -12,7 +12,7 @@ export default async function Home({params: { lang }}) {
   return (
     <>
       <HeroSection
-        title="In </br> Brows"
+        h1MobileTitle="In </br> Brows"
         className="main-page"
         h1Title="What is Lorem Ipsum?"
         description="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."

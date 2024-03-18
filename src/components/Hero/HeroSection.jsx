@@ -7,7 +7,7 @@ import logo from "../../../public/assets/svg/logo--strocked.svg";
 import heroImage from "../../../public/assets/images/hero/hero--desktop.jpg";
 
 export const HeroSection = ({
-  title,
+  h1MobileTitle,
   className,
   bgImage = heroImage,
   h1Title,
@@ -21,10 +21,10 @@ export const HeroSection = ({
       >
         <p
           className="hero__text"
-          dangerouslySetInnerHTML={{ __html: title }}
+          dangerouslySetInnerHTML={{ __html: h1MobileTitle }}
         ></p>
         <div className="hero-content">
-          <div className="main-logo">
+          <div className="left-block">
             <div className="ml-16 self-start mt-[20%] w-full">
               <Image src={logo} alt="In brows" />
               <h1 className="text-[40px]">{h1Title}</h1>
@@ -32,7 +32,7 @@ export const HeroSection = ({
               <span className="decorative-title">{h2Title}</span>
             </div>
           </div>
-          <div className={`content content__${className}`}></div>
+          <div className={`right-block content__${className}`}></div>
         </div>
       </div>
     </section>

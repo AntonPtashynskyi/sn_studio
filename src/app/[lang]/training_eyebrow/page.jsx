@@ -14,18 +14,22 @@ const BrowsPage = async ({params: { lang }}) => {
     <>
       <HeroSection
         className="brows_page"
-        title="Reserve best training ever"
+        h1MobileTitle="Training for you"
         h1Title="Szkolenia"
         description="Najlepszę szkolenie"
         h2Title="Szkolenia!"
       />
       <Section id="brows_courses_theory">
-        <h2 className="uppercase mb-10 text-2xl">Twój program szkoleniowy</h2>
+        <h2 className="uppercase mb-6 md:mb-10 text-2xl">Twój program szkoleniowy</h2>
         <AccordionSchedule positionNumber="1" title="część teoretyczna" description="Czas trwania - 3h">
           <AccordionContentTheory t={t}/>
         </AccordionSchedule>
+        <AccordionSchedule positionNumber="2" title="część praktyczna" description="Czas trwania - 8h">
+          <AccordionContentTheory t={t}/>
+        </AccordionSchedule>
       </Section>
-      <Section id="brows_faq">
+      <Section id="brows_faq" >
+        <h2 className="uppercase mb-6 md:mb-10 text-2xl">Najczęściej zadawane pytania</h2>
         <FAQBrows t={t} />
       </Section>
       <Section title="Contact">
