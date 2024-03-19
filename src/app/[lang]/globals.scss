@@ -69,4 +69,23 @@ a {
     @apply text-h2TextColor uppercase font-semibold lg:font-medium mb-[1rem] shadow-none leading-none;
     font-size: clamp(3.2rem, 10vw, 7rem);
   }
+
+  &.faq-section {
+    @apply relative;
+    .wrapper {
+      &:after {
+        @apply bg-no-repeat;
+        display: block;
+        position: absolute;
+        top: 10rem;
+        right: 15%;
+        content: "";
+        width: 200px;
+        height: 300px;
+        background-image: url("/assets/svg/question-mark.svg");
+        background-size: 200px;
+        background-position: center right;
+      }
+    }
+  }
 }

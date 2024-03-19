@@ -5,10 +5,12 @@
         @apply relative mt-[5rem] pb-[3rem] md:pb-0;
 
         .container {
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 4rem;
-            padding: 3rem;
+            @apply md:p-12 md:rounded-[4rem] max-w-[71rem];
+            
+            @media (min-width: 768px) {
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.3);
+            }
         }
 
         .content {
@@ -21,7 +23,7 @@
             flex-direction: row-reverse;
 
             .service--content-block {
-                padding-right: 3rem;
+                @apply md:pr-12;
             }
         }
     }
@@ -29,7 +31,7 @@
     .content-section:nth-child(odd) {
         .content {
             .service--content-block {
-                padding-left: 3rem;
+                @apply md:pl-12;
             }
         }
     }

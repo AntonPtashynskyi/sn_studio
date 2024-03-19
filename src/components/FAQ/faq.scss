@@ -1,6 +1,6 @@
 .accordion {
     &__block {
-        @apply border-b-[1px];
+        @apply border-b-[1px] z-10 relative;
     }
 
     &__item {

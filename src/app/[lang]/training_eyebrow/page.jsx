@@ -20,7 +20,7 @@ const BrowsPage = async ({params: { lang }}) => {
         h2Title="Szkolenia!"
       />
       <Section id="brows_courses_theory">
-        <h2 className="uppercase mb-6 md:mb-10 text-2xl">Twój program szkoleniowy</h2>
+        <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">Twój program szkoleniowy</h2>
         <AccordionSchedule positionNumber="1" title="część teoretyczna" description="Czas trwania - 3h">
           <AccordionContentTheory t={t}/>
         </AccordionSchedule>
@@ -28,8 +28,8 @@ const BrowsPage = async ({params: { lang }}) => {
           <AccordionContentTheory t={t}/>
         </AccordionSchedule>
       </Section>
-      <Section id="brows_faq" >
-        <h2 className="uppercase mb-6 md:mb-10 text-2xl">Najczęściej zadawane pytania</h2>
+      <Section id="brows_faq" className="faq-section" >
+        <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">Najczęściej zadawane pytania</h2>
         <FAQBrows t={t} />
       </Section>
       <Section title="Contact">
