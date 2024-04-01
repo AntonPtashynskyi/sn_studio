@@ -1,0 +1,33 @@
+.advantage-block {
+    @apply flex flex-col md:flex-row gap-12 justify-center md:even:flex-row-reverse;
+
+    .left-block, .right-block {
+        @apply flex flex-1 justify-center flex-col ;
+    }
+
+    .left-block {
+        @apply flex-1 items-center;
+
+        .image-wrapper {
+            @apply relative overflow-hidden w-full max-h-[240px] aspect-[5/2] bg-lightBgColor border-4 border-darkBgColor rounded-[3rem];
+        }
+
+        img {
+            @apply object-cover;
+        }
+    }
+
+    .right-block {
+        @apply gap-8;
+        
+        h2 {
+            @apply text-2xl md:text-3xl uppercase text-center md:text-left;
+        }
+
+        p {
+            @apply text-lg md:text-2xl text-center md:text-left;
+        }
+    }
+
+
+}

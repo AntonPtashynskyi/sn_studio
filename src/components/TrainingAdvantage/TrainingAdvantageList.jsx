@@ -1,0 +1,11 @@
+import React from 'react'
+
+const TrainingAdvantageList = ({ children }) => {
+  return (
+    <div className='flex flex-col gap-12'>
+        {children}
+    </div>
+  )
+}
+
+export default TrainingAdvantageList

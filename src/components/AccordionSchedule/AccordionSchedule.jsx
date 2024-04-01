@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import "./accordion-schedule.scss";
 
-const AccordionSchedule = ({ title, copy, description, positionNumber, children }) => {
+const AccordionSchedule = ({ title, copy, description, positionNumber, isInteractive = true, children }) => {
   const [isOpen, setIsOpen] = useState(false);
-  let activeClass = isOpen ? "active" : "";
+  let activeClass = isInteractive && isOpen ? "active" : "";
   return (
     <div className={`accordion-schedule accordion-schedule__block`}>
       <button onClick={() => setIsOpen(!isOpen)} className={`accordion__item ${activeClass}`}>
@@ -15,7 +15,7 @@ const AccordionSchedule = ({ title, copy, description, positionNumber, children 
                 {description && <p className="description">{description}</p>}
             </div>
         </div>
-        <div className={`icon ${activeClass}`}></div>
+        {isInteractive && <div className={`icon ${activeClass}`}></div>}
       </button>
       <div className={`accordion__copy ${activeClass}`}>
         <div className="overflow-hidden">
