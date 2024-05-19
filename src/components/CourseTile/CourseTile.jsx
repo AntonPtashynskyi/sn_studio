@@ -1,7 +1,7 @@
 import React from "react";
 import "./courseTile.scss";
 
-export const CourseTile = ({ title, description, time, url }) => {
+export const CourseTile = ({ title, description, time, url, t }) => {
   const titleArray = title.split(" ").map((word, index) => {
     if (index === 1) {
       return (
@@ -27,7 +27,7 @@ export const CourseTile = ({ title, description, time, url }) => {
       <h3 className="course-tile--title">{titleArray}</h3>
       <p className="course-tile--description">{description}</p>
       <a href={url} className="course-tile--link">
-        Dowiedz się więcej
+        {t("Learn more")}
       </a>
     </div>
   );

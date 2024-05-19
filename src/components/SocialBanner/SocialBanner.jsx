@@ -7,7 +7,7 @@ import { InstagramIcon } from "../Icons/InstagramIcon";
 import instagram_banner from "@public/assets/images/social/social_instagram.png";
 import instagram_face from "@public/assets/images/social/social_instagram_rounded.png";
 
-export const SocialBanner = () => {
+export const SocialBanner = ({ t }) => {
   return (
     <section>
       <div className="wrapper container">
@@ -18,14 +18,14 @@ export const SocialBanner = () => {
         >
           <div className="block--left">
             <h2 className="social-banner--title">
-              Obserwuj mnie <br />
-              na instagramie
+              {t("Follow me")} <br />
+              {t("on Instagram")}
             </h2>
             <div className="images-block flex">
               <InstagramIcon class_name="absolute z-10 left-0 max-w-[30%]" />
               <Image
                 src={instagram_face}
-                alt="Instagram Sn_brows"
+                alt="Instagram In_brows"
                 className="max-w-[150px] z-10 object-contain"
               />
             </div>
@@ -33,7 +33,7 @@ export const SocialBanner = () => {
           <div className="block--right">
             <Image
               src={instagram_banner}
-              alt="Instagram Sn_brows"
+              alt="Instagram In_brows"
               className="social-image"
             />
           </div>

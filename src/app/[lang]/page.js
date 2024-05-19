@@ -7,8 +7,8 @@ import { SocialBanner } from "@/components/SocialBanner/SocialBanner";
 import { useTranslation } from "../i18n";
 import CoursesHomeSection from "@/components/CoursesHomeSection/CoursesHomeSection";
 
-export default async function Home({params: { lang }}) {
-  const { t } = await useTranslation(lang, "translation");
+export default async function Home({ params: { lang } }) {
+  const { t } = await useTranslation(lang, "common");
   return (
     <>
       <HeroSection
@@ -20,22 +20,28 @@ export default async function Home({params: { lang }}) {
       />
       <Section>
         <div>
-          Odkryj pełną gamę usług laminacji, stylizacji brwi i rzęs, a także permanentnego makijażu brwi i ust na naszej platformie. Zanurz się w świecie piękna i elegancji, korzystając z naszych profesjonalnych usług, które podkreślą Twoje naturalne piękno. Ponadto, oferujemy kursy, które umożliwią Ci opanowanie tych technik, abyś mógł/a w pełni wykorzystać swój talent. Dołącz do naszej społeczności i odkryj, jak możemy pomóc Ci osiągnąć pożądane efekty!
+          Odkryj pełną gamę usług laminacji, stylizacji brwi i rzęs, a także
+          permanentnego makijażu brwi i ust na naszej platformie. Zanurz się w
+          świecie piękna i elegancji, korzystając z naszych profesjonalnych
+          usług, które podkreślą Twoje naturalne piękno. Ponadto, oferujemy
+          kursy, które umożliwią Ci opanowanie tych technik, abyś mógł/a w pełni
+          wykorzystać swój talent. Dołącz do naszej społeczności i odkryj, jak
+          możemy pomóc Ci osiągnąć pożądane efekty!
         </div>
       </Section>
       <Section>
-          <CoursesHomeSection t={t}/>
+        <CoursesHomeSection t={t} lang={lang} />
       </Section>
-      <SocialBanner />
-      <Section title="Usługi" id="services">
+      <SocialBanner t={t} />
+      <Section title={t("Services")} id="services">
         <div className="lg:flex service-wrapper">
           <ServiceTile
-            title={t("brows")}
+            title={t("Brows")}
             path={`${lang}/services#brows`}
             styleClass="brows"
           />
           <ServiceTile
-            title="Rzęsy"
+            title={t("Lashes")}
             path={`${lang}/services#lashes`}
             styleClass="eyelashes"
           />
@@ -47,11 +53,11 @@ export default async function Home({params: { lang }}) {
         </div>
       </Section>
 
-      <Section title="Cennik" id="price">
-        <PriceTable />
+      <Section title={t("Price list")} id="price">
+        <PriceTable t={t} />
       </Section>
 
-      <Section title="Kontakt" id="contact">
+      <Section title={t("Contact")} id="contact">
         <Contact />
       </Section>
     </>

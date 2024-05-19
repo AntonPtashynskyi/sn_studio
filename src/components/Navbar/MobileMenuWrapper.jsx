@@ -16,23 +16,55 @@ const MobileMenuWrapper = ({ open, pageLanguage, setOpen, t }) => {
         <div className="min-h-[80%] overflow-y-scroll py-6 flex flex-col justify-center">
           <nav>
             <div className="menu">
-              <MenuLink href={`/${pageLanguage}`} title={t('mainPage')} onClick={closeMobileMenu} />
-              <MenuLink href={`/${pageLanguage}/#price`} title="Cennik" onClick={closeMobileMenu} />
-              <MobileMenuDropDown title="Usługi">
-                  <MenuLink href={`/${pageLanguage}/services`} title="Wzystkie usługi" onClick={closeMobileMenu} />
-                  <MenuLink href={`/${pageLanguage}/services#brows`} title="Brwi" onClick={closeMobileMenu} />
-                  <MenuLink href={`/${pageLanguage}/services#lashes`} title="Rzęsy" onClick={closeMobileMenu} />
-                  <MenuLink href={`/${pageLanguage}/services#pmu`} title="PMU" onClick={closeMobileMenu} />
+              <MenuLink
+                href={`/${pageLanguage}`}
+                title={t("Main")}
+                onClick={closeMobileMenu}
+              />
+              <MenuLink
+                href={`/${pageLanguage}/#price`}
+                title={t("Price list")}
+                onClick={closeMobileMenu}
+              />
+              <MobileMenuDropDown title={t("Services")}>
+                <MenuLink
+                  href={`/${pageLanguage}/services`}
+                  title={t("All services")}
+                  onClick={closeMobileMenu}
+                />
+                <MenuLink
+                  href={`/${pageLanguage}/services#brows`}
+                  title={t("Brows")}
+                  onClick={closeMobileMenu}
+                />
+                <MenuLink
+                  href={`/${pageLanguage}/services#lashes`}
+                  title={t("Lashes")}
+                  onClick={closeMobileMenu}
+                />
+                <MenuLink
+                  href={`/${pageLanguage}/services#pmu`}
+                  title="PMU"
+                  onClick={closeMobileMenu}
+                />
               </MobileMenuDropDown>
-              <MobileMenuDropDown title="Szkolenia">
-                  <MenuLink href={`/${pageLanguage}/szkolenie_laminacja_rzes`} title="Szkolenie z laminacji rzęs" onClick={closeMobileMenu} />
-                  <MenuLink href={`/${pageLanguage}/szkolenie_laminacja_brwi`} title="Szkolenie z laminacji brwi" onClick={closeMobileMenu} />
+              <MobileMenuDropDown title={t("Training sessions")}>
+                <MenuLink
+                  href={`/${pageLanguage}/training_eyebrow`}
+                  title={t("Eyebrow lamination training")}
+                  onClick={closeMobileMenu}
+                />
+                {/* <MenuLink href={`/${pageLanguage}/szkolenie_laminacja_brwi`} title="Szkolenie z laminacji brwi" onClick={closeMobileMenu} /> */}
               </MobileMenuDropDown>
-              <MenuLink href={`/${pageLanguage}/#contact`} title="Kontakt" onClick={closeMobileMenu} />
+              <MenuLink
+                href={`/${pageLanguage}/#contact`}
+                title={t("Contact")}
+                onClick={closeMobileMenu}
+              />
             </div>
           </nav>
           <div className="flex items-center flex-col">
-            <p className="mb-9">Wroclaw</p>
+            <p className="mb-9">{t("Wroclaw")}</p>
             <div className="flex gap-11 mb-9">
               <Image
                 src={instagram}
@@ -54,6 +86,5 @@ const MobileMenuWrapper = ({ open, pageLanguage, setOpen, t }) => {
     </div>
   );
 };
-
 
 export default MobileMenuWrapper;

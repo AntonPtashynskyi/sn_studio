@@ -1,13 +1,18 @@
-'use client'
+"use client";
 
-import React from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
+import React from "react";
+import useEmblaCarousel from "embla-carousel-react";
 
-import './trainingCarousel.scss'
-import { NextButton, PrevButton, usePrevNextButtons } from './EmblaCarouselArrowButtons';
+import "./trainingCarousel.scss";
+import {
+  NextButton,
+  PrevButton,
+  usePrevNextButtons,
+} from "./EmblaCarouselArrowButtons";
+import { Section } from "../Section/Section";
 
-const SLIDE_COUNT = 5
-const slides = Array.from(Array(SLIDE_COUNT).keys())
+const SLIDE_COUNT = 5;
+const slides = Array.from(Array(SLIDE_COUNT).keys());
 
 function TrainingCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -16,8 +21,8 @@ function TrainingCarousel() {
     prevBtnDisabled,
     nextBtnDisabled,
     onPrevButtonClick,
-    onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
 
   return (
     <section className="embla">
@@ -38,7 +43,7 @@ function TrainingCarousel() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default TrainingCarousel
+export default TrainingCarousel;

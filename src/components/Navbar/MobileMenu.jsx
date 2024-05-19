@@ -6,16 +6,21 @@ import MobileMenuButton from "./MobileMenuButton";
 import HeaderLogo from "./HeaderLogo";
 import { useTranslation } from "@/app/i18n/client";
 
-const MobileMenu = ({pageLanguage}) => {
+const MobileMenu = ({ pageLanguage }) => {
   const [open, setOpen] = useState("");
-  const { t } = useTranslation(pageLanguage, "translation")
+  const { t } = useTranslation(pageLanguage, "common");
 
   return (
     <>
       <div className="mobile-menu">
-        <HeaderLogo/>
+        <HeaderLogo />
         <MobileMenuButton open={open} setOpen={setOpen} />
-        <MobileMenuWrapper open={open} setOpen={setOpen} pageLanguage={pageLanguage} t={t} />
+        <MobileMenuWrapper
+          open={open}
+          setOpen={setOpen}
+          pageLanguage={pageLanguage}
+          t={t}
+        />
       </div>
     </>
   );

@@ -1,39 +1,48 @@
+import React from "react";
+import { CourseTile } from "../CourseTile/CourseTile";
 
-import React from 'react'
-import { CourseTile } from '../CourseTile/CourseTile'
-
-const CoursesHomeSection = ({ t }) => {
-
+const CoursesHomeSection = ({ t, lang }) => {
   return (
     <>
-        <h2 className="section-title">{t('title')}</h2>
-        <p className="lg:max-w-[80%] text-lg md:text-2xl font-light">
-        Wybierz szkolenie dla Siebie i zmień swoją zawodową karierę.
+      <h2 className="section-title">{t("Training sessions")}</h2>
+      <p className="lg:max-w-[80%] text-lg md:text-2xl font-light">
+        {t(
+          "Choose the training that suits you and change your professional career."
+        )}
         <br />
-        Skontaktuj się ze mną w celu umuwiena się na{" "}
-        <a href="" className="text-[#EDC385] font-semibold">
-            bezpłatną konsultację
+        {t("Get in touch with me to schedule a")}{" "}
+        <a href={`/${lang}#contact`} className="text-[#EDC385] font-semibold">
+          {t("free consultation")}
         </a>
-        </p>
-        <div className="course-tile-container">
+      </p>
+      <div className="course-tile-container">
         <CourseTile
-            time="10h ~"
-            title="Laminacja brwi"
-            description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"
+          time="10h ~"
+          title={t("Eyebrow lamination")}
+          // TODO! Translate
+          description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"
+          t={t}
+          url={`${lang}/training_eyebrow`}
         />
         <CourseTile
-            time="10h ~"
-            title="Laminacja brwi"
-            description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"
+          time="10h ~"
+          title={t("Eyebrow architecture")}
+          // TODO! Translate
+          description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"
+          t={t}
+          url={`${lang}/training_eyebrow`}
         />
         <CourseTile
-            time="10h ~"
-            title="Laminacja brwi"
-            description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"
+          time="10h ~"
+          title={t("Eyelash lamination")}
+          // TODO! Translate
+          description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"
+          t={t}
+          url={`${lang}/training_eyebrow`}
         />
-        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default CoursesHomeSection
+export default CoursesHomeSection;
