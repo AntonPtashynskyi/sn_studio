@@ -9,6 +9,7 @@ import CoursesHomeSection from "@/components/CoursesHomeSection/CoursesHomeSecti
 
 export default async function Home({ params: { lang } }) {
   const { t } = await useTranslation(lang, "common");
+
   return (
     <>
       <HeroSection
@@ -58,7 +59,7 @@ export default async function Home({ params: { lang } }) {
       </Section>
 
       <Section title={t("Contact")} id="contact">
-        <Contact />
+        <Contact t={t} />
       </Section>
     </>
   );

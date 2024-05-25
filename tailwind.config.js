@@ -54,7 +54,7 @@ module.exports = {
         baseHoverShadow: "0px 7px 7px 0px rgba(0, 0, 0, 0.25) inset",
       },
       aspectRatio: {
-        '5/2': '500 / 240',
+        "5/2": "500 / 240",
       },
     },
   },

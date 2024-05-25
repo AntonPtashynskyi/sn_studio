@@ -38,6 +38,8 @@ function Map({ address }) {
     initMap();
   }, [address]);
 
-  return <div className="h-96 rounded-[3rem] mt-10" ref={mapRef} />;
+  return (
+    <div className="h-96 rounded-[3rem] w-full md:flex-[3]" ref={mapRef} />
+  );
 }
 export default Map;

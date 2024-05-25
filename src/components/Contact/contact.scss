@@ -6,7 +6,7 @@
     @apply flex flex-1 items-center first:bg-[#F5D5CB] bg-[#FDFDFB] py-[25px] px-[20px] gap-6  rounded-[2rem] hover:shadow-baseShadow transition-all;
 
     &:first-child {
-        @apply rounded-bl-none rounded-br-none md:rounded-bl-[2rem] md:rounded-br-none md:rounded-tr-none;
+        @apply rounded-bl-none rounded-br-none md:rounded-bl-none md:rounded-br-none md:rounded-tr-[2rem];
 
         .image-contact {
             filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(115deg) brightness(108%) contrast(108%);
@@ -14,7 +14,7 @@
     }
 
     &:last-child {
-        @apply rounded-tl-none rounded-tr-none md:rounded-tl-none md:rounded-bl-none md:rounded-tr-[2rem];
+        @apply rounded-tl-none rounded-tr-none md:rounded-br-[2rem] md:rounded-bl-[2rem] md:rounded-tr-none;
     }
 
     .image-contact {
