@@ -6,7 +6,8 @@ import "./hero.scss";
 import logo from "../../../public/assets/svg/logo--strocked.svg";
 import heroImage from "../../../public/assets/images/hero/hero--desktop.jpg";
 
-export const HeroSection = ({
+
+export const HeroSection =  ({
   h1MobileTitle,
   className,
   bgImage = heroImage,
@@ -14,6 +15,8 @@ export const HeroSection = ({
   description,
   h2Title,
 }) => {
+
+
   return (
     <section>
       <div

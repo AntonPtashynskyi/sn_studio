@@ -7,7 +7,8 @@ import { SocialBanner } from "@/components/SocialBanner/SocialBanner";
 import { useTranslation } from "../i18n";
 import CoursesHomeSection from "@/components/CoursesHomeSection/CoursesHomeSection";
 
-export default async function Home({ params: { lang } }) {
+export default async function Home({ params }) {
+  const {lang} = params;
   const { t } = await useTranslation(lang, "common");
 
   return (

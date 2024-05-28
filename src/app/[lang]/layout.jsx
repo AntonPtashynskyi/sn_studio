@@ -5,6 +5,7 @@ import MobileMenu from "@/components/Navbar/MobileMenu";
 import DesktopMenu from "@/components/Navbar/DesktopMenu";
 
 import "./globals.scss";
+import Link from "next/link";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -18,7 +19,7 @@ export const metadata = {
     "Odkryj naszą platformę z usługami laminacji, stylizacji brwi i rzęs oraz permanentnym makijażem. Dołącz do nas i podkreśl swoje naturalne piękno!",
 };
 
-export default async function RootLayout({ children, params: { lang } }) {
+export default async function RootLayout({ children, modal, params: { lang } }) {
   return (
     <html lang={lang}>
       <body className={`${montserrat.variable} font-sans`}>
@@ -26,6 +27,10 @@ export default async function RootLayout({ children, params: { lang } }) {
           <MobileMenu pageLanguage={lang} />
           <DesktopMenu pageLanguage={lang} />
         </Navbar>
+        <div className="w-full bg-slate-500 h-10 z-[99999]">
+          <Link href="/modal">Open modal</Link>
+          { modal }
+        </div>
         <main className="main-content">{children}</main>
         <Footer pageLanguage={lang} />
       </body>
