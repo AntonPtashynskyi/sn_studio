@@ -5,6 +5,7 @@ import "./hero.scss";
 
 import logo from "../../../public/assets/svg/logo--strocked.svg";
 import heroImage from "../../../public/assets/images/hero/hero--desktop.jpg";
+import Link from "next/link";
 
 
 export const HeroSection =  ({
@@ -33,6 +34,7 @@ export const HeroSection =  ({
               <h1 className="text-[40px]">{h1Title}</h1>
               <p className="text-2xl max-w-[50%]">{description}</p>
               <span className="decorative-title">{h2Title}</span>
+              <Link href="/modal">Open modal</Link>
             </div>
           </div>
           <div className={`right-block content__${className}`}></div>

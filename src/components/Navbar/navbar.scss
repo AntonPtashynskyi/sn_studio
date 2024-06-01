@@ -1,5 +1,5 @@
 .navBar {
-    @apply text-black bg-transparent fixed top-0 left-0 right-0 z-[9999] flex justify-between flex-col transition-all duration-300;
+    @apply text-black bg-transparent fixed top-0 left-0 right-0 z-20 flex justify-between flex-col transition-all duration-300;
 
     &.show {
         @apply translate-y-0;
@@ -10,7 +10,7 @@
     }
 
     .mobile-menu {
-        @apply flex md:hidden justify-between items-center z-[50] relative p-4;
+        @apply flex md:hidden justify-between items-center z-20 relative p-4;
     }
 }
 

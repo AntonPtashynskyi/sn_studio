@@ -91,7 +91,7 @@ const ServicesPage = async ({params: {lang}}) => {
         />
       </div>
       <Section title="Contact">
-        <Contact />
+        <Contact t={t}/>
       </Section>
     </>
   );

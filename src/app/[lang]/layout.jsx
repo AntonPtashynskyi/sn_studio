@@ -27,12 +27,9 @@ export default async function RootLayout({ children, modal, params: { lang } }) 
           <MobileMenu pageLanguage={lang} />
           <DesktopMenu pageLanguage={lang} />
         </Navbar>
-        <div className="w-full bg-slate-500 h-10 z-[99999]">
-          <Link href="/modal">Open modal</Link>
-          { modal }
-        </div>
         <main className="main-content">{children}</main>
         <Footer pageLanguage={lang} />
+        { modal }
       </body>
     </html>
   );
