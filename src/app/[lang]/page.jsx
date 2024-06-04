@@ -6,6 +6,7 @@ import { ServiceTile } from "@/components/ServiceTile/ServiceTile";
 import { SocialBanner } from "@/components/SocialBanner/SocialBanner";
 import { useTranslation } from "../i18n";
 import CoursesHomeSection from "@/components/CoursesHomeSection/CoursesHomeSection";
+import ModalContent from "@/components/Modal/Modal";
 
 export default async function Home({ params }) {
   const {lang} = params;
@@ -19,6 +20,7 @@ export default async function Home({ params }) {
         h1Title="What is Lorem Ipsum?"
         description="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
         h2Title="Cześć!"
+        CTAText="Zapisz się!"
       />
       <Section>
         <div>

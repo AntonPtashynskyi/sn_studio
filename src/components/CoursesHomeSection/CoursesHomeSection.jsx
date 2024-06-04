@@ -1,5 +1,6 @@
 import React from "react";
 import { CourseTile } from "../CourseTile/CourseTile";
+import Link from "next/link";
 
 const CoursesHomeSection = ({ t, lang }) => {
   return (
@@ -11,9 +12,7 @@ const CoursesHomeSection = ({ t, lang }) => {
         )}
         <br />
         {t("Get in touch with me to schedule a")}{" "}
-        <a href={`/${lang}#contact`} className="text-[#EDC385] font-semibold">
-          {t("free consultation")}
-        </a>
+        <Link href="/modal" className="text-[#EDC385] font-semibold">{t("free consultation")}</Link>
       </p>
       <div className="course-tile-container">
         <CourseTile

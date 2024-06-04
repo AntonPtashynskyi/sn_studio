@@ -1,3 +1,11 @@
+.hero-base-section {
+    @media (min-width: 768px) {
+        background-image: none;
+        background-color: #f6f6eb;
+        height: 100vh;
+    }
+}
+
 .hero {
     overflow: hidden;
     background-image: url("/assets/images/hero/hero--mobile.jpg");
@@ -7,8 +15,6 @@
 
     @media (min-width: 768px) {
         background-image: none;
-        background-color: #f6f6eb;
-        height: 100vh;
     }
 
     @media (max-width: 768px) {

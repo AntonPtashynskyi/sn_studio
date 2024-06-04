@@ -25,6 +25,7 @@ const ServicesPage = async ({params: {lang}}) => {
         h1Title="Najlepsze brwi"
         description="Jak zdobyć najkepszy kształt"
         h2Title="Brwi!"
+        CTAText="Zapisz się na usługę!"
       />
       <div className="content-block">
         <ServiceDescription

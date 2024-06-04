@@ -1,8 +1,9 @@
 import React from 'react'
 
-export default async function Modal() {
+function DefaultModalPage() {
   return (
     <div></div>
   )
 }
 
+export default DefaultModalPage

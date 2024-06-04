@@ -27,11 +27,10 @@ export default function Modal () {
   }, [onClose]);
     
   return(
-    <div className='backdrop fixed inset-0 z-[50]' onClick={(e) => onClose(e)}>
-      <div className="bg-gray-50 bg-opacity-40 pointer-events-none z-[51] absolute inset-0 backdrop-blur-[2px]"></div>
-      <div className="modal w-[95%] md:max-w-xl h-[95%] md:h-auto overflow-y-scroll md:overflow-hidden  bg-white fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col z-[52] rounded-lg md:rounded-lg p-4 md:p-7 border border-black">
-        <ModalContent route={route}/>
+      <div className="backdrop bg-black bg-opacity-40 z-[51] fixed inset-0 backdrop-blur-[2px]" onClick={(e) => onClose(e)}>
+        <div className="modal w-[95%] md:max-w-xl h-[95%] md:h-[80%] md:max-h-[47rem] bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col z-[52] rounded-lg md:rounded-lg p-4 md:p-7 shadow-lg">
+          <ModalContent />
+        </div>
       </div>
-    </div>
   )
 }

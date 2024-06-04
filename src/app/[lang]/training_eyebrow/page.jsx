@@ -24,6 +24,7 @@ const BrowsPage = async ({ params: { lang } }) => {
         h1Title="Szkolenia"
         description="Najlepszę szkolenie"
         h2Title="Szkolenia!"
+        CTAText="Zapisz się na szkolenie"
       />
       <Section id="brows_courses_theory">
         <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
