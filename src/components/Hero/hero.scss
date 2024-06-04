@@ -4,6 +4,20 @@
         background-color: #f6f6eb;
         height: 100vh;
     }
+
+    &.main-page {
+        background-image: url("/assets/images/hero/hero-bg.png");
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    &.services_page {
+        background-image: url("/assets/images/hero/hero-bg--services.png");
+        background-size: contain;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
 }
 
 .hero {
@@ -18,7 +32,7 @@
     }
 
     @media (max-width: 768px) {
-        &__brows_page {
+        &__services_page {
             background-image: url("/assets/images/hero/hero__brows.jpg");
         }
     }

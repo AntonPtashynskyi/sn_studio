@@ -6,7 +6,9 @@ import { ServiceTile } from "@/components/ServiceTile/ServiceTile";
 import { SocialBanner } from "@/components/SocialBanner/SocialBanner";
 import { useTranslation } from "../i18n";
 import CoursesHomeSection from "@/components/CoursesHomeSection/CoursesHomeSection";
-import ModalContent from "@/components/Modal/Modal";
+import Image from "next/image";
+
+import aboutMe from "@public/assets/images/main/about-me.png";
 
 export default async function Home({ params }) {
   const {lang} = params;
@@ -17,20 +19,21 @@ export default async function Home({ params }) {
       <HeroSection
         h1MobileTitle="In </br> Brows"
         className="main-page"
-        h1Title="What is Lorem Ipsum?"
-        description="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+        description="Chcesz podkreślić swoje naturalne piękno lub nauczyć się tego zawodowo? Skontaktuj się ze mną już dziś!"
         h2Title="Cześć!"
-        CTAText="Zapisz się!"
+        CTAText="Umów się!"
       />
-      <Section>
-        <div>
-          Odkryj pełną gamę usług laminacji, stylizacji brwi i rzęs, a także
-          permanentnego makijażu brwi i ust na naszej platformie. Zanurz się w
-          świecie piękna i elegancji, korzystając z naszych profesjonalnych
-          usług, które podkreślą Twoje naturalne piękno. Ponadto, oferujemy
-          kursy, które umożliwią Ci opanowanie tych technik, abyś mógł/a w pełni
-          wykorzystać swój talent. Dołącz do naszej społeczności i odkryj, jak
-          możemy pomóc Ci osiągnąć pożądane efekty!
+      <Section  title={t("O mnie")} id="about-me">
+        <div className="flex items-center gap-10">
+        <Image
+            src={aboutMe}
+            width={300}
+            height={300}
+            alt="Inna"
+          />
+          <p className="text-lg md:text-2xl font-light bg-darkBgColor text-black p-6 rounded-sm">
+            Hej, nazywam się Inna Snisar Jestem doświadczoną stylistką brwi i rzęs, specjalizującą się w tworzeniu naturalnych, harmonijnych efektów, które podkreślają indywidualne piękno każdej klientki. Prowadzę także profesjonalne szkolenia dla kursantek z Polski i zagranicy, dzieląc się swoją wiedzą i pasją do stylizacji.
+          </p>
         </div>
       </Section>
       <Section>

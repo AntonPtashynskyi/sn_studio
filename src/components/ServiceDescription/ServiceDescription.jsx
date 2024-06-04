@@ -25,15 +25,15 @@ export const ServiceDescription = ({
           />
           {positionNumber && <span className="service--decorative-number">{positionNumber}</span>}
         </div>
-        <div className="service--content-block wrapper ">
+        <div className="service--content-block wrapper">
           <h2
             className="service--title"
             dangerouslySetInnerHTML={{ __html: title }}
           ></h2>
-          <p>{copyOne}</p>
+          <p className="text-lg">{copyOne}</p>
           {copyTwo && (
             <>
-              <p className="mt-3">Zabieg obejmuje:</p>
+              <p className="mt-3 text-lg font-bold">Zabieg obejmuje:</p>
               <ul
                 className="service--list"
                 dangerouslySetInnerHTML={{ __html: copyTwo }}

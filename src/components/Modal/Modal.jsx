@@ -105,7 +105,7 @@ function ModalContent() {
                             <div>
                                 <input 
                                     {...register("contact")}
-                                    type="radio" id="phone-contact" name="contact" value="phone" defaultChecked className='mr-2'/>
+                                    type="radio" id="phone-contact" name="contact" value="call" defaultChecked className='mr-2'/>
                                 <label htmlFor="phone-contact">Telefon</label>
                             </div>
 

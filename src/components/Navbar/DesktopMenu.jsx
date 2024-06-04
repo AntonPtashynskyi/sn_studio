@@ -42,7 +42,8 @@ export default async function DesktopMenu({ pageLanguage }) {
           <MenuLink
             href={`/${pageLanguage}/training_eyebrow`}
             key="training_eyebrow"
-            title={t("Eyebrow lamination training")}
+            // TODO Transalate
+            title={t("Basic Brows")}
           />
         </MenuDropDown>
         <MenuLink

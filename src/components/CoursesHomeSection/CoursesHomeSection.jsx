@@ -16,26 +16,42 @@ const CoursesHomeSection = ({ t, lang }) => {
       </p>
       <div className="course-tile-container">
         <CourseTile
-          time="10h ~"
-          title={t("Eyebrow lamination")}
           // TODO! Translate
-          description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"
+          time="2 dni"
+          title={t("Basic Brows")}
+          description="Szkolenie podstawowe ze stylizacji brwi. Obejmuje: geometrię brwi, koloryzacja farbką i henną, regulacją pęsettą i woskiem."
           t={t}
           url={`${lang}/training_eyebrow`}
         />
         <CourseTile
-          time="10h ~"
-          title={t("Eyebrow architecture")}
           // TODO! Translate
-          description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"
+          time="3 dni"
+          title={t("Basic Brows+Lami")}
+          description="Szkolenie podstawowe ze stylizacji brwi + szkolenie z laminacji brwi"
           t={t}
           url={`${lang}/training_eyebrow`}
         />
         <CourseTile
-          time="10h ~"
+          // TODO! Translate
+          time="2 dni"
           title={t("Eyelash lamination")}
+          description="Szkolenie z laminacji rzęs od A do Z. Zawierające prace na trzech markach preparatów: Inley, Elan, Zola. Oraz wszystkie typy skęrów."
+          t={t}
+          url={`${lang}/training_eyebrow`}
+        />
+        <CourseTile
           // TODO! Translate
-          description="Program  szkoleniowy z laminacji brwi w którym się dowiesz jak poprawnie robuić laminacje"
+          time="1 dzień"
+          title={t("Lami brows")}
+          description="Szkolenie przeznaczone dla osób z podstawołą wiedzą o stylizacji brwi. Zawiera dużą część teoretyczną o chenii preparatów i biocheii włosa. Koloryzacja bez zaciemnineia włosków."
+          t={t}
+          url={`${lang}/training_eyebrow`}
+        />
+        <CourseTile
+          // TODO! Translate
+          time="1 dzień"
+          title={t("Doszkolenie")}
+          description="Podwyszenie kwalifikacji w dowolym zakeresię dostosowane indywidualnie do każdej kursanti."
           t={t}
           url={`${lang}/training_eyebrow`}
         />

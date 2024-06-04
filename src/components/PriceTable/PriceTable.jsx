@@ -12,15 +12,15 @@ export const PriceTable = ({ t }) => {
           <div className="price--description">
             <div className="flex font-medium gap-[1rem]">
               <p className="price--category">{t("Eyebrow styling")}</p>
-              <p className="price--amount">80 {t("pln")}</p>
+              <p className="price--amount">100 {t("pln")}</p>
             </div>
             <div className="flex font-medium gap-[1rem]">
               <p className="price--category">{t("Eyebrow lamination")}</p>
-              <p className="price--amount">130 {t("pln")}</p>
+              <p className="price--amount">140 {t("pln")}</p>
             </div>
             <div className="flex font-medium gap-[1rem]">
               <p className="price--category">{t("Eyebrow regulation")}</p>
-              <p className="price--amount">30 {t("pln")}</p>
+              <p className="price--amount">50 {t("pln")}</p>
             </div>
           </div>
         </div>
@@ -32,7 +32,7 @@ export const PriceTable = ({ t }) => {
           <div className="price--description">
             <div className="flex font-medium gap-[1rem]">
               <p className="price--category">{t("Eyelash lamination")}</p>
-              <p className="price--amount">140 {t("pln")}</p>
+              <p className="price--amount">150 {t("pln")}</p>
             </div>
             <div className="flex font-medium gap-[1rem]">
               <p className="price--category">{t("Eyelash dye")}</p>
@@ -49,11 +49,11 @@ export const PriceTable = ({ t }) => {
           <div className="price--description">
             <div className="flex font-medium gap-[1rem]">
               <p className="price--category">{t("Permanent eyebrow makeup")}</p>
-              <p className="price--amount">700 {t("pln")}</p>
+              <p className="price--amount">800 {t("pln")}</p>
             </div>
             <div className="flex font-medium gap-[1rem]">
               <p className="price--category">{t("Permanent lip makeup")}</p>
-              <p className="price--amount">600 {t("pln")}</p>
+              <p className="price--amount">800 {t("pln")}</p>
             </div>
           </div>
         </div>
@@ -67,13 +67,13 @@ export const PriceTable = ({ t }) => {
               <p className="price--category">
                 {t("Eyebrow styling + eyelash lamination")}
               </p>
-              <p className="price--amount">200 {t("pln")}</p>
+              <p className="price--amount">230 {t("pln")}</p>
             </div>
             <div className="flex font-medium gap-[1rem]">
               <p className="price--category">
                 {t("Eyebrow lamination + eyelash lamination")}
               </p>
-              <p className="price--amount">200 {t("pln")}</p>
+              <p className="price--amount">270 {t("pln")}</p>
             </div>
           </div>
         </div>
