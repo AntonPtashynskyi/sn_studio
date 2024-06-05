@@ -24,13 +24,13 @@ export const Footer = ({ pageLanguage }) => {
             <span className="uppercase font-medium">
               {t("Training sessions")}
             </span>
-            <Link href={`/${pageLanguage}/training_eyebrow`}>
+            <Link href={`/${pageLanguage}/training-eyebrow`}>
               {t("Eyebrow architecture training")}
             </Link>
-            <Link href={`/${pageLanguage}/training_eyebrow`}>
+            <Link href={`/${pageLanguage}/training-eyebrow`}>
               {t("Eyebrow lamination training")}
             </Link>
-            <Link href={`/${pageLanguage}/training_eyebrow`}>
+            <Link href={`/${pageLanguage}/training-eyebrow`}>
               {t("Eyelash lamination training")}
             </Link>
           </div>
@@ -46,7 +46,7 @@ export const Footer = ({ pageLanguage }) => {
         </div>
         <div className="flex justify-between py-5">
           <Image src={logo} alt={t("Logo_alt")} className="object-contain" />
-          <Link href={`/${pageLanguage}/privacy_policy`}>
+          <Link href={`/${pageLanguage}/privacy-policy`}>
             {t("Privacy Policy")}
           </Link>
         </div>

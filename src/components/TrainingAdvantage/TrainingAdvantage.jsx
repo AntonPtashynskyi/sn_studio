@@ -12,8 +12,8 @@ const TrainingAdvantage = ({imagePath, imageTitle, stepTitle, stepDescription}) 
             </div>
         </div>
         <div className='right-block'>
-            <h2>{stepTitle}</h2>
-            <p>{stepDescription}</p>
+            <h2 className=' font-bold'>{stepTitle}</h2>
+            <p className='font-light'>{stepDescription}</p>
         </div>
     </div>
   )

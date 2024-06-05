@@ -4,15 +4,16 @@ import { useTranslation } from "@/app/i18n";
 import { HeroSection } from "@/components/Hero/HeroSection";
 import { Contact } from "@/components/Contact/Contact";
 import { Section } from "@/components/Section/Section";
-import { FAQBrows } from "@/components/FAQ/FAQ_brows";
 import AccordionSchedule from "@/components/AccordionSchedule/AccordionSchedule";
 import AccordionContentTheory from "@/components/BrowsCorsesDescription/AccordionContentTheory/AccordionContentTheory";
 import TrainingAdvantageList from "@/components/TrainingAdvantage/TrainingAdvantageList";
 import TrainingAdvantage from "@/components/TrainingAdvantage/TrainingAdvantage";
+import "@/components/Section/section.scss"
 
 import mainImage from "../../../../public/assets/images/courses/course_1.jpg";
 import TrainingCarousel from "@/components/TrainingCarousel/TrainingCarousel";
 import AccordionContentPractice from "@/components/BrowsCorsesDescription/AccordionContentTheory/AccordionContentPractice";
+import ModalContent from "@/components/Modal/Modal";
 
 const BrowsPage = async ({ params: { lang } }) => {
   const { t } = await useTranslation(lang, "translation");
@@ -20,27 +21,43 @@ const BrowsPage = async ({ params: { lang } }) => {
   return (
     <>
       <HeroSection
-        className="brows_page"
+        className="brows_training"
         h1MobileTitle="Training for you"
         h1Title="Szkolenie Basic Brows"
         description="Indywidualne szkolenie podstawowe ze stylizacji brwi."
         CTAText="Umów się na szkolenie!"
       />
       <Section id="brows_courses_theory">
-        <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
+      <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
           Opis Szkolenia
         </h2>
-        <div>
-          <p>BASIC BROWS to intensywne, dwudniowe szkolenie podstawowe ze stylizacji brwi, zaprojektowane dla osób pragnących zdobyć kompleksową wiedzę i umiejętności w tej dziedzinie. </p>
-          <p>Dzień pierwszy obejmuje 6-godzinną część teoretyczną, w której uczestnicy poznają:</p>
-          <ul>
-            <li>Budowę włosa i skóry, fazy wzrostu włosa oraz jego skład chemiczny.</li>
-            <li>Wpływ porowatości włosa na koloryzację i jak przygotować różne typy skóry do zabiegu.</li>
-            <li>Geometrię brwi, techniki rysunku wstępnego, koloryzację farbką i henną, oraz regulację brwi pęsetą i woskiem.</li>
-            <li>Przeciwwskazania do zabiegu oraz zalecenia dla klienta.</li>
-          </ul>
-          <p>Szkolenie zapewnia również posiłki oraz napoje dla uczestników.</p>
-          <p>Dzień drugi poświęcony jest części praktycznej, gdzie każda kursantka będzie miała okazję pracować na czterech modelkach, doskonaląc techniki omówione w części teoretycznej.</p>
+        <div className="my-8 pb-16">
+          <div className="bg-lightBgColor relative p-5 rounded-md mt-14 shadow-md">
+            <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">BASIC BROWS</h2>
+            <p className="text-lg font-light"> - to intensywne, dwudniowe szkolenie podstawowe ze stylizacji brwi, zaprojektowane dla osób pragnących zdobyć kompleksową wiedzę i umiejętności w tej dziedzinie. </p>
+          </div>
+          
+          <div className="flex gap-4 flex-col md:flex-row">
+            <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
+              <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
+                Dzień pierwszy 
+              </h2>
+              <p className="text-lg font-light mb-3">Obejmuje 6-godzinną część teoretyczną, w której uczestnicy poznają:</p>
+              <ul className="text-lg font-light list-disc  list-inside">
+                <li className="pl-3">Budowę włosa i skóry, fazy wzrostu włosa oraz jego skład chemiczny.</li>
+                <li className="pl-3">Wpływ porowatości włosa na koloryzację i jak przygotować różne typy skóry do zabiegu.</li>
+                <li className="pl-3">Geometrię brwi, techniki rysunku wstępnego, koloryzację farbką i henną, oraz regulację brwi pęsetą i woskiem.</li>
+                <li className="pl-3">Przeciwwskazania do zabiegu oraz zalecenia dla klienta.</li>
+              </ul>
+            </div>
+            
+            <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
+              <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">Dzień drugi </h2>
+              <p className="text-lg font-light">Poświęcony jest części praktycznej, gdzie każda kursantka będzie miała okazję pracować na czterech modelkach, doskonaląc techniki omówione w części teoretycznej.</p>
+            </div>
+          </div>
+
+          <p className="mt-6 text-lg font-light">* Szkolenie zapewnia również posiłki oraz napoje dla uczestników.</p>
         </div>
 
         <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
@@ -105,14 +122,16 @@ const BrowsPage = async ({ params: { lang } }) => {
           />
         </TrainingAdvantageList>
       </Section>
-      <Section>
+      <div className="main-section">
         <TrainingCarousel />
+      </div>
+      <Section>
+        <div className="mx-auto relative">
+          <ModalContent showCloseButton={false}/>
+        </div>
       </Section>
-      <Section id="brows_faq" className="faq-section">
-        <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
-          Najczęściej zadawane pytania
-        </h2>
-        <FAQBrows t={t} />
+      <Section>
+        <Contact t={t}/>
       </Section>
     </>
   );

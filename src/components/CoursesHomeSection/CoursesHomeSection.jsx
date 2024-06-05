@@ -12,7 +12,7 @@ const CoursesHomeSection = ({ t, lang }) => {
         )}
         <br />
         {t("Get in touch with me to schedule a")}{" "}
-        <Link href="/modal" className="text-[#EDC385] font-semibold">{t("free consultation")}</Link>
+        <Link href="/contact-form" className="text-[#EDC385] font-semibold">{t("free consultation")}</Link>
       </p>
       <div className="course-tile-container">
         <CourseTile
@@ -21,7 +21,7 @@ const CoursesHomeSection = ({ t, lang }) => {
           title={t("Basic Brows")}
           description="Szkolenie podstawowe ze stylizacji brwi. Obejmuje: geometrię brwi, koloryzacja farbką i henną, regulacją pęsettą i woskiem."
           t={t}
-          url={`${lang}/training_eyebrow`}
+          url={`${lang}/training-eyebrow`}
         />
         <CourseTile
           // TODO! Translate
@@ -29,7 +29,7 @@ const CoursesHomeSection = ({ t, lang }) => {
           title={t("Basic Brows+Lami")}
           description="Szkolenie podstawowe ze stylizacji brwi + szkolenie z laminacji brwi"
           t={t}
-          url={`${lang}/training_eyebrow`}
+          url={`${lang}/training-eyebrow`}
         />
         <CourseTile
           // TODO! Translate
@@ -37,7 +37,7 @@ const CoursesHomeSection = ({ t, lang }) => {
           title={t("Eyelash lamination")}
           description="Szkolenie z laminacji rzęs od A do Z. Zawierające prace na trzech markach preparatów: Inley, Elan, Zola. Oraz wszystkie typy skęrów."
           t={t}
-          url={`${lang}/training_eyebrow`}
+          url={`${lang}/training-eyebrow`}
         />
         <CourseTile
           // TODO! Translate
@@ -45,7 +45,7 @@ const CoursesHomeSection = ({ t, lang }) => {
           title={t("Lami brows")}
           description="Szkolenie przeznaczone dla osób z podstawołą wiedzą o stylizacji brwi. Zawiera dużą część teoretyczną o chenii preparatów i biocheii włosa. Koloryzacja bez zaciemnineia włosków."
           t={t}
-          url={`${lang}/training_eyebrow`}
+          url={`${lang}/training-eyebrow`}
         />
         <CourseTile
           // TODO! Translate
@@ -53,7 +53,7 @@ const CoursesHomeSection = ({ t, lang }) => {
           title={t("Doszkolenie")}
           description="Podwyszenie kwalifikacji w dowolym zakeresię dostosowane indywidualnie do każdej kursanti."
           t={t}
-          url={`${lang}/training_eyebrow`}
+          url={`${lang}/training-eyebrow`}
         />
       </div>
     </>

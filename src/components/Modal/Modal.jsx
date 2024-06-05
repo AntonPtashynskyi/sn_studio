@@ -9,7 +9,7 @@ import { addEntry } from '@/app/actions';
 
 import closeIcon from "@public/assets/svg/icon__close.svg";
 
-function ModalContent() {
+function ModalContent({showCloseButton = true}) {
     const { register, handleSubmit, watch, reset, formState: { errors, isValid }, formState: { isSubmitting }  } = useForm({mode: 'onChange'});
     const [isError, setIsError] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
@@ -24,7 +24,7 @@ function ModalContent() {
             setIsSuccess(true);
             setTimeout(()=> {
                 setIsSuccess(false);
-                route.back();
+                showCloseButton && route.back();
             }, 4000)
         } else {
             setIsError(true)
@@ -50,9 +50,11 @@ function ModalContent() {
                     <p className='text-white text-center'>Ups! Coś poszło nie tak</p>
                 </div>
             }
-            <span onClick={() => route.back()} className='self-end cursor-pointer'>
-                <Image src={closeIcon} width={20} alt='Close icon'/>
-            </span>
+            { showCloseButton && 
+                <span onClick={() => route.back()} className='self-end cursor-pointer'>
+                    <Image src={closeIcon} width={20} alt='Close icon'/>
+                </span>
+            }
             <form className='flex flex-col gap-5 flex-grow h-[95%]' onSubmit={handleSubmit(onSubmit)}>
             <p className='text-xl font-bold uppercase'>Formularz kontaktowy</p>
             <div className='flex flex-col gap-5 overflow-y-auto'>

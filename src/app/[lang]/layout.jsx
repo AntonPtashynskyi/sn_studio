@@ -19,7 +19,7 @@ export const metadata = {
     "Odkryj naszą platformę z usługami laminacji, stylizacji brwi i rzęs oraz permanentnym makijażem. Dołącz do nas i podkreśl swoje naturalne piękno!",
 };
 
-export default async function RootLayout({ children, modal, params: { lang } }) {
+export default async function RootLayout({ children, contact_form, params: { lang } }) {
   return (
     <html lang={lang}>
       <body className={`${montserrat.variable} font-sans`}>
@@ -29,7 +29,7 @@ export default async function RootLayout({ children, modal, params: { lang } }) 
         </Navbar>
         <main className="main-content">{children}</main>
         <Footer pageLanguage={lang} />
-        { modal }
+        { contact_form }
       </body>
     </html>
   );

@@ -1,8 +1,9 @@
 import React from 'react'
+import "../accordion-style.scss"
 
 const AccordionContentTheory = () => {
   return (
-    <ul className="pl-[10%] pr-[10%] list-disc text-[#6C6C6C]">
+    <ul className="accordion-content-panel pl-[15%] pr-[10%] list-disc text-[#6C6C6C]">
       <li className="description-text">Budowa włosa i skóry</li>
       <li className="description-text">Fazy wzrostu włosa</li>
       <li className="description-text">Skład włosa</li>

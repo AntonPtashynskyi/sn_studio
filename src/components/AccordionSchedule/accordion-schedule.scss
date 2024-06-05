@@ -2,7 +2,7 @@
     @apply mb-4 md:mb-6;
 
     .accordion__item {
-        @apply px-5 -mb-3 cursor-pointer flex justify-between items-center text-lg uppercase w-full font-bold rounded-[3rem] z-10 relative transition-all duration-200;
+        @apply px-5 py-3 -mb-3 cursor-pointer flex justify-between items-center text-lg uppercase w-full font-bold rounded-[3rem] z-10 relative transition-all duration-200;
         background: linear-gradient(90deg, rgba(245,213,203,1) 0%, rgba(245,213,203,1) 35%, rgba(246,246,235,1) 100%);
 
         &.active {
@@ -18,7 +18,7 @@
         }
 
         .description-text {
-            @apply py-1 md:py-3 text-base md:text-xl capitalize;
+            @apply pt-1 md:pt-3 text-base md:text-xl capitalize;
         }
     }
 

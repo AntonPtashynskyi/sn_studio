@@ -1,0 +1,21 @@
+.accordion-content-panel {
+    @apply relative;
+
+    @media (width >= 768px) {
+        &:before {
+            content: "";
+            @apply absolute left-[1%] top-[10%] block w-[7rem] h-[7rem];
+            background-image: url("/assets/svg/icon--notepad.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    
+        &:after {
+            content: "";
+            @apply absolute right-[10%] bottom-[10%] block w-20 h-20;
+            background-image: url("/assets/svg/icon--pen.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}

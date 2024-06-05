@@ -36,7 +36,7 @@ function TrainingCarousel() {
         </div>
       </div>
 
-      <div className="embla__controls">
+      <div className="embla__controls container wrapper flex justify-center">
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />

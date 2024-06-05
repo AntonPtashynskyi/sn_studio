@@ -1,5 +1,5 @@
 .advantage-block {
-    @apply flex flex-col md:flex-row gap-12 justify-center md:even:flex-row-reverse;
+    @apply flex flex-col md:flex-row gap-12 justify-center md:even:flex-row-reverse md:my-8;
 
     .left-block, .right-block {
         @apply flex flex-1 justify-center flex-col ;
