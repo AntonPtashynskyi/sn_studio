@@ -32,6 +32,11 @@ export default async function DesktopMenu({ pageLanguage }) {
             key="permanent_makeup"
             title={t("Permanent Makeup")}
           />
+          <MenuLink
+            href={`/${pageLanguage}/services#faq`}
+            key="permanent_makeup"
+            title={t("FAQ")}
+          />
         </MenuDropDown>
         <MenuLink
           href={`/${pageLanguage}/#price`}

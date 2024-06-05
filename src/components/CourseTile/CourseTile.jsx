@@ -26,7 +26,7 @@ export const CourseTile = ({ title, description, time, url, t }) => {
       </div>
       <h3 className="course-tile--title">{titleArray}</h3>
       <p className="course-tile--description">{description}</p>
-      <a href={url} className="course-tile--link">
+      <a href={url} className="course-tile--link mt-auto">
         {t("Learn more")}
       </a>
     </div>

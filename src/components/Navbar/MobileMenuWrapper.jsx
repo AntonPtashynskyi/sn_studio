@@ -47,6 +47,11 @@ const MobileMenuWrapper = ({ open, pageLanguage, setOpen, t }) => {
                   title="PMU"
                   onClick={closeMobileMenu}
                 />
+                <MenuLink
+                  href={`/${pageLanguage}/services#faq`}
+                  title="FAQ"
+                  onClick={closeMobileMenu}
+                />
               </MobileMenuDropDown>
               <MobileMenuDropDown title={t("Training sessions")}>
                 <MenuLink

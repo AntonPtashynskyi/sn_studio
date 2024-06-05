@@ -50,7 +50,7 @@ const CoursesHomeSection = ({ t, lang }) => {
         <CourseTile
           // TODO! Translate
           time="1 dzień"
-          title={t("Doszkolenie")}
+          title={t(". Doszkolenie")}
           description="Podwyszenie kwalifikacji w dowolym zakeresię dostosowane indywidualnie do każdej kursanti."
           t={t}
           url={`${lang}/training-eyebrow`}

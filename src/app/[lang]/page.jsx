@@ -24,15 +24,15 @@ export default async function Home({ params }) {
         CTAText="Umów się!"
       />
       <Section  title={t("O mnie")} id="about-me">
-        <div className="flex items-center gap-10">
+        <div className="flex flex-col md:flex-row items-center gap-10">
         <Image
             src={aboutMe}
             width={300}
             height={300}
             alt="Inna"
           />
-          <p className="text-lg md:text-2xl font-light bg-darkBgColor text-black p-6 rounded-sm">
-            Hej, nazywam się Inna Snisar Jestem doświadczoną stylistką brwi i rzęs, specjalizującą się w tworzeniu naturalnych, harmonijnych efektów, które podkreślają indywidualne piękno każdej klientki. Prowadzę także profesjonalne szkolenia dla kursantek z Polski i zagranicy, dzieląc się swoją wiedzą i pasją do stylizacji.
+          <p className="relative text-lg md:text-2xl font-light bg-darkBgColor text-black p-6 rounded-lg after:w-7 after:h-7 after:bg-darkBgColor after:rotate-45 after:rounded-md after:-top-3 after:left-1/2  md:after:top-[15%] md:after:-left-3 after:-translate-x-1/2 md:after:-translate-x-0 after:absolute after:block">
+            Hej, nazywam się <span className="font-medium">Inna Snisar</span> Jestem doświadczoną stylistką brwi i rzęs, specjalizującą się w tworzeniu naturalnych, harmonijnych efektów, które podkreślają indywidualne piękno każdej klientki. Prowadzę także profesjonalne szkolenia dla kursantek z Polski i zagranicy, dzieląc się swoją wiedzą i pasją do stylizacji.
           </p>
         </div>
       </Section>

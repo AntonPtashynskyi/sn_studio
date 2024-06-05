@@ -14,6 +14,7 @@ import styledEyelashes from "../../../../public/assets/images/services/eyelashes
 import pmuBrows from "../../../../public/assets/images/services/brows_pmu.jpg";
 import pmuLips from "../../../../public/assets/images/services/lips_pmu.jpg";
 import { FAQ_services } from "@/components/FAQ/FAQ_services";
+import ModalContent from "@/components/Modal/Modal";
 
 const ServicesPage = async ({params: {lang}}) => {
   const { t } = await useTranslation(lang, "translation");
@@ -97,8 +98,14 @@ const ServicesPage = async ({params: {lang}}) => {
         </h2>
         <FAQ_services t={t} />
       </Section>
+
       <Section title="Contact">
         <Contact t={t}/>
+      </Section>
+      <Section>
+        <div className="mx-auto relative">
+          <ModalContent showCloseButton={false}/>
+        </div>
       </Section>
     </>
   );
