@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 import "./serviceDescription.scss";
+import Link from "next/link";
 
 export const ServiceDescription = ({
   title,
@@ -31,6 +32,7 @@ export const ServiceDescription = ({
             dangerouslySetInnerHTML={{ __html: title }}
           ></h2>
           <p className="text-lg">{copyOne}</p>
+          <Link href="/contact-form" className="underline text-lg font-bold">Umów się</Link>
           {copyTwo && (
             <>
               <p className="mt-3 text-lg font-bold">Zabieg obejmuje:</p>
@@ -43,11 +45,11 @@ export const ServiceDescription = ({
           <div className="service--details-block">
             <div className="service--detail">
               <p>Cena:</p>
-              <span>{price}</span>
+              <span>{price} pln</span>
             </div>
             <div className="service--detail">
               <p>Czas:</p>
-              <span>{time}</span>
+              <span>{time} min</span>
             </div>
           </div>
         </div>

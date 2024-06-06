@@ -10,25 +10,30 @@ import Link from "next/link";
 
 export const HeroSection =  ({
   h1MobileTitle,
+  mobileSubtitle,
   className,
   bgImage = heroImage,
   h1Title,
   description,
   h2Title,
-  CTAText
+  CTAText,
 }) => {
 
 
   return (
     <section className={`${className} hero-base-section`}>
       <div
-        className={`hero hero__${className} wrapper container flex flex-col justify-end md:justify-center py-[3rem] md:py-0`}
+        className={`hero hero__${className} wrapper container flex flex-col justify-end md:justify-center pt-12 pb-8 md:py-0`}
       >
-        <p
-          className="hero__text"
-          dangerouslySetInnerHTML={{ __html: h1MobileTitle }}
-        ></p>
-        <div className="hero-content">
+        <div className="mobile-only md:hidden mt-auto">
+          <h2 className="text-white uppercase font-bold opacity-80 text-xl">{mobileSubtitle}</h2>
+          <h1
+            className="hero__text"
+            dangerouslySetInnerHTML={{ __html: h1MobileTitle }}
+          ></h1>
+          <Link href={`/contact-form`} className="bg-black bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-full font-light mt-6">Umów się!</Link>
+        </div>
+        <div className="desktop-only hero-content">
           <div className="left-block">
             <div className="self-start w-full flex flex-col gap-4">
               <Image src={logo} alt="In brows" />

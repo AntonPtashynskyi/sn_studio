@@ -18,10 +18,12 @@ export default async function Home({ params }) {
     <>
       <HeroSection
         h1MobileTitle="In </br> Brows"
+        mobileSubtitle="Studio"
         className="main-page"
         description="Chcesz podkreślić swoje naturalne piękno lub nauczyć się tego zawodowo? Skontaktuj się ze mną już dziś!"
         h2Title="Cześć!"
         CTAText="Umów się!"
+        lang={lang}
       />
       <Section  title={t("O mnie")} id="about-me">
         <div className="flex flex-col md:flex-row items-center gap-10">

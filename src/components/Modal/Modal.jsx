@@ -130,7 +130,9 @@ function ModalContent({showCloseButton = true}) {
                 </div>
                 <p className='text-xs text-gray-600'>* Hej, formularz nie jest podtwiedzeniem umówienie się na wizytę. W celu umówienia się, odzwonię/opdiszę do Ciebie w najblizszej mozliwej chiwli! </p>
 
-                <div>
+                
+            </div>
+            <div>
                     <div className='flex gap-3'>
                         <input
                             {...register("rodo", {
@@ -144,7 +146,6 @@ function ModalContent({showCloseButton = true}) {
                     </div> 
                     
                 </div>
-            </div>
             <button type='submit' disabled={!isValid || isSubmitting } className='bg-black text-white px-14 py-2 w-full rounded-lg ml-auto mt-auto disabled:bg-gray-500 disabled:cursor-not-allowed'>
                 {isSubmitting ? <p>Loading...</p> : <p>Wyśli</p>}
             </button>

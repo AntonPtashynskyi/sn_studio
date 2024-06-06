@@ -5,7 +5,6 @@ import MobileMenu from "@/components/Navbar/MobileMenu";
 import DesktopMenu from "@/components/Navbar/DesktopMenu";
 
 import "./globals.scss";
-import Link from "next/link";
 
 const montserrat = Montserrat({
   subsets: ["latin"],

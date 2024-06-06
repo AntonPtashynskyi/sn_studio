@@ -22,10 +22,12 @@ const BrowsPage = async ({ params: { lang } }) => {
     <>
       <HeroSection
         className="brows_training"
-        h1MobileTitle="Training for you"
+        h1MobileTitle="Basic brows"
+        mobileSubtitle="Skolenie"
         h1Title="Szkolenie Basic Brows"
         description="Indywidualne szkolenie podstawowe ze stylizacji brwi."
         CTAText="Umów się na szkolenie!"
+        lang={lang}
       />
       <Section id="brows_courses_theory">
       <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">

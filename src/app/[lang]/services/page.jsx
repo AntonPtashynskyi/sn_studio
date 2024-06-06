@@ -23,10 +23,11 @@ const ServicesPage = async ({params: {lang}}) => {
     <>
       <HeroSection
         className="services_page"
-        h1MobileTitle="Brows"
+        h1MobileTitle="Usługi"
         description="Brwi odgrywają kluczową rolę w nadawaniu twarzy wyrazistości, kształtu i symetrii, co w wyjątkowy sposób uwydatnia naturalne piękno oczu i całej twarzy."
         h2Title="Brwi!"
         CTAText="Zapisz się na usługę!"
+        lang={lang}
       />
       <div className="content-block">
         <ServiceDescription
@@ -37,8 +38,8 @@ const ServicesPage = async ({params: {lang}}) => {
           copyTwo="<li>Indywidualny dobór kształtu brwi do urody klienta.</li>
         <li>Regulację brwi pęsetą i woskiem.</li>
         <li>Koloryzację brwi farbką lub henną pudrową.</li>"
-          price="100 zł"
-          time="30-60min"
+          price="100"
+          time="30-60"
           id="brows"
         />
         <ServiceDescription
@@ -51,16 +52,16 @@ const ServicesPage = async ({params: {lang}}) => {
         <li>Precyzyjną regulację brwi pęsetą i woskiem.</li>
         <li>Koloryzację brwi farbką</li>
         <li>Odżywienie włosków za pomocą botoksu, aby podkreślić zdrowy wygląd.</li>"
-          price="140 zł"
-          time="60 min"
+          price="140"
+          time="60"
         />
         <ServiceDescription
           title="Regulacja </br><span>brwi</span>"
           key="3"
           imageSrc={regulationBrows}
           copyOne="Regulacja brwi to proces kształtowania i porządkowania brwi za pomocą różnych technik, takich jak usuwanie nadmiaru włosków pęsetą, woskiem czy nitką. Celem regulacji brwi jest nadanie im ładnego kształtu, dostosowanego do indywidualnych cech twarzy, co może znacznie poprawić wygląd i wyrażenie spojrzenia."
-          price="50 zł"
-          time="15-30min"
+          price="50"
+          time="15-30"
         />
         <ServiceDescription
           title="Laminacja </br><span>rzęs</span>"
@@ -70,8 +71,8 @@ const ServicesPage = async ({params: {lang}}) => {
           copyTwo="<li>Dobór odpowiedniego skrętu rzęs.</li>
         <li> Koloryzacje rzęs</li>
         <li>Odżywienie rzęs za pomocą botoksu</li>"
-          price="150 zł"
-          time="60-90min"
+          price="150"
+          time="60-90"
           id="lashes"
         />
         <ServiceDescription
@@ -79,8 +80,8 @@ const ServicesPage = async ({params: {lang}}) => {
           key="5"
           imageSrc={pmuBrows}
           copyOne="Zabieg makijażu permanentnego brwi, znany także jako mikropigmentacja brwi, to procedura, w której pigment jest wprowadzany pod skórę w celu trwałego podkreślenia kształtu i koloru brwi. Poprzez precyzyjne umieszczanie pigmentu, osiąga się efekt trwającego makijażu brwi, eliminując konieczność codziennego ręcznego ich rysowania czy wypełniania. To rozwiązanie może być szczególnie atrakcyjne dla osób pragnących oszczędzić czas na codziennym makijażu brwi."
-          price="800 zł"
-          time="120-160min"
+          price="800"
+          time="120-160"
           id="pmu"
         />
         <ServiceDescription
@@ -88,8 +89,8 @@ const ServicesPage = async ({params: {lang}}) => {
           key="6"
           imageSrc={pmuLips}
           copyOne="Makijaż permanentny ust, znany również jako mikropigmentacja ust, to innowacyjny zabieg, w którym pigment jest wprowadzany pod skórę, trwale podkreślając kontur i kolor ust. Ten zabieg może poprawić symetrię ust, nadać im pełniejszy wygląd lub po prostu podkreślić naturalny kształt. Dzięki makijażowi permanentnemu ust możesz cieszyć się trwałym efektem, eliminując konieczność częstego nakładania szminki czy konturówki. Przed przystąpieniem do zabiegu zawsze warto skonsultować się z doświadczonym specjalistą, aby uzyskać efekt dostosowany do Twoich indywidualnych preferencji."
-          price="800 zł"
-          time="120-160min"
+          price="800"
+          time="120-160"
         />
       </div>
       <Section id="faq" className="faq-section">
