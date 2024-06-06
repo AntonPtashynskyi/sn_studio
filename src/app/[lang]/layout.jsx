@@ -12,6 +12,8 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
+// TODO Add meta data!!! to all pages. 
+// TODO Add favicon.
 export const metadata = {
   title: "Brows Studio In-Brows",
   description:
