@@ -1,6 +1,7 @@
 import React from "react";
 
 import "./priceTable.scss";
+import Link from "next/link";
 
 export const PriceTable = ({ t }) => {
   return (
@@ -78,6 +79,7 @@ export const PriceTable = ({ t }) => {
           </div>
         </div>
       </div>
+      <Link href={`/contact-form`} className="bg-black bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] mx-auto font-light mt-6">{t("Make an appointment!")}</Link>
     </div>
   );
 };

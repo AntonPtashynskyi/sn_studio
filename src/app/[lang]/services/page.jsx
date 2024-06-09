@@ -56,56 +56,56 @@ const ServicesPage = async ({params: {lang}}) => {
           t={t}
         />
         <ServiceDescription
-          title="Laminacja </br><span>brwi</span>"
+          title={`${t("Lamination")}</br><span>${t("eyebrow")}</span>`}
           key="2"
           imageSrc={laminationBrows}
-          copyOne="Laminacja brwi - to zabieg kosmetyczny mający na celu podkreślenie i ukształtowanie brwi. Podczas tego zabiegu brwi są modelowane, aby uzyskać pożądany kształt i wygląd"
-          copyTwo="<li>Wymodelowanie i ukształtowanie włosków za pomocą specjalnych preparatów.</li>
-                  <li>Indywidualny dobór kształtu brwi, harmonijnie dostosowany do urody klienta.</li>
-                  <li>Precyzyjną regulację brwi pęsetą i woskiem.</li>
-                  <li>Koloryzację brwi farbką</li>
-                  <li>Odżywienie włosków za pomocą botoksu, aby podkreślić zdrowy wygląd.</li>"
+          copyOne={t("Eyebrow lamination is a cosmetic procedure aimed at emphasizing and shaping the eyebrows. During this procedure, the eyebrows are shaped to achieve the desired shape and appearance.")}
+          copyTwo={`<li>${t("Modeling and shaping the hairs using special preparations")}</li>
+                    <li>${t("Individual selection of the eyebrow shape, harmoniously adjusted to the client's beauty.")}</li>
+                    <li>${t("Precise eyebrow regulation with tweezers and wax.")}</li>
+                    <li>${t("Coloring the eyebrows with dye.")}</li>
+                    <li>${t("Nourishment of the hairs using botox to emphasize a healthy appearance.")}</li>`}
           price="140"
           time="60"
           t={t}
         />
         <ServiceDescription
-          title="Regulacja </br><span>brwi</span>"
+          title={`${t("Regulation")}</br><span>${t("eyebrow")}</span>`}
           key="3"
           imageSrc={regulationBrows}
-          copyOne="Regulacja brwi to proces kształtowania i porządkowania brwi za pomocą różnych technik, takich jak usuwanie nadmiaru włosków pęsetą, woskiem czy nitką. Celem regulacji brwi jest nadanie im ładnego kształtu, dostosowanego do indywidualnych cech twarzy, co może znacznie poprawić wygląd i wyrażenie spojrzenia."
+          copyOne={t("Eyebrow shaping is the process of shaping and tidying eyebrows using various techniques such as tweezing, waxing, or threading. The aim of eyebrow shaping is to give them a nice shape, tailored to the individual facial features, which can significantly enhance appearance and expression.")}
           price="50"
           time="15-30"
           t={t}
         />
         <ServiceDescription
-          title="Laminacja </br><span>rzęs</span>"
+          title={`${t("Lamination")}</br><span>${t("lashes")}</span>`}
           key="4"
           imageSrc={styledEyelashes}
-          copyOne="Laminacja rzęs to zabieg kosmetyczny, celem którego jest podkreślenie naturalnego piękna rzęs poprzez podkręcenie i uniesienie ich od nasady za pomocą specjalnych wałków i preparatów. W rezultacie uzyskujemy uniesione i podkręcone naturalne rzęsy, efekt utrzymuje się nawet do 2 miesięcy."
-          copyTwo="<li>Dobór odpowiedniego skrętu rzęs.</li>
-        <li> Koloryzacje rzęs</li>
-        <li>Odżywienie rzęs za pomocą botoksu</li>"
+          copyOne={t("Eyelash lamination is a cosmetic procedure aimed at enhancing the natural beauty of lashes by curling and lifting them from the base using special rods and preparations. As a result, we get lifted and curled natural lashes, and the effect lasts up to 2 months.")}
+          copyTwo={`<li>${t("Selection of the appropriate curl of lashes.")}</li>
+                   <li>${t("Eyelash coloring.")}</li>
+                   <li>${t("Nourishment of lashes using botox.")}</li>`}
           price="150"
           time="60-90"
           id="lashes"
           t={t}
         />
         <ServiceDescription
-          title="Makijaż permanentny </br><span>brwi</span>"
+          title={`${t("Permanent makeup")}</br><span>${t("eyebrow")}</span>`}
           key="5"
           imageSrc={pmuBrows}
-          copyOne="Zabieg makijażu permanentnego brwi, znany także jako mikropigmentacja brwi, to procedura, w której pigment jest wprowadzany pod skórę w celu trwałego podkreślenia kształtu i koloru brwi. Poprzez precyzyjne umieszczanie pigmentu, osiąga się efekt trwającego makijażu brwi, eliminując konieczność codziennego ręcznego ich rysowania czy wypełniania. To rozwiązanie może być szczególnie atrakcyjne dla osób pragnących oszczędzić czas na codziennym makijażu brwi."
+          copyOne={t("Permanent eyebrow makeup, also known as eyebrow micropigmentation, is a procedure in which pigment is inserted into the skin to permanently emphasize the shape and color of the eyebrows. By precisely placing the pigment, the effect of lasting eyebrow makeup is achieved, eliminating the need for daily manual drawing or filling. This solution may be particularly attractive for people looking to save time on their daily eyebrow makeup.")}
           price="800"
           time="120-160"
           id="pmu"
           t={t}
         />
         <ServiceDescription
-          title="Makijaż permanentny </br><span>ust</span>"
+          title={`${t("Permanent makeup")}</br><span>${t("lips")}</span>`}
           key="6"
           imageSrc={pmuLips}
-          copyOne="Makijaż permanentny ust, znany również jako mikropigmentacja ust, to innowacyjny zabieg, w którym pigment jest wprowadzany pod skórę, trwale podkreślając kontur i kolor ust. Ten zabieg może poprawić symetrię ust, nadać im pełniejszy wygląd lub po prostu podkreślić naturalny kształt. Dzięki makijażowi permanentnemu ust możesz cieszyć się trwałym efektem, eliminując konieczność częstego nakładania szminki czy konturówki. Przed przystąpieniem do zabiegu zawsze warto skonsultować się z doświadczonym specjalistą, aby uzyskać efekt dostosowany do Twoich indywidualnych preferencji."
+          copyOne={t("Permanent lip makeup, also known as lip micropigmentation, is an innovative procedure in which pigment is introduced into the skin, permanently emphasizing the contour and color of the lips. This procedure can improve lip symmetry, give them a fuller appearance, or simply accentuate their natural shape. With permanent lip makeup, you can enjoy long-lasting effects, eliminating the need for frequent lipstick or lip liner application. It's always worth consulting with an experienced specialist before undergoing the procedure to achieve results tailored to your individual preferences.")}
           price="800"
           time="120-160"
           t={t}
