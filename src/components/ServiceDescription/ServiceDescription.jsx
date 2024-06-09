@@ -13,6 +13,7 @@ export const ServiceDescription = ({
   price,
   time,
   id,
+  t
 }) => {
   return (
     <section className="content-section wrapper" id={id}>
@@ -32,10 +33,10 @@ export const ServiceDescription = ({
             dangerouslySetInnerHTML={{ __html: title }}
           ></h2>
           <p className="text-lg">{copyOne}</p>
-          <Link href="/contact-form" className="underline text-lg font-bold">Umów się</Link>
+          <Link href="/contact-form" className="underline text-lg font-bold">{t("Make an appointment!")}</Link>
           {copyTwo && (
             <>
-              <p className="mt-3 text-lg font-bold">Zabieg obejmuje:</p>
+              <p className="mt-3 text-lg font-bold">{t("The treatment includes:")}</p>
               <ul
                 className="service--list"
                 dangerouslySetInnerHTML={{ __html: copyTwo }}
@@ -44,12 +45,12 @@ export const ServiceDescription = ({
           )}
           <div className="service--details-block">
             <div className="service--detail">
-              <p>Cena:</p>
-              <span>{price} pln</span>
+              <p>{t("Price")}</p>
+              <span>{price} {t("pln")}</span>
             </div>
             <div className="service--detail">
-              <p>Czas:</p>
-              <span>{time} min</span>
+              <p>{t("Time:")}</p>
+              <span>{time} {t("min")}</span>
             </div>
           </div>
         </div>

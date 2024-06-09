@@ -31,7 +31,7 @@ export const HeroSection =  ({
             className="hero__text"
             dangerouslySetInnerHTML={{ __html: h1MobileTitle }}
           ></h1>
-          <Link href={`/contact-form`} className="bg-black bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-full font-light mt-6">Umów się!</Link>
+          <Link href={`/contact-form`} className="bg-black bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] mx-auto font-light mt-6">{CTAText}</Link>
         </div>
         <div className="desktop-only hero-content">
           <div className="left-block">

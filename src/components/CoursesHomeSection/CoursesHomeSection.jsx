@@ -16,42 +16,37 @@ const CoursesHomeSection = ({ t, lang }) => {
       </p>
       <div className="course-tile-container">
         <CourseTile
-          // TODO! Translate
-          time="2 dni"
+          time={`2 ${t("days")}`}
           title={t("Basic Brows")}
-          description="Szkolenie podstawowe ze stylizacji brwi. Obejmuje: geometrię brwi, koloryzacja farbką i henną, regulacją pęsettą i woskiem."
+          description={t("Basic eyebrow styling training. Includes: eyebrow geometry, coloring with dye and henna, tweezing and waxing.")}
           t={t}
           url={`${lang}/training-eyebrow`}
         />
         <CourseTile
-          // TODO! Translate
-          time="3 dni"
+          time={`3 ${t("days")}`}
           title={t("Basic Brows+Lami")}
-          description="Szkolenie podstawowe ze stylizacji brwi + szkolenie z laminacji brwi"
+          description={t("Basic eyebrow styling training + eyebrow lamination training")}
           t={t}
           url={`${lang}/training-eyebrow`}
         />
         <CourseTile
-          // TODO! Translate
-          time="2 dni"
+          time={`2 ${t("days")}`}
           title={t("Eyelash lamination")}
-          description="Szkolenie z laminacji rzęs od A do Z. Zawierające prace na trzech markach preparatów: Inley, Elan, Zola. Oraz wszystkie typy skęrów."
+          description={t("Eyelash lamination training from A to Z. Includes work with three brands of products: Inley, Elan, Zola. And all types of curls.")}
           t={t}
           url={`${lang}/training-eyebrow`}
         />
         <CourseTile
-          // TODO! Translate
-          time="1 dzień"
+          time={`1 ${t("day")}`}
           title={t("Lami brows")}
-          description="Szkolenie przeznaczone dla osób z podstawołą wiedzą o stylizacji brwi. Zawiera dużą część teoretyczną o chenii preparatów i biocheii włosa. Koloryzacja bez zaciemnineia włosków."
+          description={t("Training intended for people with basic knowledge of eyebrow styling. Contains a large theoretical part about the chemistry of products and hair biochemistry. Coloring without darkening the hairs.")}
           t={t}
           url={`${lang}/training-eyebrow`}
         />
         <CourseTile
-          // TODO! Translate
-          time="1 dzień"
-          title={t(". Doszkolenie")}
-          description="Podwyszenie kwalifikacji w dowolym zakeresię dostosowane indywidualnie do każdej kursanti."
+          time={`1 ${t("day")}`}
+          title={t("Supplementary training")}
+          description={t("Qualification upgrade in any area tailored individually to each student.")}
           t={t}
           url={`${lang}/training-eyebrow`}
         />

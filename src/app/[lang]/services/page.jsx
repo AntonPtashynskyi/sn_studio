@@ -28,30 +28,32 @@ export async function generateMetadata({ params }) {
 }
 
 const ServicesPage = async ({params: {lang}}) => {
-  const { t } = await useTranslation(lang, "translation");
+  const { t } = await useTranslation(lang, "common");
 
   return (
     <>
       <HeroSection
         className="services_page"
-        h1MobileTitle="Usługi"
-        description="Brwi odgrywają kluczową rolę w nadawaniu twarzy wyrazistości, kształtu i symetrii, co w wyjątkowy sposób uwydatnia naturalne piękno oczu i całej twarzy."
+        h1MobileTitle={t("Services")}
+        description={t("Eyebrows play a key role in giving the face expressiveness, shape, and symmetry, uniquely highlighting the natural beauty of the eyes and the entire face.")}
         h2Title="Brwi!"
-        CTAText="Zapisz się na usługę!"
+        CTAText={t("Sign up for a service!")}
         lang={lang}
       />
       <div className="content-block">
         <ServiceDescription
-          title="Stylizacja </br><span>brwi</span>"
+          title={`${t("styling")}</br><span>${t("eyebrow")}</span>`}
           key="1"
           imageSrc={styledBrows}
-          copyOne="Stylizacja brwi to delikatny zabieg, który pomaga odkryć twój indywidualny kształt i subtelnie podkreślić naturalne piękno."
-          copyTwo="<li>Indywidualny dobór kształtu brwi do urody klienta.</li>
-        <li>Regulację brwi pęsetą i woskiem.</li>
-        <li>Koloryzację brwi farbką lub henną pudrową.</li>"
+          copyOne={t("Eyebrow styling is a delicate procedure that helps discover your individual shape and subtly highlight natural beauty.")}
+          copyTwo={`<li>${t("Individual selection of eyebrow shape to match the client's beauty.")}</li>
+                    <li>${t("Tweezing and waxing eyebrow shaping.")}</li>
+                    <li>${t("Eyebrow coloring with dye or powder henna.")}</li>`
+                  }
           price="100"
           time="30-60"
           id="brows"
+          t={t}
         />
         <ServiceDescription
           title="Laminacja </br><span>brwi</span>"
@@ -59,12 +61,13 @@ const ServicesPage = async ({params: {lang}}) => {
           imageSrc={laminationBrows}
           copyOne="Laminacja brwi - to zabieg kosmetyczny mający na celu podkreślenie i ukształtowanie brwi. Podczas tego zabiegu brwi są modelowane, aby uzyskać pożądany kształt i wygląd"
           copyTwo="<li>Wymodelowanie i ukształtowanie włosków za pomocą specjalnych preparatów.</li>
-        <li>Indywidualny dobór kształtu brwi, harmonijnie dostosowany do urody klienta.</li>
-        <li>Precyzyjną regulację brwi pęsetą i woskiem.</li>
-        <li>Koloryzację brwi farbką</li>
-        <li>Odżywienie włosków za pomocą botoksu, aby podkreślić zdrowy wygląd.</li>"
+                  <li>Indywidualny dobór kształtu brwi, harmonijnie dostosowany do urody klienta.</li>
+                  <li>Precyzyjną regulację brwi pęsetą i woskiem.</li>
+                  <li>Koloryzację brwi farbką</li>
+                  <li>Odżywienie włosków za pomocą botoksu, aby podkreślić zdrowy wygląd.</li>"
           price="140"
           time="60"
+          t={t}
         />
         <ServiceDescription
           title="Regulacja </br><span>brwi</span>"
@@ -73,6 +76,7 @@ const ServicesPage = async ({params: {lang}}) => {
           copyOne="Regulacja brwi to proces kształtowania i porządkowania brwi za pomocą różnych technik, takich jak usuwanie nadmiaru włosków pęsetą, woskiem czy nitką. Celem regulacji brwi jest nadanie im ładnego kształtu, dostosowanego do indywidualnych cech twarzy, co może znacznie poprawić wygląd i wyrażenie spojrzenia."
           price="50"
           time="15-30"
+          t={t}
         />
         <ServiceDescription
           title="Laminacja </br><span>rzęs</span>"
@@ -85,6 +89,7 @@ const ServicesPage = async ({params: {lang}}) => {
           price="150"
           time="60-90"
           id="lashes"
+          t={t}
         />
         <ServiceDescription
           title="Makijaż permanentny </br><span>brwi</span>"
@@ -94,6 +99,7 @@ const ServicesPage = async ({params: {lang}}) => {
           price="800"
           time="120-160"
           id="pmu"
+          t={t}
         />
         <ServiceDescription
           title="Makijaż permanentny </br><span>ust</span>"
@@ -102,6 +108,7 @@ const ServicesPage = async ({params: {lang}}) => {
           copyOne="Makijaż permanentny ust, znany również jako mikropigmentacja ust, to innowacyjny zabieg, w którym pigment jest wprowadzany pod skórę, trwale podkreślając kontur i kolor ust. Ten zabieg może poprawić symetrię ust, nadać im pełniejszy wygląd lub po prostu podkreślić naturalny kształt. Dzięki makijażowi permanentnemu ust możesz cieszyć się trwałym efektem, eliminując konieczność częstego nakładania szminki czy konturówki. Przed przystąpieniem do zabiegu zawsze warto skonsultować się z doświadczonym specjalistą, aby uzyskać efekt dostosowany do Twoich indywidualnych preferencji."
           price="800"
           time="120-160"
+          t={t}
         />
       </div>
       <Section id="faq" className="faq-section">

@@ -30,23 +30,23 @@ export default async function Home({ params }) {
     <>
       <HeroSection
         h1MobileTitle="In </br> Brows"
-        mobileSubtitle="Studio"
+        mobileSubtitle={t("Studio")}
         className="main-page"
-        description="Chcesz podkreślić swoje naturalne piękno lub nauczyć się tego zawodowo? Skontaktuj się ze mną już dziś!"
+        description={t("Do you want to enhance your natural beauty or learn to do it professionally? Contact me today!")}
         h2Title="Cześć!"
-        CTAText="Umów się!"
+        CTAText={t("Make an appointment!")}
         lang={lang}
       />
-      <Section  title={t("O mnie")} id="about-me">
+      <Section  title={t("About me")} id="about-me">
         <div className="flex flex-col md:flex-row items-center gap-10">
         <Image
             src={aboutMe}
             width={300}
             height={300}
-            alt="Inna"
+            alt={t("Inna Snisar")}
           />
           <p className="relative text-lg md:text-2xl font-light bg-darkBgColor text-black p-6 rounded-lg after:w-7 after:h-7 after:bg-darkBgColor after:rotate-45 after:rounded-md after:-top-3 after:left-1/2  md:after:top-[15%] md:after:-left-3 after:-translate-x-1/2 md:after:-translate-x-0 after:absolute after:block">
-            Hej, nazywam się <span className="font-medium">Inna Snisar</span> Jestem doświadczoną stylistką brwi i rzęs, specjalizującą się w tworzeniu naturalnych, harmonijnych efektów, które podkreślają indywidualne piękno każdej klientki. Prowadzę także profesjonalne szkolenia dla kursantek z Polski i zagranicy, dzieląc się swoją wiedzą i pasją do stylizacji.
+            {t("Hi, my name is")} <span className="font-medium">{t("Inna Snisar")}</span> {t("I am an experienced eyebrow and eyelash stylist, specializing in creating natural, harmonious effects that highlight each client's individual beauty. I also conduct professional training for students from Poland and abroad, sharing my knowledge and passion for styling.")}
           </p>
         </div>
       </Section>
