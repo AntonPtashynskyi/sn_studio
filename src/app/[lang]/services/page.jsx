@@ -15,6 +15,17 @@ import pmuBrows from "../../../../public/assets/images/services/brows_pmu.jpg";
 import pmuLips from "../../../../public/assets/images/services/lips_pmu.jpg";
 import { FAQ_services } from "@/components/FAQ/FAQ_services";
 import ModalContent from "@/components/Modal/Modal";
+import { getMetadata } from "@/app/actions";
+
+export async function generateMetadata({ params }) {
+  const { lang } = params;
+  const metaData = await getMetadata(lang);
+ 
+  return {
+    title: metaData.services.title,
+    description: metaData.services.description,
+  }
+}
 
 const ServicesPage = async ({params: {lang}}) => {
   const { t } = await useTranslation(lang, "translation");

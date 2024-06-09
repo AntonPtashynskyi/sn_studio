@@ -68,3 +68,9 @@ export async function cookiesHandler(data) {
   const cookiesTools = cookies();
   cookiesTools.set("GA", "111");
 }
+
+import { metadataLocales } from "@/app/i18n/metadata"
+
+export async function getMetadata(lang) {
+  return metadataLocales[lang];
+}

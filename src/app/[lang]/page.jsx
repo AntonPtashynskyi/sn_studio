@@ -9,6 +9,18 @@ import CoursesHomeSection from "@/components/CoursesHomeSection/CoursesHomeSecti
 import Image from "next/image";
 
 import aboutMe from "@public/assets/images/main/about-me.png";
+import { getMetadata } from "../actions";
+
+export async function generateMetadata({ params }) {
+  const { lang } = params;
+  const metaData = await getMetadata(lang);
+ 
+  return {
+    title: metaData.title,
+    description: metaData.description,
+    keywords: metaData.keywords,
+  }
+}
 
 export default async function Home({ params }) {
   const {lang} = params;

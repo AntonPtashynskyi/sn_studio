@@ -14,6 +14,17 @@ import mainImage from "../../../../public/assets/images/courses/course_1.jpg";
 import TrainingCarousel from "@/components/TrainingCarousel/TrainingCarousel";
 import AccordionContentPractice from "@/components/BrowsCorsesDescription/AccordionContentTheory/AccordionContentPractice";
 import ModalContent from "@/components/Modal/Modal";
+import { getMetadata } from "@/app/actions";
+
+export async function generateMetadata({ params }) {
+  const { lang } = params;
+  const metaData = await getMetadata(lang);
+ 
+  return {
+    title: metaData.basicBrows.title,
+    description: metaData.basicBrows.description,
+  }
+}
 
 const BrowsPage = async ({ params: { lang } }) => {
   const { t } = await useTranslation(lang, "translation");
