@@ -113,7 +113,7 @@ const ServicesPage = async ({params: {lang}}) => {
       </div>
       <Section id="faq" className="faq-section">
         <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
-          Najczęściej zadawane pytania
+          {t("Frequently Asked Questions")}
         </h2>
         <FAQ_services t={t} />
       </Section>
