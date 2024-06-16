@@ -11,7 +11,7 @@ import styledBrows from "../../../../public/assets/images/services/brows_style.j
 import laminationBrows from "../../../../public/assets/images/services/brows_lamination.jpg";
 import regulationBrows from "../../../../public/assets/images/services/brows_paint.jpg";
 import styledEyelashes from "../../../../public/assets/images/services/eyelashes_lamination.jpg";
-import pmuBrows from "../../../../public/assets/images/services/brows_pmu.jpg";
+import pmuBrows from "../../../../public/assets/images/services/service--pmu.jpg";
 import pmuLips from "../../../../public/assets/images/services/lips_pmu.jpg";
 import { FAQ_services } from "@/components/FAQ/FAQ_services";
 import ModalContent from "@/components/Modal/Modal";

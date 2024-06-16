@@ -1,3 +1,4 @@
+
 import { Navbar } from "@/components/Navbar/Navbar";
 import { Montserrat } from "next/font/google";
 import { Footer } from "@/components/Footer/Footer";
@@ -27,3 +28,5 @@ export default async function RootLayout({ children, contact_form, params: { lan
     </html>
   );
 }
+
+

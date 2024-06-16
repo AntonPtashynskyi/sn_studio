@@ -16,9 +16,21 @@ export async function generateMetadata({ params }) {
   const metaData = await getMetadata(lang);
  
   return {
+    metadataBase: new URL('http://localhost:3001'),
     title: metaData.title,
     description: metaData.description,
     keywords: metaData.keywords,
+    // openGraph: {
+    //   title: metaData.title,
+    //   description: metaData.description,
+    //   images: ['/opengraph-image.jpg'],
+    // },
+    // twitter: {
+    //   card: 'InBrows_large_image',
+    //   site: 'In-Brows',
+    //   title: metaData.title,
+    //   description: metaData.description,
+    // }
   }
 }
 
