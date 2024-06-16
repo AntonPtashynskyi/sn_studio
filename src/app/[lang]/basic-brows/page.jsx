@@ -15,6 +15,8 @@ import TrainingCarousel from "@/components/TrainingCarousel/TrainingCarousel";
 import AccordionContentPractice from "@/components/BrowsCorsesDescription/AccordionContentTheory/AccordionContentPractice";
 import ModalContent from "@/components/Modal/Modal";
 import { getMetadata } from "@/app/actions";
+import AccordionContentPracticeDay3 from "@/components/BrowsCorsesDescription/AccordionContentTheory/AccordionContentPracticeDay3";
+import AccordionContentPracticeBonus from "@/components/BrowsCorsesDescription/AccordionContentTheory/AccordionContentPracticeBonus";
 
 export async function generateMetadata({ params }) {
   const { lang } = params;
@@ -41,13 +43,14 @@ const BrowsPage = async ({ params: { lang } }) => {
         lang={lang}
       />
       <Section id="brows_courses_theory">
-      <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
+        <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
           {t("Training Description")}
         </h2>
         <div className="my-8 pb-16">
           <div className="bg-lightBgColor relative p-5 rounded-md mt-14 shadow-md">
             <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">BASIC BROWS</h2>
-            <p className="text-lg font-light"> - {t("is an intensive, two-day basic training in brow styling, designed for those who wish to gain comprehensive knowledge and skills in this field.")}</p>
+            <p className="text-lg font-light"> - Pełne szkolenie ze stylizacji brwi od podstaw oraz laminacji brwi. Podczas tego szkolenia przekażę całą wiedzę, którą zdobyłam przez 4 lata pracy. Zaprojektowane dla osób pragnących zdobyć kompleksową wiedzę i umiejętności w tej dziedzinie. 
+            </p>
           </div>
           
           <div className="flex gap-4 flex-col md:flex-row">
@@ -68,6 +71,16 @@ const BrowsPage = async ({ params: { lang } }) => {
               <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">{t("Second day")}</h2>
               <p className="text-lg font-light">{t("Is dedicated to the practical part, where each trainee will have the opportunity to work on four models, perfecting the techniques discussed in the theoretical part.")}</p>
             </div>
+          </div>
+
+          <div>
+            <div className="md:w-1/2">
+              <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
+                <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">Dzień trzeci</h2>
+                <p className="text-lg font-light">Trzeci dzień kursu poświęcony jest laminacji brwi. W programie znajduje się 3-godzinna sesja teoretyczna, obejmująca chemię preparatów, działanie poszczególnych składników na strukturę włosa oraz specyfikę pracy z farbką po laminacji. W drugiej części odbędzie się pokaz na modelce, a każda kursantka będzie miała możliwość pracy na dwóch modelkach.</p>
+              </div>
+            </div>
+            <div className="flex-1 md:w-1/2"></div>
           </div>
 
           <p className="mt-6 text-lg font-light">* {t("The training also provides meals and beverages for the participants.")}</p>
@@ -92,8 +105,21 @@ const BrowsPage = async ({ params: { lang } }) => {
         </AccordionSchedule>
         <AccordionSchedule
           positionNumber="3"
+          title={t("practical part")}
+          description="Dzień 3: Czas trwania 6h"
+        >
+          <AccordionContentPracticeDay3 t={t} />
+        </AccordionSchedule>
+        <AccordionSchedule
+          positionNumber="4"
+          title="Bonus"
+          description="Dzień 3"
+        >
+          <AccordionContentPracticeBonus t={t} />
+        </AccordionSchedule>
+        <AccordionSchedule
           title={t("Price")}
-          description={`2000 ${t("pln")}`}
+          description={`2500 ${t("pln")}`}
           isInteractive={false}
         ></AccordionSchedule>
       </Section>

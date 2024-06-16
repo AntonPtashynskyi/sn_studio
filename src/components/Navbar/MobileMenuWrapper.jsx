@@ -55,11 +55,22 @@ const MobileMenuWrapper = ({ open, pageLanguage, setOpen, t }) => {
               </MobileMenuDropDown>
               <MobileMenuDropDown title={t("Training sessions")}>
                 <MenuLink
-                  href={`/${pageLanguage}/training-eyebrow`}
-                  title={t("Eyebrow lamination training")}
+                  href={`/${pageLanguage}/basic-brows`}
+                  title={t("Basic Brows")}
                   onClick={closeMobileMenu}
                 />
-                {/* <MenuLink href={`/${pageLanguage}/szkolenie_laminacja_brwi`} title="Szkolenie z laminacji brwi" onClick={closeMobileMenu} /> */}
+                <MenuLink
+                  href={`/${pageLanguage}/lash-lamination`}
+                  key="lash-lamination"
+                  title={t("Eyelash lamination")}
+                  onClick={closeMobileMenu}
+                />
+                <MenuLink
+                  href={`/${pageLanguage}/additional-trainings`}
+                  key="additional-trainings"
+                  title={t("Supplementary training")}
+                  onClick={closeMobileMenu}
+                />
               </MobileMenuDropDown>
               <MenuLink
                 href={`/${pageLanguage}/#contact`}

@@ -24,13 +24,13 @@ export const Footer = ({ pageLanguage }) => {
             <span className="uppercase font-medium">
               {t("Training sessions")}
             </span>
-            <Link href={`/${pageLanguage}/training-eyebrow`}>
+            <Link href={`/${pageLanguage}/basic-brows`}>
               {t("Eyebrow architecture training")}
             </Link>
-            <Link href={`/${pageLanguage}/training-eyebrow`}>
+            <Link href={`/${pageLanguage}/basic-brows`}>
               {t("Eyebrow lamination training")}
             </Link>
-            <Link href={`/${pageLanguage}/training-eyebrow`}>
+            <Link href={`/${pageLanguage}/basic-brows`}>
               {t("Eyelash lamination training")}
             </Link>
           </div>

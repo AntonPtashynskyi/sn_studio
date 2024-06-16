@@ -45,10 +45,19 @@ export default async function DesktopMenu({ pageLanguage }) {
         />
         <MenuDropDown title={t("Training sessions")}>
           <MenuLink
-            href={`/${pageLanguage}/training-eyebrow`}
-            key="training-eyebrow"
-            // TODO Transalate
+            href={`/${pageLanguage}/basic-brows`}
+            key="basic-brows"
             title={t("Basic Brows")}
+          />
+          <MenuLink
+            href={`/${pageLanguage}/lash-lamination`}
+            key="lash-lamination"
+            title={t("Eyelash lamination")}
+          />
+          <MenuLink
+            href={`/${pageLanguage}/additional-trainings`}
+            key="additional-trainings"
+            title={t("Supplementary training")}
           />
         </MenuDropDown>
         <MenuLink

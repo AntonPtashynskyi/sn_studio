@@ -16,39 +16,25 @@ const CoursesHomeSection = ({ t, lang }) => {
       </p>
       <div className="course-tile-container">
         <CourseTile
-          time={`2 ${t("days")}`}
-          title={t("Basic Brows")}
-          description={t("Basic eyebrow styling training. Includes: eyebrow geometry, coloring with dye and henna, tweezing and waxing.")}
-          t={t}
-          url={`${lang}/training-eyebrow`}
-        />
-        <CourseTile
           time={`3 ${t("days")}`}
-          title={t("Basic Brows+Lami")}
-          description={t("Basic eyebrow styling training + eyebrow lamination training")}
+          title={t("Basic Brows")}
+          description="Pełne szkolenie ze stylizacji brwi od podstaw oraz laminacji brwi. "
           t={t}
-          url={`${lang}/training-eyebrow`}
+          url={`${lang}/basic-brows`}
         />
         <CourseTile
           time={`2 ${t("days")}`}
           title={t("Eyelash lamination")}
           description={t("Eyelash lamination training from A to Z. Includes work with three brands of products: Inley, Elan, Zola. And all types of curls.")}
           t={t}
-          url={`${lang}/training-eyebrow`}
-        />
-        <CourseTile
-          time={`1 ${t("day")}`}
-          title={t("Lami brows")}
-          description={t("Training intended for people with basic knowledge of eyebrow styling. Contains a large theoretical part about the chemistry of products and hair biochemistry. Coloring without darkening the hairs.")}
-          t={t}
-          url={`${lang}/training-eyebrow`}
+          url={`${lang}/lash-lamination`}
         />
         <CourseTile
           time={`1 ${t("day")}`}
           title={t("Supplementary training")}
           description={t("Qualification upgrade in any area tailored individually to each student.")}
           t={t}
-          url={`${lang}/training-eyebrow`}
+          url={`${lang}/additional-trainings`}
         />
       </div>
     </>
