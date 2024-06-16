@@ -1,23 +1,23 @@
 import React from 'react'
 import "../accordion-style.scss"
 
-const AccordionContentTheory = () => {
+const AccordionContentTheory = ({t}) => {
   return (
     <ul className="accordion-content-panel pl-[15%] pr-[10%] list-disc text-[#6C6C6C]">
-      <li className="description-text">Budowa włosa i skóry</li>
-      <li className="description-text">Fazy wzrostu włosa</li>
-      <li className="description-text">Skład włosa</li>
-      <li className="description-text">Porowatość włosa i jej wpływ na proces koloryzacji</li>
-      <li className="description-text">Skład chemiczny</li>
-      <li className="description-text">Przygotowanie skóry do zabiegu (skóra normalna, sucha, tłusta – jakie produkty dobrać, aby uzyskać równomierne pofarbowanie)</li>
-      <li className="description-text">Geometria brwi</li>
-      <li className="description-text">rysunek wstępny na dwa sposoby kredką pudrową i pastą</li>
-      <li className="description-text">Koloryzacja farbką i henną</li>
-      <li className="description-text">Regulacja pęsetą i woskiem</li>
-      <li className="description-text">Praca z woskiem, który wosk wybrać</li>
-      <li className="description-text">Odpowiednie kierunki regulacji</li>
-      <li className="description-text">Przeciwwskazania do zbiegu</li>
-      <li className="description-text">Zalecenia dla klienta</li>
+      <li className="description-text">{t("Hair and Skin Structure")}</li>
+      <li className="description-text">{t("Hair Growth Phases")}</li>
+      <li className="description-text">{t("Hair Composition")}</li>
+      <li className="description-text">{t("Hair Porosity and Its Effect on Coloring Process")}</li>
+      <li className="description-text">{t("Chemical Composition")}</li>
+      <li className="description-text">{t("Skin Preparation for Procedure (normal skin, dry, oily – which products to choose to achieve even coloring)")}</li>
+      <li className="description-text">{t("Brow Geometry")}</li>
+      <li className="description-text">{t("Preliminary Drawing in Two Ways: Powder Pencil and Paste")}</li>
+      <li className="description-text">{t("Coloring with Dye and Henna")}</li>
+      <li className="description-text">{t("Tweezing and Waxing")}</li>
+      <li className="description-text">{t("Working with Wax: Which Wax to Choose")}</li>
+      <li className="description-text">{t("Appropriate Directions for Tweezing")}</li>
+      <li className="description-text">{t("Contraindications for Procedure")}</li>
+      <li className="description-text">{t("Recommendations for Client")}</li>
   </ul>
   )
 }

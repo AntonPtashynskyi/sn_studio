@@ -27,111 +27,111 @@ export async function generateMetadata({ params }) {
 }
 
 const BrowsPage = async ({ params: { lang } }) => {
-  const { t } = await useTranslation(lang, "translation");
+  const { t } = await useTranslation(lang, "trainings");
 
   return (
     <>
       <HeroSection
         className="brows_training"
         h1MobileTitle="Basic brows"
-        mobileSubtitle="Skolenie"
-        h1Title="Szkolenie Basic Brows"
-        description="Indywidualne szkolenie podstawowe ze stylizacji brwi."
-        CTAText="Umów się na szkolenie!"
+        mobileSubtitle={t("Training")}
+        h1Title={t("Basic Brows Training")}
+        description={t("Individual basic training in brow styling.")}
+        CTAText={t("Sign up for training!")}
         lang={lang}
       />
       <Section id="brows_courses_theory">
       <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
-          Opis Szkolenia
+          {t("Training Description")}
         </h2>
         <div className="my-8 pb-16">
           <div className="bg-lightBgColor relative p-5 rounded-md mt-14 shadow-md">
             <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">BASIC BROWS</h2>
-            <p className="text-lg font-light"> - to intensywne, dwudniowe szkolenie podstawowe ze stylizacji brwi, zaprojektowane dla osób pragnących zdobyć kompleksową wiedzę i umiejętności w tej dziedzinie. </p>
+            <p className="text-lg font-light"> - {t("is an intensive, two-day basic training in brow styling, designed for those who wish to gain comprehensive knowledge and skills in this field.")}</p>
           </div>
           
           <div className="flex gap-4 flex-col md:flex-row">
             <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
               <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
-                Dzień pierwszy 
+                {t("First day")}
               </h2>
-              <p className="text-lg font-light mb-3">Obejmuje 6-godzinną część teoretyczną, w której uczestnicy poznają:</p>
+              <p className="text-lg font-light mb-3">{t("Includes a 6-hour theoretical part where participants will learn:")}</p>
               <ul className="text-lg font-light list-disc  list-inside">
-                <li className="pl-3">Budowę włosa i skóry, fazy wzrostu włosa oraz jego skład chemiczny.</li>
-                <li className="pl-3">Wpływ porowatości włosa na koloryzację i jak przygotować różne typy skóry do zabiegu.</li>
-                <li className="pl-3">Geometrię brwi, techniki rysunku wstępnego, koloryzację farbką i henną, oraz regulację brwi pęsetą i woskiem.</li>
-                <li className="pl-3">Przeciwwskazania do zabiegu oraz zalecenia dla klienta.</li>
+                <li className="pl-3">{t("The structure of hair and skin, hair growth phases, and its chemical composition.")}</li>
+                <li className="pl-3">{t("The effect of hair porosity on coloring and how to prepare different skin types for the procedure.")}</li>
+                <li className="pl-3">{t("Brow geometry, preliminary drawing techniques, coloring with dye and henna, and brow shaping with tweezers and wax.")}</li>
+                <li className="pl-3">{t("Contraindications for the procedure and recommendations for the client.")}</li>
               </ul>
             </div>
             
             <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
-              <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">Dzień drugi </h2>
-              <p className="text-lg font-light">Poświęcony jest części praktycznej, gdzie każda kursantka będzie miała okazję pracować na czterech modelkach, doskonaląc techniki omówione w części teoretycznej.</p>
+              <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">{t("Second day")}</h2>
+              <p className="text-lg font-light">{t("Is dedicated to the practical part, where each trainee will have the opportunity to work on four models, perfecting the techniques discussed in the theoretical part.")}</p>
             </div>
           </div>
 
-          <p className="mt-6 text-lg font-light">* Szkolenie zapewnia również posiłki oraz napoje dla uczestników.</p>
+          <p className="mt-6 text-lg font-light">* {t("The training also provides meals and beverages for the participants.")}</p>
         </div>
 
         <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
-          Twój program szkoleniowy
+          {t("Your training program")}
         </h2>
         <AccordionSchedule
           positionNumber="1"
-          title="część teoretyczna"
-          description="Dzień 1. Czas trwania - 6h"
+          title={t("theoretical part")}
+          description={`${t("Day 1. Duration -")} 6${t("h")}`}
         >
           <AccordionContentTheory t={t} />
         </AccordionSchedule>
         <AccordionSchedule
           positionNumber="2"
-          title="część praktyczna"
-          description="Dzień 2. Czas trwania - 8h"
+          title={t("practical part")}
+          description={`${t("Day 2. Duration -")} 8${t("h")}`}
         >
           <AccordionContentPractice t={t} />
         </AccordionSchedule>
         <AccordionSchedule
           positionNumber="3"
-          title="Cena"
-          description="2000 PLN"
+          title={t("Price")}
+          description={`2000 ${t("pln")}`}
           isInteractive={false}
         ></AccordionSchedule>
       </Section>
       <Section id="brows_advatage" className="brow-advantage-section">
         <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
-          Dlaczego musisz obrać mnie?
+          {t("Why should you choose me?")}
         </h2>
         <TrainingAdvantageList>
           <TrainingAdvantage
             imagePath={mainImage}
-            imageTitle="Szkolenia"
-            stepTitle="1. Bogate doświadczenie zawodowe"
-            // TODO add years couner from 2020.
-            stepDescription="Posiadam 4 lata praktyki jako stylistka brwi i rzęs, a w tym czasie obsłużyłam ponad 500 zadowolonych klientek. Moje doświadczenie pozwala mi dzielić się sprawdzonymi technikami i najlepszymi praktykami."
+            imageTitle={t("Training")}
+            stepTitle={`1.${t("Extensive professional experience")}`}
+            stepDescription={t("I have 4 years of practice as a brow and lash stylist, during which I have served over 500 satisfied clients. My experience allows me to share proven techniques and best practices.")}
           />
           <TrainingAdvantage
             imagePath={mainImage}
-            imageTitle="Szkolenia"
-            stepTitle="2. Ciągłe podnoszenie kwalifikacji"
-            stepDescription="Regularnie uczestniczę w kursach i szkoleniach, aby być na bieżąco z najnowszymi trendami i technikami w branży. Dzięki temu moje szkolenia są zawsze aktualne i oparte na najnowszych osiągnięciach."
+            imageTitle={t("Training")}
+            stepTitle={`2.${t("Continuous qualification improvement")}`}
+            stepDescription={t("I regularly attend courses and training to stay updated with the latest trends and techniques in the industry. This ensures that my training is always current and based on the latest advancements.")}
           />
           <TrainingAdvantage
             imagePath={mainImage}
-            imageTitle="Szkolenia"
-            stepTitle="3. Międzynarodowy zasięg i różnorodność kursantek"
-            stepDescription="Od 2021 roku prowadzę szkolenia dla kursantek z całej Polski oraz z innych krajów. Moje podejście jest uniwersalne i dostosowane do różnych rynków, co sprawia, że każda kursantka, niezależnie od lokalizacji, wyniesie wartościową wiedzę."
+            imageTitle={t("Training")}
+            
+            stepTitle={`3.${t("International reach and diverse trainees")}`}
+            stepDescription={t("Since 2021, I have been conducting training for trainees from all over Poland and other countries. My approach is universal and adapted to different markets, ensuring that every trainee, regardless of location, gains valuable knowledge.")}
           />
           <TrainingAdvantage
             imagePath={mainImage}
-            imageTitle="Szkolenia"
-            stepTitle="4. Indywidualne podejście do każdej kursantki"
-            stepDescription="Każda kursantka jest dla mnie wyjątkowa, dlatego dostosowuję program szkolenia do jej indywidualnych potrzeb i poziomu zaawansowania. Dbam o to, aby każda osoba czuła się komfortowo i pewnie w zdobywaniu nowych umiejętności."
+            imageTitle={t("Training")}
+            stepTitle={`4.${t("Individual approach to each trainee")}`}
+            stepDescription={t("Every trainee is unique to me, so I tailor the training program to their individual needs and skill levels. I ensure that everyone feels comfortable and confident in acquiring new skills.")}
           />
           <TrainingAdvantage
             imagePath={mainImage}
-            imageTitle="Szkolenia"
-            stepTitle="5. Kompleksowe wsparcie po szkoleniu:"
-            stepDescription="Moja pomoc nie kończy się na zakończeniu kursu. Zapewniam kursantkom wsparcie również po szkoleniu, oferując konsultacje, porady oraz dostęp do materiałów edukacyjnych. Dbam o rozwój moich kursantek i ich sukces zawodowy."
+            imageTitle={t("Training")}
+            stepTitle={`4.${t("Comprehensive support after training")}`}
+            stepDescription={t("My support does not end with the completion of the course. I provide trainees with support even after the training, offering consultations, advice, and access to educational materials. I care about the development of my trainees and their professional success.")}
           />
         </TrainingAdvantageList>
       </Section>
