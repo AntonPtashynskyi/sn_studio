@@ -19,7 +19,7 @@ import { getMetadata } from "@/app/actions";
 export async function generateMetadata({ params }) {
   const { lang } = params;
   const metaData = await getMetadata(lang);
- 
+
   return {
     title: metaData.basicBrows.title,
     description: metaData.basicBrows.description,
@@ -140,7 +140,7 @@ const BrowsPage = async ({ params: { lang } }) => {
       </div>
       <Section>
         <div className="mx-auto relative">
-          <ModalContent showCloseButton={false}/>
+          <ModalContent showCloseButton={false} lang={lang}/>
         </div>
       </Section>
       <Section>

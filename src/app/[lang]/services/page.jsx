@@ -118,12 +118,12 @@ const ServicesPage = async ({params: {lang}}) => {
         <FAQ_services t={t} />
       </Section>
 
-      <Section title="Contact">
+      <Section title={t("Contact")}>
         <Contact t={t}/>
       </Section>
       <Section>
         <div className="mx-auto relative">
-          <ModalContent showCloseButton={false}/>
+          <ModalContent showCloseButton={false} lang={lang}/>
         </div>
       </Section>
     </>
