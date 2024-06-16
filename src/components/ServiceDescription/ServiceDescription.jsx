@@ -24,6 +24,7 @@ export const ServiceDescription = ({
             src={imageSrc}
             style={{ objectFit: "cover" }}
             fill={true}
+            sizes="100%"
           />
           {positionNumber && <span className="service--decorative-number">{positionNumber}</span>}
         </div>

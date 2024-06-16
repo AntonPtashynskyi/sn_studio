@@ -45,7 +45,7 @@ export const Footer = ({ pageLanguage }) => {
           <div className="flex flex-1 flex-col"></div>
         </div>
         <div className="flex justify-between py-5">
-          <Image src={logo} alt={t("Logo_alt")} className="object-contain" />
+          <Image src={logo} alt={t("Logo_alt")} className="object-contain" width="0" height="0" style={{ width: '4rem', height: 'auto' }}/>
           <Link href={`/${pageLanguage}/privacy-policy`}>
             {t("Privacy Policy")}
           </Link>
