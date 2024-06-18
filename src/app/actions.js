@@ -4,6 +4,7 @@ import { FormDataSchema } from "@/libs/schema";
 import { GoogleSpreadsheet } from "google-spreadsheet";
 import { JWT } from 'google-auth-library';
 import { cookies } from "next/headers";
+import { metadataLocales } from "@/app/i18n/metadata"
 
 // Config variables
 const SPREADSHEET_ID = process.env.NEXT_PUBLIC_SPREADSHEET_ID;
@@ -68,8 +69,6 @@ export async function cookiesHandler(data) {
   const cookiesTools = cookies();
   cookiesTools.set("GA", "111");
 }
-
-import { metadataLocales } from "@/app/i18n/metadata"
 
 export async function getMetadata(lang) {
   return metadataLocales[lang];
