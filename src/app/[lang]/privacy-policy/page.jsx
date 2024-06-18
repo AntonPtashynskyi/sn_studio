@@ -2,7 +2,7 @@ import { Section } from "@/components/Section/Section";
 import { useTranslation } from "../../i18n";
 
 export default async function PrivacyPage({ params: { lang } }) {
-  const { t } = await useTranslation(lang, "translation");
+  const { t } = await useTranslation(lang, "privacy");
 
   return (
     <>
