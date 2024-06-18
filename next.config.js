@@ -11,8 +11,10 @@ const nextConfig = {
       return config;
   },
   env: {
-  GOOGLE_SERVICE_PRIVATE_KEY: process.env.GOOGLE_SERVICE_PRIVATE_KEY,
+    GOOGLE_SERVICE_PRIVATE_KEY: process.env.GOOGLE_SERVICE_PRIVATE_KEY,
   },
+  output: "export",
+  basePath: "/sn_studio"
 }
 
 module.exports = nextConfig
