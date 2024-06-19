@@ -56,4 +56,4 @@ jobs:
       - name: Delete all container
         run: docker rm -f in-brows-app-container
       - name: Run docker container
-        run: docker run -d -p 3000:3000 --name in-brows-app-container aptashynskyi/in-brows
+        run: docker run -d -p 80:80 --name in-brows-app-container aptashynskyi/in-brows
