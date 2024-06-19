@@ -29,15 +29,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Get secret from base64
-        env:
-          NEXT_PUBLIC_SPREADSHEET_ID: ${{ secrets.NEXT_PUBLIC_SPREADSHEET_ID }}
-          NEXT_PUBLIC_SHEET_ID: ${{ secrets.NEXT_PUBLIC_SHEET_ID }}
-          NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL: ${{ secrets.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL }}
-          GOOGLE_SERVICE_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_PRIVATE_KEY }}
-          NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Create .env file
+        run:  |
+          echo "NEXT_PUBLIC_SPREADSHEET_ID=${{ secrets.NEXT_PUBLIC_SPREADSHEET_ID }}" >> .env
+          echo "NEXT_PUBLIC_SPREADSHEET_ID: ${{ secrets.NEXT_PUBLIC_SPREADSHEET_ID }}" >> .env
+          echo "NEXT_PUBLIC_SHEET_ID: ${{ secrets.NEXT_PUBLIC_SHEET_ID }}" >> .env
+          echo "NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL: ${{ secrets.NEXT_PUBLIC_GOOGLE_CLIENT_EMAIL }}" >> .env
+          echo "GOOGLE_SERVICE_PRIVATE_KEY: ${{ secrets.GOOGLE_SERVICE_PRIVATE_KEY }}" >> .env
+          echo "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: ${{ secrets.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}" >> .env
       - name: Detect package manager
         id: detect-package-manager
         run: |
