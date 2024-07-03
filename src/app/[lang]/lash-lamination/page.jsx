@@ -5,26 +5,26 @@ import { HeroSection } from "@/components/Hero/HeroSection";
 import { Contact } from "@/components/Contact/Contact";
 import { Section } from "@/components/Section/Section";
 import AccordionSchedule from "@/components/AccordionSchedule/AccordionSchedule";
-import AccordionContentTheory from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentTheory";
+import AccordionContentTheory from "@/components/CorsesDescription/AccordionContentTheoryLashes/AccordionContentTheory";
 import TrainingAdvantageList from "@/components/TrainingAdvantage/TrainingAdvantageList";
 import TrainingAdvantage from "@/components/TrainingAdvantage/TrainingAdvantage";
 import "@/components/Section/section.scss"
 
 import mainImage from "../../../../public/assets/images/courses/course_1.jpg";
 import TrainingCarousel from "@/components/TrainingCarousel/TrainingCarousel";
-import AccordionContentPractice from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentPractice";
+import AccordionContentPractice from "@/components/CorsesDescription/AccordionContentTheoryLashes/AccordionContentPractice";
 import ModalContent from "@/components/Modal/Modal";
 import { getMetadata } from "@/app/actions";
-import AccordionContentPracticeDay3 from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentPracticeDay3";
-import AccordionContentPracticeBonus from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentPracticeBonus";
+import AccordionContentPracticeDay3 from "@/components/CorsesDescription/AccordionContentTheoryLashes/AccordionContentPracticeDay3";
+import AccordionContentPracticeBonus from "@/components/CorsesDescription/AccordionContentTheoryLashes/AccordionContentPracticeBonus";
 
 export async function generateMetadata({ params }) {
   const { lang } = params;
   const metaData = await getMetadata(lang);
 
   return {
-    title: metaData.basicBrows.title,
-    description: metaData.basicBrows.description,
+    title: metaData.lashLamination.title,
+    description: metaData.lashLamination.description,
   }
 }
 
@@ -35,7 +35,7 @@ const BrowsPage = async ({ params: { lang } }) => {
     <>
       <HeroSection
         className="brows_training"
-        h1MobileTitle="Basic brows"
+        h1MobileTitle={t("Basic Brows Training")}
         mobileSubtitle={t("Training")}
         h1Title={t("Basic Brows Training")}
         description={t("Individual basic training in brow styling.")}

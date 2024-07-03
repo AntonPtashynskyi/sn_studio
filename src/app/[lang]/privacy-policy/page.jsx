@@ -13,9 +13,8 @@ export default async function PrivacyPage({ params: { lang } }) {
           <li>
             Polityka prywatności określa, jak zbierane, przetwarzane i
             przechowywane są dane osobowe Użytkowników niezbędne do świadczenia
-            usług drogą elektroniczną za pośrednictwem serwisu internetowego{" "}
-            <span style={{ backgroundColor: "#ffff00" }}>[adres strony]</span>{" "}
-            (dalej: Serwis).
+            usług drogą elektroniczną za pośrednictwem serwisu internetowego
+            in-brows.pl (dalej: Serwis).
           </li>
           <li>
             Serwis zbiera wyłącznie dane osobowe niezbędne do świadczenia i
@@ -32,14 +31,9 @@ export default async function PrivacyPage({ params: { lang } }) {
           </li>
         </ol>
         <h3 className="my-4 font-bold">II. Administrator danych</h3>
-        Administratorem danych osobowych zbieranych poprzez Serwis jest{" "}
-        <span style={{ backgroundColor: "#ffff00" }}>
-          [nazwa osoby prawnej/przedsiębiorcy/osoby fizycznej]
-        </span>
-        , adres:{" "}
-        <span style={{ backgroundColor: "#ffff00" }}>
-          [adres siedziby/zamieszkania]
-        </span>
+        Administratorem danych osobowych zbieranych poprzez Serwis jest 
+        Inna Snisar
+        , adres: Wrocław ul.Buforowa 101A/13, 52-131
         , KRS: <span style={{ backgroundColor: "#ffff00" }}>[numer]</span>, NIP:{" "}
         <span style={{ backgroundColor: "#ffff00" }}>[numer]</span>, REGON:{" "}
         <span style={{ backgroundColor: "#ffff00" }}>[numer]</span>, adres
