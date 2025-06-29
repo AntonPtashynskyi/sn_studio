@@ -81,21 +81,21 @@ const MobileMenuWrapper = ({ open, pageLanguage, setOpen, t }) => {
             </div>
           </nav>
           <div className="flex items-center flex-col">
+            <Link href="https://dikidi.net/1788548" target="_blank" className="bg-black mb-3 bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] mx-auto font-light mt-6">
+              {t("Online reservation")}
+            </Link>
             <p className="mb-9">{t("Wroclaw")}</p>
             <div className="flex gap-11 mb-9">
-              <Link href="https://www.instagram.com/in_brows__?igsh=MWhlN2s3eDQzOW16Zg%3D%3D&utm_source=qr" target="_blank">
+              <Link
+                href="https://www.instagram.com/in_brows__?igsh=MWhlN2s3eDQzOW16Zg%3D%3D&utm_source=qr"
+                target="_blank"
+              >
                 <Image
                   src={instagram}
                   alt="Instagram In Brows"
                   width={30}
                   height={30}
                 />
-              </Link>
-              <Link
-                href="https://dikidi.net/1788548"
-                target="_blank"
-              >
-                {t("Online reservation")}
               </Link>
               <Link
                 href="https://www.facebook.com/share/16hjUVdrCD/?mibextid=wwXIfr"

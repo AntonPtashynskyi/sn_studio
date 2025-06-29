@@ -13,6 +13,7 @@ const HeaderLogo = () => {
         width="auto"
         height="auto"
         className="logo-link"
+        loading="lazy"
         />
     </Link>
   )

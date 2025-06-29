@@ -4,7 +4,6 @@ import Image from "next/image";
 import "./hero.scss";
 
 import logo from "../../../public/assets/svg/logo--strocked.svg";
-import heroImage from "../../../public/assets/images/hero/hero--desktop.jpg";
 import Link from "next/link";
 
 
@@ -12,10 +11,8 @@ export const HeroSection =  ({
   h1MobileTitle,
   mobileSubtitle,
   className,
-  bgImage = heroImage,
   h1Title,
   description,
-  h2Title,
   CTAText,
 }) => {
 

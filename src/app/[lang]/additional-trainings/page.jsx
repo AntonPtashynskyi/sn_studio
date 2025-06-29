@@ -11,6 +11,7 @@ import TrainingAdvantage from "@/components/TrainingAdvantage/TrainingAdvantage"
 import "@/components/Section/section.scss"
 
 import mainImage from "../../../../public/assets/images/courses/course_1.jpg";
+import experienceImage from "../../../../public/assets/images/courses/experience.png";
 import AccordionContentPractice from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentPractice";
 import ModalContent from "@/components/Modal/Modal";
 import { getMetadata } from "@/app/actions";
@@ -128,7 +129,7 @@ const BrowsPage = async ({ params: { lang } }) => {
         </h2>
         <TrainingAdvantageList>
           <TrainingAdvantage
-            imagePath={mainImage}
+            imagePath={experienceImage}
             imageTitle={t("Training")}
             stepTitle={`1.${t("Extensive professional experience")}`}
             stepDescription={t("I have 4 years of practice as a brow and lash stylist, during which I have served over 500 satisfied clients. My experience allows me to share proven techniques and best practices.")}

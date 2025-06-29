@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { InstagramIcon } from "../Icons/InstagramIcon";
-import instagram_banner from "@public/assets/images/social/social_instagram.png";
-import instagram_face from "@public/assets/images/social/social_instagram_rounded.png";
+import instagram_banner from "@public/assets/images/social/social_instagram.webp";
+import instagram_face from "@public/assets/images/social/social_instagram_rounded.webp";
 
 export const SocialBanner = ({ t }) => {
   return (

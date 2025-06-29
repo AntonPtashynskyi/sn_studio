@@ -19,9 +19,9 @@ module.exports = {
         heroDecorativeTitleColor: "rgba(219, 184, 184, 0.15)",
         lightBgColor: "#F6F6EB",
         darkBgColor: "#F5D5CB",
-        h2TextColor: "rgb(219 184 184)",
+        h2TextColor: "rgb(52, 52, 52)",
         h3TextColor: "#BEBEBE",
-        priceColor: "#7C7C7C;",
+        priceColor: "#000000;",
         borderColor: "#D9D9D9",
         slideCopyColor: "#6A6A6A",
         filterWhiteColor:

@@ -1,5 +1,5 @@
 .navBar {
-    @apply text-black bg-transparent fixed top-0 left-0 right-0 z-20 flex justify-between flex-col transition-all duration-300;
+    @apply text-black bg-transparent fixed top-0 left-0 right-0 z-30 flex justify-between flex-col transition-all duration-300;
 
     &.show {
         @apply translate-y-0;
@@ -29,7 +29,7 @@
 
     .menu {
         @apply flex justify-center items-center flex-col text-mobileMenu;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
 
         .link {
             @apply uppercase;
@@ -141,4 +141,15 @@
     -moz-transition: 0.5s ease-in-out;
     -o-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
+}
+
+.sr-onl {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }

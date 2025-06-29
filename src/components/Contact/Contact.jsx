@@ -1,11 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Map from "../Maps/Maps";
+import dynamic from "next/dynamic";
 
 import instagramLogo from "../../../public/assets/svg/instagram--in_brows.svg";
 import emailLogo from "../../../public/assets/svg/email--logo.svg";
 import "./contact.scss";
+
+const LazyMap = dynamic(() => import("../Maps/Maps"), {
+  ssr: false,
+  loading: () => <div className="h-[300px] bg-gray-100 animate-pulse" />,
+});
 
 export const Contact = ({ t }) => {
   return (
@@ -14,6 +19,7 @@ export const Contact = ({ t }) => {
         <Link
           href="https://www.instagram.com/in_brows__/"
           className="contact-link"
+          target="_blank"
         >
           <Image
             src={instagramLogo}
@@ -35,7 +41,7 @@ export const Contact = ({ t }) => {
           <p className="text-[20px] font-light text-black">{t("Mail me")}</p>
         </Link>
       </div>
-      <Map />
+      <LazyMap />
     </div>
   );
 };

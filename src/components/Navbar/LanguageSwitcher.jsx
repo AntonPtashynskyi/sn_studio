@@ -1,14 +1,17 @@
 "use client";
 
+import { useTranslation } from "@/app/i18n/client";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 
 export default function LanguageChanger({ pageLanguage }) {
   const router = useRouter();
   const currentPathname = usePathname();
+  const { t } = useTranslation(pageLanguage, "common");
 
   const handleChange = (e) => {
     const newLocale = e.target.value;
+    
 
     const days = 30;
     const date = new Date();
@@ -26,11 +29,14 @@ export default function LanguageChanger({ pageLanguage }) {
   };
 
   return (
-    <select onChange={handleChange} value={pageLanguage}>
-      <option value="en">EN</option>
-      <option value="pl">PL</option>
-      <option value="ua">UA</option>
-      <option value="ru">RU</option>
-    </select>
+    <>
+      <label htmlFor="language-select" className="sr-only">{t("Choose language:")}</label>
+      <select onChange={handleChange} value={pageLanguage} id="language-select">
+        <option value="en">EN</option>
+        <option value="pl">PL</option>
+        <option value="ua">UA</option>
+        <option value="ru">RU</option>
+      </select>
+    </>
   );
 }

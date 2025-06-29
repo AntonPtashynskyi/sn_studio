@@ -7,12 +7,12 @@ import { useTranslation } from "@/app/i18n";
 
 import "./browsPage.scss";
 
-import styledBrows from "../../../../public/assets/images/services/brows_style.jpg";
-import laminationBrows from "../../../../public/assets/images/services/brows_lamination.jpg";
-import regulationBrows from "../../../../public/assets/images/services/brows_paint.jpg";
-import styledEyelashes from "../../../../public/assets/images/services/eyelashes_lamination.jpg";
-import pmuBrows from "../../../../public/assets/images/services/service--pmu.jpg";
-import pmuLips from "../../../../public/assets/images/services/lips_pmu.jpg";
+import styledBrows from "../../../../public/assets/images/services/brows_style.webp";
+import laminationBrows from "../../../../public/assets/images/services/brows_lamination.webp";
+import regulationBrows from "../../../../public/assets/images/services/brows_paint.webp";
+import styledEyelashes from "../../../../public/assets/images/services/eyelashes_lamination.webp";
+import pmuBrows from "../../../../public/assets/images/services/service--pmu.webp";
+import pmuLips from "../../../../public/assets/images/services/lips_pmu.webp";
 import { FAQ_services } from "@/components/FAQ/FAQ_services";
 import ModalContent from "@/components/Modal/Modal";
 import { getMetadata } from "@/app/actions";

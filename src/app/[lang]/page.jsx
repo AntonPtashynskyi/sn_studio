@@ -8,34 +8,35 @@ import { useTranslation } from "../i18n";
 import CoursesHomeSection from "@/components/CoursesHomeSection/CoursesHomeSection";
 import Image from "next/image";
 
-import aboutMe from "@public/assets/images/main/about-me.png";
+import aboutMe from "@public/assets/images/main/about-me.webp";
 import { getMetadata } from "../actions";
+import { FAQ_services } from "@/components/FAQ/FAQ_services";
 
 export async function generateMetadata({ params }) {
   const { lang } = params;
   const metaData = await getMetadata(lang);
- 
+
   return {
-    metadataBase: new URL('http://localhost:3001'),
+    metadataBase: new URL("https://in-brows.vercel.app/pl"),
     title: metaData.title,
     description: metaData.description,
     keywords: metaData.keywords,
-    // openGraph: {
-    //   title: metaData.title,
-    //   description: metaData.description,
-    //   images: ['/opengraph-image.jpg'],
-    // },
-    // twitter: {
-    //   card: 'InBrows_large_image',
-    //   site: 'In-Brows',
-    //   title: metaData.title,
-    //   description: metaData.description,
-    // }
-  }
+    openGraph: {
+      title: metaData.title,
+      description: metaData.description,
+      images: ["/opengraph-image.jpg"],
+    },
+    twitter: {
+      card: "InBrows_large_image",
+      site: "In-Brows",
+      title: metaData.title,
+      description: metaData.description,
+    },
+  };
 }
 
 export default async function Home({ params }) {
-  const {lang} = params;
+  const { lang } = params;
   const { t } = await useTranslation(lang, "common");
 
   return (
@@ -44,25 +45,37 @@ export default async function Home({ params }) {
         h1MobileTitle="In </br> Brows"
         mobileSubtitle={t("Studio")}
         className="main-page"
-        description={t("Do you want to enhance your natural beauty or learn to do it professionally? Contact me today!")}
+        description={t(
+          "Do you want to enhance your natural beauty or learn to do it professionally? Contact me today!"
+        )}
         h2Title="Cześć!"
         CTAText={t("Make an appointment!")}
         lang={lang}
       />
-      <Section  title={t("About me")} id="about-me">
+      <Section title={t("About me")} id="about-me">
         <div className="flex flex-col md:flex-row items-center gap-10">
-        <Image
+          <Image
             src={aboutMe}
             width={300}
             height={300}
             alt={t("Inna Snisar")}
+            priority={true}
           />
           <p className="relative text-lg md:text-2xl font-light bg-darkBgColor text-black p-6 rounded-lg after:w-7 after:h-7 after:bg-darkBgColor after:rotate-45 after:rounded-md after:-top-3 after:left-1/2  md:after:top-[15%] md:after:-left-3 after:-translate-x-1/2 md:after:-translate-x-0 after:absolute after:block">
-            {t("Hi, my name is")} <span className="font-medium">{t("Inna Snisar")}</span> {t("I am an experienced eyebrow and eyelash stylist, specializing in creating natural, harmonious effects that highlight each client's individual beauty. I also conduct professional training for students from Poland and abroad, sharing my knowledge and passion for styling.")}
+            {t("Hi, my name is")}{" "}
+            <span className="font-medium">{t("Inna Snisar")}</span>{" "}
+            {t(
+              "I am an experienced eyebrow and eyelash stylist, specializing in creating natural, harmonious effects that highlight each client's individual beauty. I also conduct professional training for students from Poland and abroad, sharing my knowledge and passion for styling."
+            )}
           </p>
         </div>
       </Section>
       <SocialBanner t={t} />
+
+      <Section title={t("Price list")} id="price">
+        <PriceTable t={t} />
+      </Section>
+
       <Section title={t("Services")} id="services">
         <div className="lg:flex service-wrapper">
           <ServiceTile
@@ -82,15 +95,19 @@ export default async function Home({ params }) {
           />
         </div>
       </Section>
-            <Section>
+      <Section>
         <CoursesHomeSection t={t} lang={lang} />
-      </Section>
-      <Section title={t("Price list")} id="price">
-        <PriceTable t={t} />
       </Section>
 
       <Section title={t("Contact")} id="contact">
         <Contact t={t} />
+      </Section>
+
+      <Section id="faq" className="faq-section">
+        <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
+          {t("Frequently Asked Questions")}
+        </h2>
+        <FAQ_services t={t} />
       </Section>
     </>
   );

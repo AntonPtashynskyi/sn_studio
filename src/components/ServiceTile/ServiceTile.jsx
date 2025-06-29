@@ -18,6 +18,7 @@ export const ServiceTile = ({ title, path, number, styleClass }) => {
             height={40}
             alt="arrow"
             className="arrow-more"
+            loading="lazy"
           />
         </div>
         {number && <span className="tile__decorative-number">{number}</span>}

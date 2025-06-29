@@ -58,6 +58,7 @@ export const Courses = () => {
             height={40}
             alt="arrow prev"
             className="arrow-more z-50 relative rotate-180"
+            loading="lazy"
           />
         </button>
 
@@ -68,6 +69,7 @@ export const Courses = () => {
             height={40}
             alt="arrow next"
             className="arrow-more z-50 relative"
+            loading="lazy"
           />
         </button>
       </div>

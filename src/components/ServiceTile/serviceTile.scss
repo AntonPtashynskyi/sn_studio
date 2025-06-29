@@ -3,7 +3,7 @@
 }
 
 .service-title {
-    @apply z-20 relative text-[46px] lg:text-[64px] uppercase md:flex md:justify-center transition-all;
+    @apply relative text-[46px] lg:text-[64px] uppercase md:flex md:justify-center transition-all;
 }
 
 .tile {
@@ -19,15 +19,15 @@
         background-size: cover;
 
         &.brows {
-            background-image: url("/assets/images/services/service--brows.jpg");
+            background-image: url("/assets/images/services/service--brows.webp");
         }
 
         &.eyelashes {
-            background-image: url("/assets/images/services/service--eyelashes.jpg");
+            background-image: url("/assets/images/services/service--eyelashes.webp");
         }
 
         &.pmu {
-            background-image: url("/assets/images/services/service--pmu.jpg");
+            background-image: url("/assets/images/services/service--pmu.webp");
         }
     }
 }

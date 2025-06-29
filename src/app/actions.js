@@ -31,17 +31,12 @@ const appendSpreadsheet = async (row) => {
       success: true,
     }
   } catch (e) {
-    console.error("Google Sheets error:", e);
     return { success: false, error: e.message };
   }
 };
 
 export async function addEntry(formData) {
   const {success, error, data: {name,phone,services,comments,contact}} =  FormDataSchema.safeParse(formData);
-
-  console.log("data", formData)
-  console.log("ID SHEET_ID >>>>", SHEET_ID);
-  
 
   if (success) {
     const newRow = {
@@ -53,15 +48,12 @@ export async function addEntry(formData) {
       Contact: contact,
     };
 
-    console.log("New row", newRow)
-
     try {
       await appendSpreadsheet(newRow);
       return {
         "success": true,
       }
     } catch (error) {
-      console.error("Append spreadsheet failed", error);
       return { success: false };
     }
   }

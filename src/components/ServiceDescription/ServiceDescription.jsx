@@ -25,6 +25,7 @@ export const ServiceDescription = ({
             style={{ objectFit: "cover" }}
             fill={true}
             sizes="100%"
+            loading="lazy"
           />
           {positionNumber && <span className="service--decorative-number">{positionNumber}</span>}
         </div>

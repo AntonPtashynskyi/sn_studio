@@ -86,7 +86,7 @@ export const PriceTable = ({ t }) => {
           </div>
         </div>
       </div>
-      <Link href={`/contact-form`} className="bg-black bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] mx-auto font-light mt-6">{t("Make an appointment!")}</Link>
+      <Link href="https://dikidi.net/1788548" target="_blank" className="bg-black bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] mx-auto font-light mt-6">{t("Make an appointment!")}</Link>
     </div>
   );
 };
