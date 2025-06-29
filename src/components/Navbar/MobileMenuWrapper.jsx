@@ -6,6 +6,7 @@ import facebook from "../../../public/assets/svg/facebook--in_brows.svg";
 import LanguageChanger from "./LanguageSwitcher";
 import MenuLink from "./MenuLink";
 import MobileMenuDropDown from "./MobileMenuDropDown";
+import Link from "next/link";
 
 const MobileMenuWrapper = ({ open, pageLanguage, setOpen, t }) => {
   const closeMobileMenu = () => setOpen("");
@@ -82,18 +83,31 @@ const MobileMenuWrapper = ({ open, pageLanguage, setOpen, t }) => {
           <div className="flex items-center flex-col">
             <p className="mb-9">{t("Wroclaw")}</p>
             <div className="flex gap-11 mb-9">
-              <Image
-                src={instagram}
-                alt="Instagram In Brows"
-                width={30}
-                height={30}
-              />
-              <Image
-                src={facebook}
-                alt="FaceBook In Brows"
-                width={30}
-                height={30}
-              />
+              <Link href="https://www.instagram.com/in_brows__?igsh=MWhlN2s3eDQzOW16Zg%3D%3D&utm_source=qr" target="_blank">
+                <Image
+                  src={instagram}
+                  alt="Instagram In Brows"
+                  width={30}
+                  height={30}
+                />
+              </Link>
+              <Link
+                href="https://dikidi.net/1788548"
+                target="_blank"
+              >
+                {t("Online reservation")}
+              </Link>
+              <Link
+                href="https://www.facebook.com/share/16hjUVdrCD/?mibextid=wwXIfr"
+                target="_blank"
+              >
+                <Image
+                  src={facebook}
+                  alt="FaceBook In Brows"
+                  width={30}
+                  height={30}
+                />
+              </Link>
             </div>
             <LanguageChanger pageLanguage={pageLanguage} />
           </div>

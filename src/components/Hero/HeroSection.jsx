@@ -31,7 +31,7 @@ export const HeroSection =  ({
             className="hero__text"
             dangerouslySetInnerHTML={{ __html: h1MobileTitle }}
           ></h1>
-          <Link href={`/contact-form`} className="bg-black bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] mx-auto font-light mt-6">{CTAText}</Link>
+          <Link href="https://dikidi.net/1788548" target="_blank" className="bg-black bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] mx-auto font-light mt-6">{CTAText}</Link>
         </div>
         <div className="desktop-only hero-content">
           <div className="left-block">
@@ -40,7 +40,7 @@ export const HeroSection =  ({
               <h1 className="text-[40px]">{h1Title}</h1>
               <h2 className="text-2xl max-w-[50%]">{description}</h2>
               <div className="mt-10">
-                <Link href="/contact-form" className="px-10 py-5 text-xl bg-black hover:bg-gray-900 transition-all text-white rounded-lg shadow-sm">{CTAText}</Link>
+                <Link href="https://dikidi.net/1788548" target="_blank" className="px-10 py-5 text-xl bg-black hover:bg-gray-900 transition-all text-white rounded-lg shadow-sm">{CTAText}</Link>
               </div>
             </div>
           </div>

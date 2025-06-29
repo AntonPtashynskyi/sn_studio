@@ -11,7 +11,6 @@ import TrainingAdvantage from "@/components/TrainingAdvantage/TrainingAdvantage"
 import "@/components/Section/section.scss"
 
 import mainImage from "../../../../public/assets/images/courses/course_1.jpg";
-import TrainingCarousel from "@/components/TrainingCarousel/TrainingCarousel";
 import AccordionContentPractice from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentPractice";
 import ModalContent from "@/components/Modal/Modal";
 import { getMetadata } from "@/app/actions";
@@ -161,9 +160,6 @@ const BrowsPage = async ({ params: { lang } }) => {
           />
         </TrainingAdvantageList>
       </Section>
-      <div className="main-section">
-        <TrainingCarousel />
-      </div>
       <Section>
         <div className="mx-auto relative">
           <ModalContent showCloseButton={false} lang={lang}/>

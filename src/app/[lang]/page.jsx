@@ -62,9 +62,6 @@ export default async function Home({ params }) {
           </p>
         </div>
       </Section>
-      <Section>
-        <CoursesHomeSection t={t} lang={lang} />
-      </Section>
       <SocialBanner t={t} />
       <Section title={t("Services")} id="services">
         <div className="lg:flex service-wrapper">
@@ -85,7 +82,9 @@ export default async function Home({ params }) {
           />
         </div>
       </Section>
-
+            <Section>
+        <CoursesHomeSection t={t} lang={lang} />
+      </Section>
       <Section title={t("Price list")} id="price">
         <PriceTable t={t} />
       </Section>

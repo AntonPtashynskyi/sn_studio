@@ -50,7 +50,7 @@ const ServicesPage = async ({params: {lang}}) => {
                     <li>${t("Tweezing and waxing eyebrow shaping.")}</li>
                     <li>${t("Eyebrow coloring with dye or powder henna.")}</li>`
                   }
-          price="100"
+          price="110"
           time="30-60"
           id="brows"
           t={t}
@@ -65,7 +65,7 @@ const ServicesPage = async ({params: {lang}}) => {
                     <li>${t("Precise eyebrow regulation with tweezers and wax.")}</li>
                     <li>${t("Coloring the eyebrows with dye.")}</li>
                     <li>${t("Nourishment of the hairs using botox to emphasize a healthy appearance.")}</li>`}
-          price="140"
+          price="150"
           time="60"
           t={t}
         />
@@ -74,7 +74,7 @@ const ServicesPage = async ({params: {lang}}) => {
           key="3"
           imageSrc={regulationBrows}
           copyOne={t("Eyebrow shaping is the process of shaping and tidying eyebrows using various techniques such as tweezing, waxing, or threading. The aim of eyebrow shaping is to give them a nice shape, tailored to the individual facial features, which can significantly enhance appearance and expression.")}
-          price="50"
+          price="60"
           time="15-30"
           t={t}
         />
@@ -86,7 +86,7 @@ const ServicesPage = async ({params: {lang}}) => {
           copyTwo={`<li>${t("Selection of the appropriate curl of lashes.")}</li>
                    <li>${t("Eyelash coloring.")}</li>
                    <li>${t("Nourishment of lashes using botox.")}</li>`}
-          price="150"
+          price="160"
           time="60-90"
           id="lashes"
           t={t}
@@ -96,7 +96,7 @@ const ServicesPage = async ({params: {lang}}) => {
           key="5"
           imageSrc={pmuBrows}
           copyOne={t("Permanent eyebrow makeup, also known as eyebrow micropigmentation, is a procedure in which pigment is inserted into the skin to permanently emphasize the shape and color of the eyebrows. By precisely placing the pigment, the effect of lasting eyebrow makeup is achieved, eliminating the need for daily manual drawing or filling. This solution may be particularly attractive for people looking to save time on their daily eyebrow makeup.")}
-          price="800"
+          price="900"
           time="120-160"
           id="pmu"
           t={t}
@@ -106,7 +106,7 @@ const ServicesPage = async ({params: {lang}}) => {
           key="6"
           imageSrc={pmuLips}
           copyOne={t("Permanent lip makeup, also known as lip micropigmentation, is an innovative procedure in which pigment is introduced into the skin, permanently emphasizing the contour and color of the lips. This procedure can improve lip symmetry, give them a fuller appearance, or simply accentuate their natural shape. With permanent lip makeup, you can enjoy long-lasting effects, eliminating the need for frequent lipstick or lip liner application. It's always worth consulting with an experienced specialist before undergoing the procedure to achieve results tailored to your individual preferences.")}
-          price="800"
+          price="900"
           time="120-160"
           t={t}
         />
