@@ -17,7 +17,7 @@ export const Footer = ({ pageLanguage }) => {
           <div className="flex flex-1 flex-col gap-2">
             <span className="uppercase font-medium">In_brows</span>
             <p>{t("Address")}</p>
-            <a href="mailto:snissarinna@gmail.com">snissarinna@gmail.com</a>
+            <a href="mailto:snisarinna7@gmail.com">snisarinna7@gmail.com</a>
             <a href="tel:+48 794 232 846">+48 794 232 846</a>
           </div>
           <div className="flex flex-1 flex-col gap-2">

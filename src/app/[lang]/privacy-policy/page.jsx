@@ -1,13 +1,11 @@
 import { Section } from "@/components/Section/Section";
-import { useTranslation } from "../../i18n";
 
 export default async function PrivacyPage({ params: { lang } }) {
-  const { t } = await useTranslation(lang, "privacy");
 
   return (
     <>
       <Section></Section>
-      <Section title={t("Private_police")}>
+      <Section title="Polityka prywatności">
         <h3 className="my-4 font-bold">I. Postanowienia ogólne</h3>
         <ol>
           <li>
@@ -34,11 +32,10 @@ export default async function PrivacyPage({ params: { lang } }) {
         Administratorem danych osobowych zbieranych poprzez Serwis jest 
         Inna Snisar
         , adres: Wrocław ul.Buforowa 101A/13, 52-131
-        , KRS: <span style={{ backgroundColor: "#ffff00" }}>[numer]</span>, NIP:{" "}
-        <span style={{ backgroundColor: "#ffff00" }}>[numer]</span>, REGON:{" "}
-        <span style={{ backgroundColor: "#ffff00" }}>[numer]</span>, adres
-        poczty elektronicznej:{" "}
-        <span style={{ backgroundColor: "#ffff00" }}>[adres e-mail]</span>{" "}
+        , NIP:{" "}
+        <span>8992951196 </span>
+        adres poczty elektronicznej:{" "}
+        <span >snisarinna7@gmail.com</span>{" "}
         (dalej: Administrator).
         <h3 className="my-4 font-bold">III. Cel zbierania danych osobowych</h3>
         <ol>
@@ -105,7 +102,7 @@ export default async function PrivacyPage({ params: { lang } }) {
           </li>
           <li>
             Dane osobowe Użytkowników{" "}
-            <span style={{ backgroundColor: "#ffff00" }}>nie będą/będą</span>{" "}
+            <span>nie będą</span>{" "}
             przekazywane poza teren Europejskiego Obszaru Gospodarczego (EOG).
           </li>
         </ol>
@@ -121,7 +118,7 @@ export default async function PrivacyPage({ params: { lang } }) {
           <li>
             Zgłoszenie o wystąpieniu przez Użytkownika z uprawnieniem
             wynikającym z wymienionych praw należy przesłać na adres{" "}
-            <span style={{ backgroundColor: "#ffff00" }}>[adres e-mail]</span>.
+            <span>snisarinna7@gmail.com</span>.
           </li>
           <li>
             Administrator spełnia lub odmawia spełnienia żądania niezwłocznie –
