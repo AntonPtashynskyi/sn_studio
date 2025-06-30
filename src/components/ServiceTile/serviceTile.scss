@@ -3,7 +3,7 @@
 }
 
 .service-title {
-    @apply relative text-[46px] lg:text-[64px] uppercase md:flex md:justify-center transition-all;
+    @apply relative text-[46px] lg:text-[64px] uppercase md:flex md:justify-center transition-all z-10;
 }
 
 .tile {

@@ -80,13 +80,13 @@ export const PriceTable = ({ t }) => {
                 <p className="price--category">
                   {t("Eyebrow lamination + eyelash lamination")}
                 </p>
-                <p className="price--amount">270 {t("pln")}</p>
+                <p className="price--amount">280 {t("pln")}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <Link href="https://dikidi.net/1788548" target="_blank" className="bg-black bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] mx-auto font-light mt-6">{t("Make an appointment!")}</Link>
+      <Link href="https://dikidi.net/1788548" target="_blank" className="bg-black bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] md:w-[50%] mx-auto font-light mt-6">{t("Make an appointment!")}</Link>
     </div>
   );
 };

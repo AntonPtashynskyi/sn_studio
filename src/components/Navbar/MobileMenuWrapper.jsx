@@ -81,7 +81,7 @@ const MobileMenuWrapper = ({ open, pageLanguage, setOpen, t }) => {
             </div>
           </nav>
           <div className="flex items-center flex-col">
-            <Link href="https://dikidi.net/1788548" target="_blank" className="bg-black mb-3 bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] mx-auto font-light mt-6">
+            <Link href="https://dikidi.net/1788548" target="_blank" className="bg-black mb-3 bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] md:w-[50%] mx-auto font-light mt-6">
               {t("Online reservation")}
             </Link>
             <p className="mb-9">{t("Wroclaw")}</p>

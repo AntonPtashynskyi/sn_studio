@@ -124,7 +124,7 @@ const BrowsPage = async ({ params: { lang } }) => {
         </AccordionSchedule>
         <AccordionSchedule
           title={t("Price")}
-          description={`2500 ${t("pln")}`}
+          description={`1500 ${t("pln")}`}
           isInteractive={false}
         ></AccordionSchedule>
       </Section>
@@ -167,7 +167,7 @@ const BrowsPage = async ({ params: { lang } }) => {
         </TrainingAdvantageList>
       </Section>
       <Section>
-          <Link href="https://dikidi.net/1788548" target="_blank" className="bg-black mb-3 bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] mx-auto font-light mt-6">
+          <Link href="https://dikidi.net/1788548" target="_blank" className="bg-black mb-3 bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] md:w-[50%] mx-auto font-light mt-6">
             {t("Sign up for training!")}
           </Link>
       </Section>

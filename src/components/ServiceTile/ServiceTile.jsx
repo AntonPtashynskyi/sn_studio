@@ -10,7 +10,7 @@ export const ServiceTile = ({ title, path, number, styleClass }) => {
     <Link href={path} className="tile flex-1 group">
       <div className={`${styleClass} image relative md:flex p-4`}>
         <h3 className="service-title">{title}</h3>
-        <div className="opacity-layout absolute inset-0 bg-white bg-opacity-30 group-hover:bg-opacity-0 transition-all"></div>
+        <div className="opacity-layout absolute inset-0 bg-opacity-0 bg-white md:bg-opacity-30 md:group-hover:bg-opacity-0 transition-all"></div>
         <div className="arrow-more__container">
           <Image
             src={arrow}
