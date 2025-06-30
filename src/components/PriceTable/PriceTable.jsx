@@ -80,7 +80,7 @@ export const PriceTable = ({ t }) => {
                 <p className="price--category">
                   {t("Eyebrow lamination + eyelash lamination")}
                 </p>
-                <p className="price--amount">278 {t("pln")}</p>
+                <p className="price--amount">270 {t("pln")}</p>
               </div>
             </div>
           </div>

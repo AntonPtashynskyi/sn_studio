@@ -10,12 +10,18 @@ import TrainingAdvantageList from "@/components/TrainingAdvantage/TrainingAdvant
 import TrainingAdvantage from "@/components/TrainingAdvantage/TrainingAdvantage";
 import "@/components/Section/section.scss"
 
-import mainImage from "../../../../public/assets/images/courses/course_1.jpg";
+import experienceImage from "../../../../public/assets/images/courses/best-customer-experience.webp";
+import qualificationImage from "../../../../public/assets/images/courses/qualification.webp";
+import supportImage from "../../../../public/assets/images/courses/support.webp";
+import traineesImage from "../../../../public/assets/images/courses/trainees.webp";
+import selfImprovementImage from "../../../../public/assets/images/courses/self-improvement.webp";
+
 import AccordionContentPractice from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentPractice";
 import ModalContent from "@/components/Modal/Modal";
 import { getMetadata } from "@/app/actions";
 import AccordionContentPracticeDay3 from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentPracticeDay3";
 import AccordionContentPracticeBonus from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentPracticeBonus";
+import Link from "next/link";
 
 export async function generateMetadata({ params }) {
   const { lang } = params;
@@ -128,42 +134,42 @@ const BrowsPage = async ({ params: { lang } }) => {
         </h2>
         <TrainingAdvantageList>
           <TrainingAdvantage
-            imagePath={mainImage}
+            imagePath={experienceImage}
             imageTitle={t("Training")}
             stepTitle={`1.${t("Extensive professional experience")}`}
             stepDescription={t("I have 4 years of practice as a brow and lash stylist, during which I have served over 500 satisfied clients. My experience allows me to share proven techniques and best practices.")}
           />
           <TrainingAdvantage
-            imagePath={mainImage}
+            imagePath={qualificationImage}
             imageTitle={t("Training")}
             stepTitle={`2.${t("Continuous qualification improvement")}`}
             stepDescription={t("I regularly attend courses and training to stay updated with the latest trends and techniques in the industry. This ensures that my training is always current and based on the latest advancements.")}
           />
           <TrainingAdvantage
-            imagePath={mainImage}
+            imagePath={supportImage}
             imageTitle={t("Training")}
             
             stepTitle={`3.${t("International reach and diverse trainees")}`}
             stepDescription={t("Since 2021, I have been conducting training for trainees from all over Poland and other countries. My approach is universal and adapted to different markets, ensuring that every trainee, regardless of location, gains valuable knowledge.")}
           />
           <TrainingAdvantage
-            imagePath={mainImage}
+            imagePath={traineesImage}
             imageTitle={t("Training")}
             stepTitle={`4.${t("Individual approach to each trainee")}`}
             stepDescription={t("Every trainee is unique to me, so I tailor the training program to their individual needs and skill levels. I ensure that everyone feels comfortable and confident in acquiring new skills.")}
           />
           <TrainingAdvantage
-            imagePath={mainImage}
+            imagePath={selfImprovementImage}
             imageTitle={t("Training")}
-            stepTitle={`4.${t("Comprehensive support after training")}`}
+            stepTitle={`5.${t("Comprehensive support after training")}`}
             stepDescription={t("My support does not end with the completion of the course. I provide trainees with support even after the training, offering consultations, advice, and access to educational materials. I care about the development of my trainees and their professional success.")}
           />
         </TrainingAdvantageList>
       </Section>
       <Section>
-        <div className="mx-auto relative">
-          <ModalContent showCloseButton={false} lang={lang}/>
-        </div>
+          <Link href="https://dikidi.net/1788548" target="_blank" className="bg-black mb-3 bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] mx-auto font-light mt-6">
+            {t("Sign up for training!")}
+          </Link>
       </Section>
       <Section>
         <Contact t={t}/>

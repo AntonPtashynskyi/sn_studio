@@ -16,6 +16,7 @@ import pmuLips from "../../../../public/assets/images/services/lips_pmu.webp";
 import { FAQ_services } from "@/components/FAQ/FAQ_services";
 import ModalContent from "@/components/Modal/Modal";
 import { getMetadata } from "@/app/actions";
+import Link from "next/link";
 
 export async function generateMetadata({ params }) {
   const { lang } = params;
@@ -37,7 +38,7 @@ const ServicesPage = async ({params: {lang}}) => {
         h1MobileTitle={t("Services")}
         description={t("Eyebrows play a key role in giving the face expressiveness, shape, and symmetry, uniquely highlighting the natural beauty of the eyes and the entire face.")}
         h2Title="Brwi!"
-        CTAText={t("Sign up for a service!")}
+        CTAText={t("Make an appointment!")}
         lang={lang}
       />
       <div className="content-block">
@@ -111,6 +112,13 @@ const ServicesPage = async ({params: {lang}}) => {
           t={t}
         />
       </div>
+      
+      <Section>
+          <Link href="https://dikidi.net/1788548" target="_blank" className="bg-black mb-3 bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] mx-auto font-light mt-6">
+            {t("Online reservation")}
+          </Link>
+      </Section>
+
       <Section id="faq" className="faq-section">
         <h2 className="uppercase mb-6 md:mb-10 text-4xl text-[#888888]">
           {t("Frequently Asked Questions")}
@@ -120,11 +128,6 @@ const ServicesPage = async ({params: {lang}}) => {
 
       <Section title={t("Contact")}>
         <Contact t={t}/>
-      </Section>
-      <Section>
-        <div className="mx-auto relative">
-          <ModalContent showCloseButton={false} lang={lang}/>
-        </div>
       </Section>
     </>
   );

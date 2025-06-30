@@ -9,11 +9,11 @@
         @apply flex-1 items-center;
 
         .image-wrapper {
-            @apply relative overflow-hidden w-full max-h-[240px] aspect-[5/2] bg-lightBgColor border-4 border-darkBgColor rounded-[3rem];
+            @apply relative overflow-hidden w-full;
         }
 
         img {
-            @apply object-cover;
+            @apply object-contain mx-auto max-w-[250px];
         }
     }
 
