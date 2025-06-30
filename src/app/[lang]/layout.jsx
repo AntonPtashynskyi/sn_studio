@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/Navbar/Navbar";
 import { Montserrat } from "next/font/google";
 import { Footer } from "@/components/Footer/Footer";
@@ -13,7 +12,11 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-export default async function RootLayout({ children, contact_form, params: { lang } }) {
+export default async function RootLayout({
+  children,
+  contact_form,
+  params: { lang },
+}) {
   return (
     <html lang={lang}>
       <body className={`${montserrat.variable} font-sans`}>
@@ -23,10 +26,8 @@ export default async function RootLayout({ children, contact_form, params: { lan
         </Navbar>
         <main className="main-content">{children}</main>
         <Footer pageLanguage={lang} />
-        { contact_form }
+        {contact_form}
       </body>
     </html>
   );
 }
-
-

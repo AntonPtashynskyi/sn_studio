@@ -11,16 +11,21 @@ import Image from "next/image";
 import aboutMe from "@public/assets/images/main/about-me.webp";
 import { getMetadata } from "../actions";
 import { FAQ_services } from "@/components/FAQ/FAQ_services";
+import { link } from "@nextui-org/react";
 
 export async function generateMetadata({ params }) {
   const { lang } = params;
   const metaData = await getMetadata(lang);
 
   return {
+    robots: "index, follow",
     metadataBase: new URL("https://in-brows.vercel.app/pl"),
     title: metaData.title,
     description: metaData.description,
     keywords: metaData.keywords,
+    alternates: {
+      canonical: 'https://in-studio.vercel.app',
+    },
     openGraph: {
       title: metaData.title,
       description: metaData.description,
@@ -31,7 +36,7 @@ export async function generateMetadata({ params }) {
       site: "In-Brows",
       title: metaData.title,
       description: metaData.description,
-    },
+    }
   };
 }
 

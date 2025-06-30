@@ -1,4 +1,9 @@
-User-Agent: *
+# *
+User-agent: *
 Allow: /
 
-Sitemap: https://in-studio.vercel.app/pl
+# Host
+Host: https://in-studio.vercel.app
+
+# Sitemaps
+Sitemap: https://in-studio.vercel.app/sitemap.xml
