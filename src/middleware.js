@@ -11,7 +11,7 @@ export const config = {
 export function middleware(req) {
   const { pathname } = req.nextUrl;
 
-  const excludedPaths = ["/sitemap.xml", "/robots.txt", "/favicon.ico"];
+  const excludedPaths = ["/sitemap.xml", "/sitemap-0.xml", "/robots.txt", "/favicon.ico"];
   if (excludedPaths.includes(pathname)) {
     return NextResponse.next();
   }
