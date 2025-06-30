@@ -66,12 +66,6 @@ const MobileMenuWrapper = ({ open, pageLanguage, setOpen, t }) => {
                   title={t("Eyelash lamination")}
                   onClick={closeMobileMenu}
                 />
-                <MenuLink
-                  href={`/${pageLanguage}/additional-trainings`}
-                  key="additional-trainings"
-                  title={t("Supplementary training")}
-                  onClick={closeMobileMenu}
-                />
               </MobileMenuDropDown>
               <MenuLink
                 href={`/${pageLanguage}/#contact`}

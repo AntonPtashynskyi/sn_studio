@@ -34,7 +34,8 @@ const CoursesHomeSection = ({ t, lang }) => {
           title={t("Supplementary training")}
           description={t("Qualification upgrade in any area tailored individually to each student.")}
           t={t}
-          url={`${lang}/additional-trainings`}
+          url={`https://dikidi.net/1788548`}
+          blank={true}
         />
       </div>
     </>

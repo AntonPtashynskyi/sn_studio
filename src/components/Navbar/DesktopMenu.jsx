@@ -54,11 +54,6 @@ export default async function DesktopMenu({ pageLanguage }) {
             key="lash-lamination"
             title={t("Eyelash lamination")}
           />
-          <MenuLink
-            href={`/${pageLanguage}/additional-trainings`}
-            key="additional-trainings"
-            title={t("Supplementary training")}
-          />
         </MenuDropDown>
         <MenuLink
           href={`/${pageLanguage}/#contact`}
