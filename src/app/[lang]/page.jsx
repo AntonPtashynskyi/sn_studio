@@ -9,39 +9,7 @@ import CoursesHomeSection from "@/components/CoursesHomeSection/CoursesHomeSecti
 import Image from "next/image";
 
 import aboutMe from "@public/assets/images/main/about-me.webp";
-import { getMetadata } from "../actions";
 import { FAQ_services } from "@/components/FAQ/FAQ_services";
-import { link } from "@nextui-org/react";
-
-export async function generateMetadata({ params }) {
-  const { lang} = params;
-  const metaData = await getMetadata(lang);
-
-  return {
-    robots: "index, follow",
-    metadataBase: new URL("https://inbrows.pl"),
-    title: metaData.title,
-    description: metaData.description,
-    keywords: metaData.keywords,
-    alternates: {
-      canonical: 'https://inbrows.pl',
-    },
-    openGraph: {
-      title: metaData.title,
-      description: metaData.description,
-      images: ["/opengraph-image.jpg"],
-      type: 'website',
-      url: 'https://inbrows.pl',
-    },
-    twitter: {
-      card: "InBrows_large_image",
-      site: 'https://inbrows.pl',
-      title: metaData.title,
-      images: ["/opengraph-image.jpg"],
-      description: metaData.description,
-    }
-  };
-}
 
 export default async function Home({ params }) {
   const { lang } = params;

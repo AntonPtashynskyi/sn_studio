@@ -17,15 +17,17 @@ import selfImprovementImage from "../../../../public/assets/images/courses/self-
 
 import { getMetadata } from "@/app/actions";
 import Link from "next/link";
+import { generatePageMetadata } from "@/utils/generatePageMetaData";
 
 export async function generateMetadata({ params }) {
   const { lang } = params;
-  const metaData = await getMetadata(lang);
+  const meta = await getMetadata(lang);
 
-  return {
-    title: metaData.lashLamination.title,
-    description: metaData.lashLamination.description,
-  }
+  return generatePageMetadata({
+    lang,
+    slug: "lash-lamination",
+    meta: meta.lashLamination,
+  });
 }
 
 const BrowsPage = async ({ params: { lang } }) => {

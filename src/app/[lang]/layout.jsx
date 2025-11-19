@@ -5,6 +5,42 @@ import MobileMenu from "@/components/Navbar/MobileMenu";
 import DesktopMenu from "@/components/Navbar/DesktopMenu";
 
 import "./globals.scss";
+import { getMetadata } from "../actions";
+
+
+export async function generateMetadata(data) {
+  const { lang, slug } = data.params;
+  const metaData = await getMetadata(lang);
+  const { ENVIRONMENT_VAR } = process.env;
+
+  const baseUrl = ENVIRONMENT_VAR === "development" ? "http://localhost:3000" : "https://inbrows.pl";
+  const canonicalUrl = `${baseUrl}/${lang}`;
+
+  return {
+    robots: "index, follow",
+    metadataBase: new URL("https://inbrows.pl"),
+    title: metaData.title,
+    description: metaData.description,
+    keywords: metaData.keywords,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: metaData.title,
+      description: metaData.description,
+      images: [`${baseUrl}/api/og-image`],
+      type: 'website',
+      url: canonicalUrl,
+    },
+    twitter: {
+      card: "InBrows_large_image",
+      site: canonicalUrl,
+      title: metaData.title,
+      images: [`${baseUrl}/api/og-image`],
+      description: metaData.description,
+    }
+  };
+}
 
 const montserrat = Montserrat({
   subsets: ["latin"],

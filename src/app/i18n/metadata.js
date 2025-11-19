@@ -18,6 +18,10 @@ export const metadataLocales = {
         "basicBrows": {
             "title": "Intensive Two-Day Brow Styling Training | Master the Art of Eyebrow Design",
             "description": "Join our intensive two-day basic brow styling training designed for those eager to gain comprehensive knowledge and skills. Enroll now to master eyebrow styling!",
+        },
+        "privacyPolicy": {
+            "title": "Polityka Prywatności – Zasady przetwarzania danych w InBrows",
+            "description": "Dowiedz się, w jaki sposób InBrows gromadzi, wykorzystuje i chroni Twoje dane osobowe. Przeczytaj szczegółowe zasady przetwarzania danych, plików cookies oraz przysługujących Ci praw."
         }
     },
     "pl": {
@@ -39,6 +43,10 @@ export const metadataLocales = {
         "additionalTrainings": {
             "title": "Intensywne dwudniowe szkolenie ze stylizacji brwi | Opanuj sztukę projektowania brwi",
             "description": "Dołącz do naszego intensywnego, dwudniowego szkolenia podstawowego ze stylizacji brwi, zaprojektowanego dla osób pragnących zdobyć kompleksową wiedzę i umiejętności. Zapisz się teraz, aby opanować stylizację brwi!",
+        },
+        "privacyPolicy": {
+            "title": "Polityka Prywatności – Zasady przetwarzania danych w InBrows",
+            "description": "Dowiedz się, w jaki sposób InBrows gromadzi, wykorzystuje i chroni Twoje dane osobowe. Przeczytaj szczegółowe zasady przetwarzania danych, plików cookies oraz przysługujących Ci praw."
         }
     },
     "ua": {
@@ -60,6 +68,10 @@ export const metadataLocales = {
         "additionalTrainings": {
             "title": "Інтенсивний дводенний курс по стилізації брів | Оволодійте мистецтвом дизайну брів",
             "description": "Приєднуйтесь до нашого інтенсивного дводенного базового курсу по стилізації брів, призначеного для тих, хто прагне отримати комплексні знання та навички. Запишіться зараз, щоб оволодіти стилізацією брів!"
+        },
+        "privacyPolicy": {
+            "title": "Polityka Prywatności – Zasady przetwarzania danych w InBrows",
+            "description": "Dowiedz się, w jaki sposób InBrows gromadzi, wykorzystuje i chroni Twoje dane osobowe. Przeczytaj szczegółowe zasady przetwarzania danych, plików cookies oraz przysługujących Ci praw."
         }
     },
     "ru": {
@@ -81,6 +93,10 @@ export const metadataLocales = {
         "additionalTrainings": {
             "title": "Интенсивный двухдневный курс по стилизации бровей | Овладейте искусством дизайна бровей",
             "description": "Присоединяйтесь к нашему интенсивному двухдневному базовому курсу по стилизации бровей, предназначенному для тех, кто стремится получить комплексные знания и навыки. Запишитесь сейчас, чтобы овладеть стилизацией бровей!"
+        },
+        "privacyPolicy": {
+            "title": "Polityka Prywatności – Zasady przetwarzania danych w InBrows",
+            "description": "Dowiedz się, w jaki sposób InBrows gromadzi, wykorzystuje i chroni Twoje dane osobowe. Przeczytaj szczegółowe zasady przetwarzania danych, plików cookies oraz przysługujących Ci praw."
         }
     },
 }

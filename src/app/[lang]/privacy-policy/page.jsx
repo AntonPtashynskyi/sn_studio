@@ -1,4 +1,18 @@
+import { getMetadata } from "@/app/actions";
 import { Section } from "@/components/Section/Section";
+import { generatePageMetadata } from "@/utils/generatePageMetaData";
+
+export async function generateMetadata({ params }) {
+  const { lang } = params;
+  const meta = await getMetadata(lang);
+
+  return generatePageMetadata({
+    lang,
+    slug: "privacy-policy",
+    meta: meta.privacyPolicy,
+  });
+}
+
 
 export default async function PrivacyPage({ params: { lang } }) {
 

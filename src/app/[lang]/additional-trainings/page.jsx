@@ -17,20 +17,21 @@ import traineesImage from "../../../../public/assets/images/courses/trainees.web
 import selfImprovementImage from "../../../../public/assets/images/courses/self-improvement.webp";
 
 import AccordionContentPractice from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentPractice";
-import ModalContent from "@/components/Modal/Modal";
 import { getMetadata } from "@/app/actions";
 import AccordionContentPracticeDay3 from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentPracticeDay3";
 import AccordionContentPracticeBonus from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentPracticeBonus";
 import Link from "next/link";
+import { generatePageMetadata } from "@/utils/generatePageMetaData";
 
 export async function generateMetadata({ params }) {
   const { lang } = params;
-  const metaData = await getMetadata(lang);
+  const meta = await getMetadata(lang);
 
-  return {
-    title: metaData.basicBrows.title,
-    description: metaData.basicBrows.description,
-  }
+  return generatePageMetadata({
+    lang,
+    slug: "lash-lamination",
+    meta: meta.additionalTrainings,
+  });
 }
 
 const BrowsPage = async ({ params: { lang } }) => {
