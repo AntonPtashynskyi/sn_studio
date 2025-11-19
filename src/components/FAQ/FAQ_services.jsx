@@ -18,10 +18,6 @@ export const FAQ_services = ({ t }) => {
         copy={t("Yes, eyebrow lamination is safe, provided it is performed by a qualified specialist using appropriate products.")}
       />
       <AccordionBlock
-        title={t("Is eyebrow lamination painful?")}
-        copy={t("No, eyebrow lamination is painless. You may only feel slight discomfort during the application of products on the eyebrows.")}
-      />
-      <AccordionBlock
         title={t("How to prepare for the eyebrow lamination procedure?")}
         copy={t("Before the procedure, avoid using strong cosmetics and peels on the eyebrows. It is also important that the eyebrows are clean and free of makeup.")}
       />

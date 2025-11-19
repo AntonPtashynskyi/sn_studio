@@ -33,7 +33,7 @@ export async function generateMetadata(data) {
       url: canonicalUrl,
     },
     twitter: {
-      card: "InBrows_large_image",
+      card: "summary_large_image",
       site: canonicalUrl,
       title: metaData.title,
       images: [`${baseUrl}/api/og-image`],

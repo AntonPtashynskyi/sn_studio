@@ -12,13 +12,13 @@ const CoursesHomeSection = ({ t, lang }) => {
         )}
         <br />
         {t("Get in touch with me to schedule a")}{" "}
-        <Link href="https://dikidi.net/1788548" target="_blank" className="text-[#EDC385] font-semibold">{t("free consultation")}</Link>
+        <Link href="https://dikidi.net/1788548" target="_blank" className="text-[#000000] font-semibold">{t("free consultation")}</Link>
       </p>
       <div className="course-tile-container">
         <CourseTile
           time={`3 ${t("days")}`}
           title={t("Basic Brows")}
-          description="Pełne szkolenie ze stylizacji brwi od podstaw oraz laminacji brwi. "
+          description={t("A full training course on eyebrow styling from scratch and eyebrow lamination.")}
           t={t}
           url={`${lang}/basic-brows`}
         />

@@ -58,11 +58,7 @@ const BrowsPage = async ({ params: { lang } }) => {
               BASIC BROWS
             </h2>
             <p className="text-lg font-light">
-              {" "}
-              - Pełne szkolenie ze stylizacji brwi od podstaw oraz laminacji
-              brwi. Podczas tego szkolenia przekażę całą wiedzę, którą zdobyłam
-              przez 4 lata pracy. Zaprojektowane dla osób pragnących zdobyć
-              kompleksową wiedzę i umiejętności w tej dziedzinie.
+              {t("Basic brows desc")}
             </p>
           </div>
 
@@ -116,15 +112,10 @@ const BrowsPage = async ({ params: { lang } }) => {
             <div className="md:w-1/2">
               <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
                 <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
-                  Dzień trzeci
+                  {t("Day three")}
                 </h2>
                 <p className="text-lg font-light">
-                  Trzeci dzień kursu poświęcony jest laminacji brwi. W programie
-                  znajduje się 3-godzinna sesja teoretyczna, obejmująca chemię
-                  preparatów, działanie poszczególnych składników na strukturę
-                  włosa oraz specyfikę pracy z farbką po laminacji. W drugiej
-                  części odbędzie się pokaz na modelce, a każda kursantka będzie
-                  miała możliwość pracy na dwóch modelkach.
+                  {t("Basic brows third day desc")}
                 </p>
               </div>
             </div>
@@ -159,14 +150,14 @@ const BrowsPage = async ({ params: { lang } }) => {
         <AccordionSchedule
           positionNumber="3"
           title={t("Theoretical and practical part")}
-          description="Dzień 3: Czas trwania 6h"
+          description={t("Day 3: Duration 6h (6 hours)")}
         >
           <AccordionContentPracticeDay3 t={t} />
         </AccordionSchedule>
         <AccordionSchedule
           positionNumber="4"
-          title="Bonus"
-          description="Dzień 3"
+          title={t("Bonus")}
+          description={t("Day 3")}
         >
           <AccordionContentPracticeBonus t={t} />
         </AccordionSchedule>

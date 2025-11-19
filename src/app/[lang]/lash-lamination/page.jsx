@@ -66,40 +66,44 @@ const BrowsPage = async ({ params: { lang } }) => {
               </h2>
               <p className="text-lg font-light mb-3">{t("✅ theoretical part - 4-5h")}</p>
               <ul className="text-lg font-light list-disc  list-inside">
-                <li className="pl-3 list-none">{t("📍 What is lash lamination")}</li>
-                <li className="pl-3 list-none">{t("📍 Benefits of the procedure")}</li>
-                <li className="pl-3 list-none">{t("📍Indications/Contraindications for the procedure")}</li>
-                <li className="pl-3 list-none">{t("📍 Hair structure")}</li>
-                <li className="pl-3 list-none">{t("📍 Chemistry of products")}</li>
-                <li className="pl-3 list-none">{t("📍 Composition and action of the products")}</li>
-                <li className="pl-3 list-none">{t("📍 Types of lashes")}</li>
-                <li className="pl-3 list-none">{t("📍 Types of rods")}</li>
-                <li className="pl-3 list-none">{t("📍How to properly choose a rod")}</li>
-                <li className="pl-3 list-none">{t("📍 Steps of lash lamination")}</li>
-                <li className="pl-3 list-none">{t("📍 Necessary tools and materials")}</li>
+                <li className="pl-3">{t("What is lash lamination")}</li>
+                <li className="pl-3">{t("Benefits of the procedure")}</li>
+                <li className="pl-3">{t("Indications/Contraindications for the procedure")}</li>
+                <li className="pl-3">{t("Hair structure")}</li>
+                <li className="pl-3">{t("Chemistry of products")}</li>
+                <li className="pl-3">{t("Composition and action of the products")}</li>
+                <li className="pl-3">{t("Types of lashes")}</li>
+                <li className="pl-3">{t("Types of rods")}</li>
+                <li className="pl-3">{t("How to properly choose a rod")}</li>
+                <li className="pl-3">{t("Steps of lash lamination")}</li>
+                <li className="pl-3">{t("Necessary tools and materials")}</li>
               </ul>
             </div>
             
             <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
               <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">{t("Second day")}</h2>
-              <p className="text-lg font-light">{t("✅ demonstration model")}</p>
-              <p className="text-lg font-light">{t("✅ 2 models for the trainee")}</p>
-              <p className="text-lg font-light">{t("✅ lunch")}</p>
-              <p className="text-lg font-light">{t("✅ training manual + ongoing support after training")}</p>
-              <p className="text-lg font-light">{t("✅ certificate of completion")}</p>
+              <ul className="text-lg font-light list-disc  list-inside">
+                <li className="pl-3">{t("demonstration model")}</li>
+                <li className="pl-3">{t("2 models for the trainee")}</li>
+                <li className="pl-3">{t("lunch")}</li>
+                <li className="pl-3">{t("training manual + ongoing support after training")}</li>
+                <li className="pl-3">{t("certificate of completion")}</li>
+              </ul>
             </div>
           </div>
 
           <div>
             <div className="md:w-1/2">
               <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
-                <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">{t("🎁Bonus")}</h2>
-                <p className="text-lg font-light">{t("Instagram photography lesson.")}</p>
-                <p className="text-lg font-light">{t("📍What equipment I use to take nice shots.")}</p>
-                <p className="text-lg font-light">{t("📍How to manage your social media profile to gain reach and attract new clients.")}</p>
-                <p className="text-lg font-light">{t("📍Which apps I use to edit photos.")}</p>
-                <p className="text-lg font-light">{t("📍Apps for editing reels")}</p>
-                <p className="text-lg font-light">{t("📍Apps for editing reels")}</p>
+                <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">{t("Bonus")}</h2>
+                <ul className="text-lg font-light list-disc  list-inside">
+                  <li className="pl-3">{t("Instagram photography lesson.")}</li>
+                  <li className="pl-3">{t("What equipment I use to take nice shots.")}</li>
+                  <li className="pl-3">{t("How to manage your social media profile to gain reach and attract new clients.")}</li>
+                  <li className="pl-3">{t("Which apps I use to edit photos.")}</li>
+                  <li className="pl-3">{t("Apps for editing reels")}</li>
+                  <li className="pl-3">{t("Apps for editing reels")}</li>
+                </ul>
               </div>
             </div>
             <div className="flex-1 md:w-1/2"></div>
