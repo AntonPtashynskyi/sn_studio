@@ -15,7 +15,7 @@ const nextConfig = {
       {
         source: '/api/:path*',
         destination: '/api/:path*',
-        locale: false,  // отключаем локаль для API
+        locale: false,
       },
       {
         source: '/sitemap.xml',
