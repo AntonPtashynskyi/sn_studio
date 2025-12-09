@@ -9,12 +9,19 @@ import { getMetadata } from "../actions";
 
 
 export async function generateMetadata(data) {
-  const { lang, slug } = data.params;
+  const { lang } = data.params;
   const metaData = await getMetadata(lang);
   const { ENVIRONMENT_VAR } = process.env;
 
   const baseUrl = ENVIRONMENT_VAR === "development" ? "http://localhost:3000" : "https://inbrows.pl";
   const canonicalUrl = `${baseUrl}/${lang}`;
+
+  // Generate hreflang alternates for all languages
+  const languages = ['pl', 'en', 'ua', 'ru'];
+  const languageAlternates = {};
+  languages.forEach(locale => {
+    languageAlternates[locale] = `${baseUrl}/${locale}`;
+  });
 
   return {
     robots: "index, follow",
@@ -24,6 +31,7 @@ export async function generateMetadata(data) {
     keywords: metaData.keywords,
     alternates: {
       canonical: canonicalUrl,
+      languages: languageAlternates,
     },
     openGraph: {
       title: metaData.title,
@@ -31,6 +39,7 @@ export async function generateMetadata(data) {
       images: [`${baseUrl}/api/og-image`],
       type: 'website',
       url: canonicalUrl,
+      locale: lang,
     },
     twitter: {
       card: "summary_large_image",
