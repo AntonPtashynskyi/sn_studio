@@ -55,6 +55,9 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
   variable: "--font-montserrat",
+  display: "swap", // Optimize font loading - show fallback font while loading
+  preload: true,
+  fallback: ["system-ui", "arial"],
 });
 
 export default async function RootLayout({

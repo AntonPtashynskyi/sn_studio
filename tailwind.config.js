@@ -58,7 +58,20 @@ module.exports = {
       },
     },
   },
+  // Dark mode configuration
   darkMode: "class",
+
+  // Plugins
   plugins: [nextui()],
-  plugins: ["prettier-plugin-tailwindcss"],
+
+  // Production optimizations
+  future: {
+    hoverOnlyWhenSupported: true, // Only apply hover styles on devices that support hover
+  },
+
+  // JIT mode optimizations (enabled by default in Tailwind CSS v3)
+  corePlugins: {
+    // Disable unused core plugins to reduce CSS size if needed
+    // preflight: true, // Keep for browser reset
+  },
 };
