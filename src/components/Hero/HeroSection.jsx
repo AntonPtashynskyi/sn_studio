@@ -13,6 +13,7 @@ export const HeroSection = ({
   h1Title,
   description,
   CTAText,
+  lang,
 }) => {
   return (
     <section className={`${className} hero-base-section`}>
@@ -30,6 +31,9 @@ export const HeroSection = ({
           <Link
             href="https://dikidi.net/1788548"
             target="_blank"
+            rel="noopener noreferrer nofollow"
+            aria-label="Book appointment online - InBrows beauty studio"
+            title="Book appointment online via Dikidi"
             className="bg-white bg-opacity-90 px-4 py-4 rounded-[3rem] font-bold text-black text-center block w-[80%] md:w-[50%] mx-auto mt-6"
           >
             {CTAText}
@@ -45,6 +49,9 @@ export const HeroSection = ({
                 <Link
                   href="https://dikidi.net/1788548"
                   target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  aria-label="Book appointment online - InBrows beauty studio"
+                  title="Book appointment online via Dikidi"
                   className="px-10 py-5 text-xl bg-black hover:bg-gray-900 transition-all text-white shadow-sm rounded-[3rem]"
                 >
                   {CTAText}

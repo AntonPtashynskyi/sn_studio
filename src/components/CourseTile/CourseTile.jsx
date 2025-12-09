@@ -16,6 +16,17 @@ export const CourseTile = ({ title, description, time, url, t, blank = false }) 
     return <React.Fragment key={index}>{word}</React.Fragment>;
   });
 
+  const linkProps = blank
+    ? {
+        rel: "noopener noreferrer nofollow",
+        "aria-label": `${title} - InBrows training`,
+        title: `Learn more about ${title}`,
+      }
+    : {
+        "aria-label": `${title} - InBrows training`,
+        title: `Learn more about ${title}`,
+      };
+
   return (
     <div className="course-tile">
       <div className="course-tile--time">
@@ -26,7 +37,12 @@ export const CourseTile = ({ title, description, time, url, t, blank = false }) 
       </div>
       <h3 className="course-tile--title">{titleArray}</h3>
       <p className="course-tile--description">{description}</p>
-      <a href={url} target={blank ? "_blank" : ""} className="course-tile--link mt-auto">
+      <a
+        href={url}
+        target={blank ? "_blank" : ""}
+        {...linkProps}
+        className="course-tile--link mt-auto"
+      >
         {t("Learn more")}
       </a>
     </div>

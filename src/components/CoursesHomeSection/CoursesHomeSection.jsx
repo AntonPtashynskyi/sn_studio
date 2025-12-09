@@ -12,7 +12,16 @@ const CoursesHomeSection = ({ t, lang }) => {
         )}
         <br />
         {t("Get in touch with me to schedule a")}{" "}
-        <Link href="https://dikidi.net/1788548" target="_blank" className="text-[#000000] font-semibold">{t("free consultation")}</Link>
+        <Link
+          href="https://dikidi.net/1788548"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          aria-label="Book free consultation - InBrows beauty studio"
+          title="Book free consultation via Dikidi"
+          className="text-[#000000] font-semibold"
+        >
+          {t("free consultation")}
+        </Link>
       </p>
       <div className="course-tile-container">
         <CourseTile

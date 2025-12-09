@@ -35,7 +35,16 @@ export const ServiceDescription = ({
             dangerouslySetInnerHTML={{ __html: title }}
           ></h2>
           <p className="text-lg">{copyOne}</p>
-          <Link href="https://dikidi.net/1788548" target="_blank" className="underline text-lg font-bold">{t("Make an appointment!")}</Link>
+          <Link
+            href="https://dikidi.net/1788548"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            aria-label="Book appointment online - InBrows beauty studio"
+            title="Book appointment online via Dikidi"
+            className="underline text-lg font-bold"
+          >
+            {t("Make an appointment!")}
+          </Link>
           {copyTwo && (
             <>
               <p className="mt-3 text-lg font-bold">{t("The treatment includes:")}</p>

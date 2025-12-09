@@ -218,6 +218,9 @@ const BrowsPage = async ({ params: { lang } }) => {
         <Link
           href="https://dikidi.net/1788548"
           target="_blank"
+          rel="noopener noreferrer nofollow"
+          aria-label="Sign up for Basic Brows training - InBrows beauty studio"
+          title="Sign up for Basic Brows training via Dikidi"
           className="bg-black mb-3 bg-opacity-90 px-4 py-4 rounded-[3rem] text-white text-center block w-[80%] md:w-[50%] mx-auto font-light mt-6"
         >
           {t("Sign up for training!")}
