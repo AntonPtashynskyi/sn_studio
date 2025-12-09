@@ -17,11 +17,14 @@ export async function generateMetadata(data) {
   const canonicalUrl = `${baseUrl}/${lang}`;
 
   // Generate hreflang alternates for all languages
-  const languages = ['pl', 'en', 'ua', 'ru'];
-  const languageAlternates = {};
-  languages.forEach(locale => {
-    languageAlternates[locale] = `${baseUrl}/${locale}`;
-  });
+  // Using proper locale codes and adding x-default
+  const languageAlternates = {
+    'pl': `${baseUrl}/pl`,
+    'en': `${baseUrl}/en`,
+    'uk': `${baseUrl}/ua`,
+    'ru': `${baseUrl}/ru`,
+    'x-default': `${baseUrl}/pl`, // Default to Polish
+  };
 
   return {
     robots: "index, follow",

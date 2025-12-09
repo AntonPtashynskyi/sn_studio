@@ -1,14 +1,21 @@
 export function generatePageMetadata({ lang, slug, meta }) {
   const { ENVIRONMENT_VAR } = process.env;
   const baseUrl = ENVIRONMENT_VAR === "development" ? "http://localhost:3000" : "https://inbrows.pl";
-  const canonicalUrl = `${baseUrl}/${lang}/${slug}`;
+
+  // Normalize slug to avoid double slashes
+  const normalizedSlug = slug ? slug : '';
+  const slugPath = normalizedSlug ? `/${normalizedSlug}` : '';
+  const canonicalUrl = `${baseUrl}/${lang}${slugPath}`;
 
   // Generate hreflang alternates for all languages
-  const languages = ['pl', 'en', 'ua', 'ru'];
-  const languageAlternates = {};
-  languages.forEach(locale => {
-    languageAlternates[locale] = `${baseUrl}/${locale}/${slug}`;
-  });
+  // Using proper locale codes: pl-PL, en-US, uk-UA, ru-RU
+  const languages = {
+    'pl': `${baseUrl}/pl${slugPath}`,
+    'en': `${baseUrl}/en${slugPath}`,
+    'uk': `${baseUrl}/ua${slugPath}`,
+    'ru': `${baseUrl}/ru${slugPath}`,
+    'x-default': `${baseUrl}/pl${slugPath}`, // Default to Polish
+  };
 
   return {
     title: meta.title,
@@ -16,7 +23,7 @@ export function generatePageMetadata({ lang, slug, meta }) {
 
     alternates: {
       canonical: canonicalUrl,
-      languages: languageAlternates,
+      languages: languages,
     },
 
     openGraph: {

@@ -20,37 +20,44 @@ const MobileMenuWrapper = ({ open, pageLanguage, setOpen, t }) => {
               <MenuLink
                 href={`/${pageLanguage}`}
                 title={t("Main")}
+                ariaLabel={t("Go to main page")}
                 onClick={closeMobileMenu}
               />
               <MenuLink
                 href={`/${pageLanguage}/#price`}
                 title={t("Price list")}
+                ariaLabel={t("View price list")}
                 onClick={closeMobileMenu}
               />
               <MobileMenuDropDown title={t("Services")}>
                 <MenuLink
                   href={`/${pageLanguage}/services`}
                   title={t("All services")}
+                  ariaLabel={t("View all services")}
                   onClick={closeMobileMenu}
                 />
                 <MenuLink
                   href={`/${pageLanguage}/services#brows`}
                   title={t("Brows")}
+                  ariaLabel={t("View brows services")}
                   onClick={closeMobileMenu}
                 />
                 <MenuLink
                   href={`/${pageLanguage}/services#lashes`}
                   title={t("Lashes")}
+                  ariaLabel={t("View lashes services")}
                   onClick={closeMobileMenu}
                 />
                 <MenuLink
                   href={`/${pageLanguage}/services#pmu`}
-                  title="PMU"
+                  title={t("Permanent Makeup")}
+                  ariaLabel={t("View permanent makeup services")}
                   onClick={closeMobileMenu}
                 />
                 <MenuLink
                   href={`/${pageLanguage}/services#faq`}
-                  title="FAQ"
+                  title={t("FAQ")}
+                  ariaLabel={t("View frequently asked questions")}
                   onClick={closeMobileMenu}
                 />
               </MobileMenuDropDown>
@@ -58,18 +65,21 @@ const MobileMenuWrapper = ({ open, pageLanguage, setOpen, t }) => {
                 <MenuLink
                   href={`/${pageLanguage}/basic-brows`}
                   title={t("Basic Brows")}
+                  ariaLabel={t("Learn eyebrow architecture training")}
                   onClick={closeMobileMenu}
                 />
                 <MenuLink
                   href={`/${pageLanguage}/lash-lamination`}
                   key="lash-lamination"
                   title={t("Eyelash lamination")}
+                  ariaLabel={t("Learn eyelash lamination training")}
                   onClick={closeMobileMenu}
                 />
               </MobileMenuDropDown>
               <MenuLink
                 href={`/${pageLanguage}/#contact`}
                 title={t("Contact")}
+                ariaLabel={t("Go to contact section")}
                 onClick={closeMobileMenu}
               />
             </div>
