@@ -56,17 +56,17 @@ export default async function Home({ params }) {
         <div className="lg:flex service-wrapper">
           <ServiceTile
             title={t("Brows")}
-            path={`${lang}/services#brows`}
+            path={`/${lang}/services#brows`}
             styleClass="brows"
           />
           <ServiceTile
             title={t("Lashes")}
-            path={`${lang}/services#lashes`}
+            path={`/${lang}/services#lashes`}
             styleClass="eyelashes"
           />
           <ServiceTile
             title="Pmu"
-            path={`${lang}/services#pmu`}
+            path={`/${lang}/services#pmu`}
             styleClass="pmu"
           />
         </div>

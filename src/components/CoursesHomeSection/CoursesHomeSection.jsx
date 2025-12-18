@@ -29,14 +29,14 @@ const CoursesHomeSection = ({ t, lang }) => {
           title={t("Basic Brows")}
           description={t("A full training course on eyebrow styling from scratch and eyebrow lamination.")}
           t={t}
-          url={`${lang}/basic-brows`}
+          url={`/${lang}/basic-brows`}
         />
         <CourseTile
           time={`2 ${t("days")}`}
           title={t("Eyelash lamination")}
           description={t("Eyelash lamination training from A to Z. Includes work with three brands of products: Inley, Elan, Zola. And all types of curls.")}
           t={t}
-          url={`${lang}/lash-lamination`}
+          url={`/${lang}/lash-lamination`}
         />
         <CourseTile
           time={`1 ${t("day")}`}
