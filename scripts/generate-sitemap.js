@@ -52,7 +52,7 @@ ${urls
   .map(
     (url) => `
   <url>
-    <loc>${baseUrl}${url}</loc>
+    <loc>${baseUrl}${url}/</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
   </url>`
   )

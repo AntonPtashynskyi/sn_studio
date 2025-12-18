@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Add trailing slash to all URLs
+  trailingSlash: true,
+
   // Optimized webpack configuration
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -13,9 +16,9 @@ const nextConfig = {
   },
 
   // Optimize CSS
-  experimental: {
-    optimizeCss: true, // Enable CSS optimization
-  },
+  // experimental: {
+  //   optimizeCss: true, // Enable CSS optimization - requires 'critters' package
+  // },
 
   // Compress output
   compress: true,
