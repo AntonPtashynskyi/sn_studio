@@ -6,12 +6,17 @@ import { useCookies } from 'react-cookie';
 export default function CookieConsent({ lang }) {
   const [cookies, setCookie] = useCookies(['cookie-consent']);
   const [showBanner, setShowBanner] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (!cookies['cookie-consent']) {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (mounted && !cookies['cookie-consent']) {
       setShowBanner(true);
     }
-  }, [cookies]);
+  }, [cookies, mounted]);
 
   const acceptCookies = () => {
     setCookie('cookie-consent', 'accepted', {
@@ -22,9 +27,12 @@ export default function CookieConsent({ lang }) {
     setShowBanner(false);
 
     // Init Google Analytics after accept
-    window.gtag('consent', 'update', {
-      'analytics_storage': 'granted'
-    });
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('consent', 'update', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'granted'
+      });
+    }
   };
 
   const declineCookies = () => {
@@ -36,7 +44,8 @@ export default function CookieConsent({ lang }) {
     setShowBanner(false);
   };
 
-  if (!showBanner) return null;
+  // Don't render anything until mounted to avoid hydration mismatch
+  if (!mounted || !showBanner) return null;
 
   const translations = {
     pl: {

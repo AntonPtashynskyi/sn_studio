@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer/Footer";
 import MobileMenu from "@/components/Navbar/MobileMenu";
 import DesktopMenu from "@/components/Navbar/DesktopMenu";
 import GoogleAnalytics from "@/components/Analytics/GoogleAnalytics";
+import GTMNoScript from "@/components/Analytics/GTMNoScript";
 import CookieConsent from "@/components/CookieConsent/CookieConsent";
 
 import "./globals.scss";
@@ -73,9 +74,10 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <head>
-        <GoogleAnalytics gaId="G-BD3JNYY65F" />
+        <GoogleAnalytics gaId="G-BD3JNYY65F" gtmId="GTM-MKH85PQM" />
       </head>
-      <body className={`${montserrat.variable} font-sans`}>
+      <body className={`${montserrat.variable} font-sans`} data-version="v.1.0">
+        <GTMNoScript gtmId="GTM-MKH85PQM" />
         <Navbar>
           <MobileMenu pageLanguage={lang} />
           <DesktopMenu pageLanguage={lang} />
