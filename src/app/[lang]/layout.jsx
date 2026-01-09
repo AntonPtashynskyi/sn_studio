@@ -3,6 +3,8 @@ import { Montserrat } from "next/font/google";
 import { Footer } from "@/components/Footer/Footer";
 import MobileMenu from "@/components/Navbar/MobileMenu";
 import DesktopMenu from "@/components/Navbar/DesktopMenu";
+import GoogleAnalytics from "@/components/Analytics/GoogleAnalytics";
+import CookieConsent from "@/components/CookieConsent/CookieConsent";
 
 import "./globals.scss";
 import { getMetadata } from "../actions";
@@ -70,6 +72,9 @@ export default async function RootLayout({
 }) {
   return (
     <html lang={lang}>
+      <head>
+        <GoogleAnalytics gaId="G-BD3JNYY65F" />
+      </head>
       <body className={`${montserrat.variable} font-sans`}>
         <Navbar>
           <MobileMenu pageLanguage={lang} />
@@ -78,6 +83,7 @@ export default async function RootLayout({
         <main className="main-content">{children}</main>
         <Footer pageLanguage={lang} />
         {contact_form}
+        <CookieConsent lang={lang} />
       </body>
     </html>
   );
