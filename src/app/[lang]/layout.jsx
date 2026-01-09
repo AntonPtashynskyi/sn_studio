@@ -74,7 +74,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <head>
-        <GoogleAnalytics gaId="G-BD3JNYY65F" gtmId="GTM-MKH85PQM" />
+        <GoogleAnalytics gtmId="GTM-MKH85PQM" />
       </head>
       <body className={`${montserrat.variable} font-sans`} data-version="v.1.0">
         <GTMNoScript gtmId="GTM-MKH85PQM" />
