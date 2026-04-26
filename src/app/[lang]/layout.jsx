@@ -6,6 +6,8 @@ import DesktopMenu from "@/components/Navbar/DesktopMenu";
 import GoogleAnalytics from "@/components/Analytics/GoogleAnalytics";
 import GTMNoScript from "@/components/Analytics/GTMNoScript";
 import CookieConsent from "@/components/CookieConsent/CookieConsent";
+import JsonLd from "@/components/JsonLd/JsonLd";
+import { localBusinessSchema } from "@/libs/schemas";
 
 import "./globals.scss";
 import { getMetadata } from "../actions";
@@ -34,7 +36,7 @@ export async function generateMetadata(data) {
     metadataBase: new URL("https://inbrows.pl"),
     title: metaData.title,
     description: metaData.description,
-    keywords: metaData.keywords,
+    keywords: metaData.keywords || metaData.keyword,
     alternates: {
       canonical: canonicalUrl,
       languages: languageAlternates,
@@ -75,6 +77,7 @@ export default async function RootLayout({
     <html lang={lang}>
       <head>
         <GoogleAnalytics gtmId="GTM-MKH85PQM" />
+        <JsonLd schema={localBusinessSchema(lang)} />
       </head>
       <body className={`${montserrat.variable} font-sans`} data-version="v.1.0">
         <GTMNoScript gtmId="GTM-MKH85PQM" />

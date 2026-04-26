@@ -22,6 +22,8 @@ import AccordionContentPracticeDay3 from "@/components/CorsesDescription/Accordi
 import AccordionContentPracticeBonus from "@/components/CorsesDescription/AccordionContentTheory/AccordionContentPracticeBonus";
 import Link from "next/link";
 import { generatePageMetadata } from "@/utils/generatePageMetaData";
+import JsonLd from "@/components/JsonLd/JsonLd";
+import { courseSchema } from "@/libs/schemas";
 
 export async function generateMetadata({ params }) {
   const { lang } = params;
@@ -34,11 +36,25 @@ export async function generateMetadata({ params }) {
   });
 }
 
+const courseNames = {
+  pl: "Szkolenie Basic Brows – Stylizacja Brwi",
+  en: "Basic Brows Training – Eyebrow Styling Course",
+  ua: "Навчання Basic Brows – Стилізація Брів",
+  ru: "Обучение Basic Brows – Стилизация Бровей",
+};
+const courseDescs = {
+  pl: "3-dniowe intensywne szkolenie ze stylizacji brwi. Teoria (geometria, koloryzacja) i praktyka na modelkach. Certyfikat i wsparcie po kursie.",
+  en: "3-day intensive brow styling training. Theory (geometry, coloring) and hands-on practice on live models. Certificate and post-course support.",
+  ua: "3-денне інтенсивне навчання зі стилізації брів. Теорія (геометрія, фарбування) та практика на живих моделях. Сертифікат і підтримка після курсу.",
+  ru: "3-дневное интенсивное обучение стилизации бровей. Теория (геометрия, колорирование) и практика на живых моделях. Сертификат и поддержка после курса.",
+};
+
 const BrowsPage = async ({ params: { lang } }) => {
   const { t } = await useTranslation(lang, "trainings");
 
   return (
     <>
+      <JsonLd schema={courseSchema({ lang, name: courseNames[lang] || courseNames.pl, description: courseDescs[lang] || courseDescs.pl, price: 2500, slug: "basic-brows" })} />
       <HeroSection
         className="brows_training"
         h1MobileTitle="Basic brows"
@@ -54,9 +70,9 @@ const BrowsPage = async ({ params: { lang } }) => {
         </h2>
         <div className="my-8 pb-16">
           <div className="bg-lightBgColor relative p-5 rounded-md mt-14 shadow-md">
-            <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
+            <h3 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
               BASIC BROWS
-            </h2>
+            </h3>
             <p className="text-lg font-light">
               {t("Basic brows desc")}
             </p>
@@ -64,9 +80,9 @@ const BrowsPage = async ({ params: { lang } }) => {
 
           <div className="flex gap-4 flex-col md:flex-row">
             <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
-              <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
+              <h3 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
                 {t("First day")}
-              </h2>
+              </h3>
               <p className="text-lg font-light mb-3">
                 {t(
                   "Includes a 6-hour theoretical part where participants will learn:"
@@ -97,9 +113,9 @@ const BrowsPage = async ({ params: { lang } }) => {
             </div>
 
             <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
-              <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
+              <h3 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
                 {t("Second day")}
-              </h2>
+              </h3>
               <p className="text-lg font-light">
                 {t(
                   "Is dedicated to the practical part, where each trainee will have the opportunity to work on four models, perfecting the techniques discussed in the theoretical part."
@@ -111,9 +127,9 @@ const BrowsPage = async ({ params: { lang } }) => {
           <div>
             <div className="md:w-1/2">
               <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
-                <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
+                <h3 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
                   {t("Day three")}
-                </h2>
+                </h3>
                 <p className="text-lg font-light">
                   {t("Basic brows third day desc")}
                 </p>

@@ -18,6 +18,8 @@ import selfImprovementImage from "../../../../public/assets/images/courses/self-
 import { getMetadata } from "@/app/actions";
 import Link from "next/link";
 import { generatePageMetadata } from "@/utils/generatePageMetaData";
+import JsonLd from "@/components/JsonLd/JsonLd";
+import { courseSchema } from "@/libs/schemas";
 
 export async function generateMetadata({ params }) {
   const { lang } = params;
@@ -30,11 +32,25 @@ export async function generateMetadata({ params }) {
   });
 }
 
+const lashCourseNames = {
+  pl: "Szkolenie Laminacja Rzęs – Lash Lifting",
+  en: "Lash Lamination Training – Lash Lifting Course",
+  ua: "Навчання Ламінування Вій – Ліфтинг Вій",
+  ru: "Обучение Ламинирование Ресниц – Лифтинг Ресниц",
+};
+const lashCourseDescs = {
+  pl: "2-dniowe szkolenie z laminacji i liftingu rzęs od podstaw. Teoria (rodzaje skrętów, chemia preparatów) i praktyka na 2 modelkach. Certyfikat.",
+  en: "2-day lash lamination and lifting training from scratch. Theory (curl types, product chemistry) and hands-on practice on 2 models. Certificate included.",
+  ua: "2-денне навчання з ламінування та ліфтингу вій з нуля. Теорія (типи скрутів, хімія засобів) та практика на 2 моделях. Сертифікат.",
+  ru: "2-дневное обучение ламинированию и лифтингу ресниц с нуля. Теория (типы завивок, химия препаратов) и практика на 2 моделях. Сертификат.",
+};
+
 const BrowsPage = async ({ params: { lang } }) => {
   const { t } = await useTranslation(lang, "trainings");
 
   return (
     <>
+      <JsonLd schema={courseSchema({ lang, name: lashCourseNames[lang] || lashCourseNames.pl, description: lashCourseDescs[lang] || lashCourseDescs.pl, price: 1500, slug: "lash-lamination" })} />
       <HeroSection
         className="brows_training"
         h1MobileTitle={t("Lami lashes training")}
@@ -50,7 +66,7 @@ const BrowsPage = async ({ params: { lang } }) => {
         </h2>
         <div className="my-8">
           <div className="bg-lightBgColor relative p-5 rounded-md mt-14 shadow-md">
-            <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">{t("Lami lashes training")}</h2>
+            <h3 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">{t("Lami lashes training")}</h3>
             <p className="text-lg font-light">{t("After completing this course, you will master the techniques of perfect curling and lifting of lashes, gaining the skills needed for professional styling.")} 
             </p>
           </div>
@@ -61,9 +77,9 @@ const BrowsPage = async ({ params: { lang } }) => {
           
           <div className="flex gap-4 flex-col md:flex-row">
             <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
-              <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
+              <h3 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">
                 {t("First day")}
-              </h2>
+              </h3>
               <p className="text-lg font-light mb-3">{t("✅ theoretical part - 4-5h")}</p>
               <ul className="text-lg font-light list-disc  list-inside">
                 <li className="pl-3">{t("What is lash lamination")}</li>
@@ -81,7 +97,7 @@ const BrowsPage = async ({ params: { lang } }) => {
             </div>
             
             <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
-              <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">{t("Second day")}</h2>
+              <h3 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">{t("Second day")}</h3>
               <ul className="text-lg font-light list-disc  list-inside">
                 <li className="pl-3">{t("demonstration model")}</li>
                 <li className="pl-3">{t("2 models for the trainee")}</li>
@@ -95,7 +111,7 @@ const BrowsPage = async ({ params: { lang } }) => {
           <div>
             <div className="md:w-1/2">
               <div className="bg-lightBgColor relative p-5 rounded-md mt-14 flex-1 shadow-md">
-                <h2 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">{t("Bonus")}</h2>
+                <h3 className="bg-lightBgColor w-fit p-3 font-medium absolute -top-9 rounded-md text-xl">{t("Bonus")}</h3>
                 <ul className="text-lg font-light list-disc  list-inside">
                   <li className="pl-3">{t("Instagram photography lesson.")}</li>
                   <li className="pl-3">{t("What equipment I use to take nice shots.")}</li>

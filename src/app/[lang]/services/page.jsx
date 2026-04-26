@@ -4,6 +4,8 @@ import { ServiceDescription } from "@/components/ServiceDescription/ServiceDescr
 import { Contact } from "@/components/Contact/Contact";
 import { Section } from "@/components/Section/Section";
 import { useTranslation } from "@/app/i18n";
+import JsonLd from "@/components/JsonLd/JsonLd";
+import { faqPageSchema, faqByLang } from "@/libs/schemas";
 
 import "./browsPage.scss";
 
@@ -30,16 +32,24 @@ export async function generateMetadata({ params }) {
   });
 }
 
+const servicesH1 = {
+  pl: "Usługi – Laminacja i Stylizacja Brwi i Rzęs, Makijaż Permanentny",
+  en: "Services – Brow & Lash Lamination, Styling and Permanent Makeup",
+  ua: "Послуги – Ламінування і Стилізація Брів та Вій, Перманентний Макіяж",
+  ru: "Услуги – Ламинирование и Стилизация Бровей и Ресниц, Перманентный Макияж",
+};
+
 const ServicesPage = async ({params: {lang}}) => {
   const { t } = await useTranslation(lang, "common");
 
   return (
     <>
+      <JsonLd schema={faqPageSchema(faqByLang[lang] || faqByLang.pl)} />
       <HeroSection
         className="services_page"
         h1MobileTitle={t("Services")}
+        h1Title={servicesH1[lang] || servicesH1.pl}
         description={t("Eyebrows play a key role in giving the face expressiveness, shape, and symmetry, uniquely highlighting the natural beauty of the eyes and the entire face.")}
-        h2Title="Brwi!"
         CTAText={t("Make an appointment!")}
         lang={lang}
       />

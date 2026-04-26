@@ -1,4 +1,4 @@
-export function generatePageMetadata({ lang, slug, meta }) {
+export function generatePageMetadata({ lang, slug, meta, keywords }: { lang: string; slug?: string; meta: { title: string; description: string }; keywords?: string[] }) {
   const { ENVIRONMENT_VAR } = process.env;
   const baseUrl = ENVIRONMENT_VAR === "development" ? "http://localhost:3000" : "https://inbrows.pl";
 
@@ -20,6 +20,7 @@ export function generatePageMetadata({ lang, slug, meta }) {
   return {
     title: meta.title,
     description: meta.description,
+    ...(keywords && { keywords }),
 
     alternates: {
       canonical: canonicalUrl,

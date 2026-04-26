@@ -1,102 +1,86 @@
 export const metadataLocales = {
     "en": {
-        "title": "In-Brows | Top Brow and Lash Lamination & Styling",
-        "description": "Discover services like lamination, eyebrow and eyelash styling, and permanent makeup for yourself. Join us and enhance your natural beauty!",
-        "keyword": ["brow", "lamination lash", "lamination eyebrow styling", "eyelash styling", "permanent makeup", "beauty services", "professional lamination", "natural beauty", "enhancement", "lash lift", "brow lift"],
+        "title": "InBrows | Brow & Lash Lamination Studio – Wrocław",
+        "description": "InBrows beauty studio in Wrocław – professional eyebrow & eyelash lamination, styling, and permanent makeup. Book online. Results you'll love.",
+        "keywords": ["brow lamination", "lash lamination", "eyebrow styling", "eyelash styling", "permanent makeup", "beauty studio Wrocław", "brow lift", "lash lift"],
         "services": {
-            "title": "Professional Brow and Lash Lamination & Styling",
-            "description": "Discover our top-notch brow and lash lamination and styling services. Achieve a stunning look with our professional permanent makeup solutions. Join us and enhance your natural beauty today!"
+            "title": "Brow & Lash Services – Lamination, Styling, PMU | InBrows",
+            "description": "Eyebrow lamination, lash lamination, eyebrow styling, regulation and permanent makeup at InBrows studio in Wrocław. Book your appointment online today."
         },
         "basicBrows": {
-            "title": "Intensive Two-Day Brow Styling Training | Master the Art of Eyebrow Design",
-            "description": "Join our intensive two-day basic brow styling training designed for those eager to gain comprehensive knowledge and skills. Enroll now to master eyebrow styling!",
+            "title": "Basic Brows Training – 3-Day Eyebrow Styling Course | InBrows",
+            "description": "Master eyebrow styling in 3 days. Theory, geometry, coloring & hands-on practice on live models. Professional brow stylist training in Wrocław. Enrol now."
         },
         "lashLamination": {
-            "title": "Intensive Two-Day Brow Styling Training | Master the Art of Eyebrow Design",
-            "description": "Join our intensive two-day basic brow styling training designed for those eager to gain comprehensive knowledge and skills. Enroll now to master eyebrow styling!",
-        },
-        "basicBrows": {
-            "title": "Intensive Two-Day Brow Styling Training | Master the Art of Eyebrow Design",
-            "description": "Join our intensive two-day basic brow styling training designed for those eager to gain comprehensive knowledge and skills. Enroll now to master eyebrow styling!",
+            "title": "Lash Lamination Training – 2-Day Lash Lifting Course | InBrows",
+            "description": "Learn lash lamination and lifting from scratch in 2 days. Theory, product chemistry, hands-on models & certificate. Professional course in Wrocław. Sign up."
         },
         "privacyPolicy": {
-            "title": "Polityka Prywatności – Zasady przetwarzania danych w InBrows",
-            "description": "Dowiedz się, w jaki sposób InBrows gromadzi, wykorzystuje i chroni Twoje dane osobowe. Przeczytaj szczegółowe zasady przetwarzania danych, plików cookies oraz przysługujących Ci praw."
+            "title": "Privacy Policy – InBrows Beauty Studio",
+            "description": "Read how InBrows collects, uses and protects your personal data. Learn about cookies, data processing rules and your rights under GDPR."
         }
     },
     "pl": {
-        "title": "In-Brows | Profesionalna laminacja i stylizacja brwi i rzęs",
-        "description": "Odkryj naszą platformę z usługami laminacji, stylizacji brwi i rzęs oraz permanentnym makijażem. Dołącz do nas i podkreśl swoje naturalne piękno!",
-        "keyword": ["laminowanie brwi", "laminowanie rzęs", "stylizacja brwi", "stylizacja rzęs", "makijaż permanentny", "usługi kosmetyczne", "profesjonalne laminowanie", "podkreślenie naturalnego piękna", "lifting rzęs", "lifting brwi"],
+        "title": "InBrows | Studio Laminacji i Stylizacji Brwi i Rzęs – Wrocław",
+        "description": "Studio kosmetyczne InBrows we Wrocławiu – profesjonalna laminacja brwi i rzęs, stylizacja oraz makijaż permanentny. Umów się online. Efekty, które pokochasz.",
+        "keywords": ["laminowanie brwi", "laminowanie rzęs", "stylizacja brwi", "stylizacja rzęs", "makijaż permanentny", "studio kosmetyczne Wrocław", "lifting rzęs", "lifting brwi"],
         "services": {
-            "title": "Profesjonalne laminowanie i stylizacja brwi i rzęs",
-            "description": "Odkryj nasze najlepsze usługi laminowania i stylizacji brwi i rzęs. Osiągnij olśniewający wygląd dzięki naszym profesjonalnym rozwiązaniom w zakresie makijażu permanentnego. Dołącz do nas i podkreśl swoje naturalne piękno już dziś!"
+            "title": "Usługi – Laminacja i Stylizacja Brwi i Rzęs, PMU | InBrows",
+            "description": "Laminacja brwi, laminacja rzęs, stylizacja, regulacja brwi oraz makijaż permanentny w studiu InBrows we Wrocławiu. Zarezerwuj wizytę online już dziś."
         },
         "basicBrows": {
-            "title": "Intensywne dwudniowe szkolenie ze stylizacji brwi | Opanuj sztukę projektowania brwi",
-            "description": "Dołącz do naszego intensywnego, dwudniowego szkolenia podstawowego ze stylizacji brwi, zaprojektowanego dla osób pragnących zdobyć kompleksową wiedzę i umiejętności. Zapisz się teraz, aby opanować stylizację brwi!",
+            "title": "Szkolenie Basic Brows – 3-Dniowy Kurs Stylizacji Brwi | InBrows",
+            "description": "Opanuj stylizację brwi w 3 dni. Teoria, geometria, koloryzacja i praktyka na modelkach. Profesjonalne szkolenie stylistki brwi we Wrocławiu. Zapisz się już teraz."
         },
         "lashLamination": {
-            "title": "Intensywne dwudniowe szkolenie ze stylizacji brwi | Opanuj sztukę projektowania brwi",
-            "description": "Dołącz do naszego intensywnego, dwudniowego szkolenia podstawowego ze stylizacji brwi, zaprojektowanego dla osób pragnących zdobyć kompleksową wiedzę i umiejętności. Zapisz się teraz, aby opanować stylizację brwi!",
-        },
-        "additionalTrainings": {
-            "title": "Intensywne dwudniowe szkolenie ze stylizacji brwi | Opanuj sztukę projektowania brwi",
-            "description": "Dołącz do naszego intensywnego, dwudniowego szkolenia podstawowego ze stylizacji brwi, zaprojektowanego dla osób pragnących zdobyć kompleksową wiedzę i umiejętności. Zapisz się teraz, aby opanować stylizację brwi!",
+            "title": "Szkolenie Laminacja Rzęs – 2-Dniowy Kurs Liftingu Rzęs | InBrows",
+            "description": "Naucz się laminacji i liftingu rzęs od podstaw w 2 dni. Teoria, chemia preparatów, praktyka na modelkach i certyfikat. Kurs we Wrocławiu. Zapisz się."
         },
         "privacyPolicy": {
-            "title": "Polityka Prywatności – Zasady przetwarzania danych w InBrows",
+            "title": "Polityka Prywatności – InBrows Studio Kosmetyczne",
             "description": "Dowiedz się, w jaki sposób InBrows gromadzi, wykorzystuje i chroni Twoje dane osobowe. Przeczytaj szczegółowe zasady przetwarzania danych, plików cookies oraz przysługujących Ci praw."
         }
     },
     "ua": {
-        "title": "In-Brows | Професійне ламінування і моделювання брів та вій",
-        "description": "Відкрийте для себе послуги ламінування, стилізації брів і вій, а також перманентного макіяжу. Приєднуйтеся до нас і підкресліть свою природну красу!",
-        "keyword": ["ламінування брів", "ламінування вій", "стилізація брів", "стилізація вій", "перманентний макіяж", "послуги краси", "професійне ламінування", "підкреслення природної краси", "підйом вій", "підйом брів"],
+        "title": "InBrows | Студія Ламінування і Стилізації Брів та Вій – Вроцлав",
+        "description": "Студія краси InBrows у Вроцлаві – професійне ламінування брів і вій, стилізація та перманентний макіяж. Запишіться онлайн. Ефекти, які вам сподобаються.",
+        "keywords": ["ламінування брів", "ламінування вій", "стилізація брів", "стилізація вій", "перманентний макіяж", "студія краси Вроцлав", "ліфтинг вій", "ліфтинг брів"],
         "services": {
-            "title": "Професійне ламінування і стилізація брів та вій ",
-            "description": "Відкрийте для себе найкращі послуги ламінування і стилізації брів та вій. Досягніть неперевершеного вигляду з нашими професійними рішеннями для перманентного макіяжу. Приєднуйтеся до нас і підкресліть свою природну красу вже сьогодні!"
+            "title": "Послуги – Ламінування і Стилізація Брів та Вій, PMU | InBrows",
+            "description": "Ламінування брів, ламінування вій, стилізація, корекція брів та перманентний макіяж у студії InBrows у Вроцлаві. Запишіться онлайн вже сьогодні."
         },
         "basicBrows": {
-            "title": "Інтенсивний дводенний курс по стилізації брів | Оволодійте мистецтвом дизайну брів",
-            "description": "Приєднуйтесь до нашого інтенсивного дводенного базового курсу по стилізації брів, призначеного для тих, хто прагне отримати комплексні знання та навички. Запишіться зараз, щоб оволодіти стилізацією брів!"
+            "title": "Навчання Basic Brows – 3-Денний Курс Стилізації Брів | InBrows",
+            "description": "Опануйте стилізацію брів за 3 дні. Теорія, геометрія, фарбування та практика на живих моделях. Профкурс майстра брів у Вроцлаві. Записуйтесь зараз."
         },
         "lashLamination": {
-            "title": "Інтенсивний дводенний курс по стилізації брів | Оволодійте мистецтвом дизайну брів",
-            "description": "Приєднуйтесь до нашого інтенсивного дводенного базового курсу по стилізації брів, призначеного для тих, хто прагне отримати комплексні знання та навички. Запишіться зараз, щоб оволодіти стилізацією брів!"
-        },
-        "additionalTrainings": {
-            "title": "Інтенсивний дводенний курс по стилізації брів | Оволодійте мистецтвом дизайну брів",
-            "description": "Приєднуйтесь до нашого інтенсивного дводенного базового курсу по стилізації брів, призначеного для тих, хто прагне отримати комплексні знання та навички. Запишіться зараз, щоб оволодіти стилізацією брів!"
+            "title": "Навчання Ламінування Вій – 2-Денний Курс Ліфтингу Вій | InBrows",
+            "description": "Вивчіть ламінування та ліфтинг вій з нуля за 2 дні. Теорія, хімія препаратів, практика на моделях і сертифікат. Курс у Вроцлаві. Записуйтесь."
         },
         "privacyPolicy": {
-            "title": "Polityka Prywatności – Zasady przetwarzania danych w InBrows",
-            "description": "Dowiedz się, w jaki sposób InBrows gromadzi, wykorzystuje i chroni Twoje dane osobowe. Przeczytaj szczegółowe zasady przetwarzania danych, plików cookies oraz przysługujących Ci praw."
+            "title": "Політика Конфіденційності – InBrows Studio",
+            "description": "Дізнайтесь, як InBrows збирає, використовує та захищає ваші персональні дані. Ознайомтесь з правилами обробки даних, файлами cookie та вашими правами."
         }
     },
     "ru": {
-        "title": "In-Brows | Профессиональное ламинирование и стилизация бровей и ресниц",
-        "description": "Откройте для себя услуги ламинирования, стилизации бровей и ресниц, а также перманентного макияжа. Присоединяйтесь к нам и подчеркните свою природную красоту!",
-        "keyword": ["ламинирование бровей", "ламинирование ресниц", "стилизация бровей", "стилизация ресниц", "перманентный макияж", "услуги красоты", "профессиональное ламинирование", "подчеркивание природной красоты", "лифтинг ресниц", "лифтинг бровей"],
+        "title": "InBrows | Студия Ламинирования и Стилизации Бровей и Ресниц – Вроцлав",
+        "description": "Студия красоты InBrows во Вроцлаве – профессиональное ламинирование бровей и ресниц, стилизация и перманентный макияж. Запишитесь онлайн. Эффекты, которые вам понравятся.",
+        "keywords": ["ламинирование бровей", "ламинирование ресниц", "стилизация бровей", "стилизация ресниц", "перманентный макияж", "студия красоты Вроцлав", "лифтинг ресниц", "лифтинг бровей"],
         "services": {
-            "title": "Профессиональное ламинирование и стилизация бровей и ресниц",
-            "description": "Откройте для себя лучшие услуги ламинирования и стилизации бровей и ресниц. Добейтесь потрясающего образа с нашими профессиональными решениями для перманентного макияжа. Присоединяйтесь к нам и подчеркните свою природную красоту уже сегодня!"
+            "title": "Услуги – Ламинирование и Стилизация Бровей и Ресниц, PMU | InBrows",
+            "description": "Ламинирование бровей, ламинирование ресниц, стилизация, коррекция и перманентный макияж в студии InBrows во Вроцлаве. Запишитесь онлайн уже сегодня."
         },
         "basicBrows": {
-            "title": "Интенсивный двухдневный курс по стилизации бровей | Овладейте искусством дизайна бровей",
-            "description": "Присоединяйтесь к нашему интенсивному двухдневному базовому курсу по стилизации бровей, предназначенному для тех, кто стремится получить комплексные знания и навыки. Запишитесь сейчас, чтобы овладеть стилизацией бровей!"
+            "title": "Обучение Basic Brows – 3-Дневный Курс Стилизации Бровей | InBrows",
+            "description": "Освойте стилизацию бровей за 3 дня. Теория, геометрия, колорирование и практика на живых моделях. Профкурс мастера бровей во Вроцлаве. Запишитесь сейчас."
         },
         "lashLamination": {
-            "title": "Интенсивный двухдневный курс по стилизации бровей | Овладейте искусством дизайна бровей",
-            "description": "Присоединяйтесь к нашему интенсивному двухдневному базовому курсу по стилизации бровей, предназначенному для тех, кто стремится получить комплексные знания и навыки. Запишитесь сейчас, чтобы овладеть стилизацией бровей!"
-        },
-        "additionalTrainings": {
-            "title": "Интенсивный двухдневный курс по стилизации бровей | Овладейте искусством дизайна бровей",
-            "description": "Присоединяйтесь к нашему интенсивному двухдневному базовому курсу по стилизации бровей, предназначенному для тех, кто стремится получить комплексные знания и навыки. Запишитесь сейчас, чтобы овладеть стилизацией бровей!"
+            "title": "Обучение Ламинирование Ресниц – 2-Дневный Курс Лифтинга | InBrows",
+            "description": "Изучите ламинирование и лифтинг ресниц с нуля за 2 дня. Теория, химия препаратов, практика на моделях и сертификат. Курс во Вроцлаве. Запишитесь."
         },
         "privacyPolicy": {
-            "title": "Polityka Prywatności – Zasady przetwarzania danych w InBrows",
-            "description": "Dowiedz się, w jaki sposób InBrows gromadzi, wykorzystuje i chroni Twoje dane osobowe. Przeczytaj szczegółowe zasady przetwarzania danych, plików cookies oraz przysługujących Ci praw."
+            "title": "Политика Конфиденциальности – InBrows Studio",
+            "description": "Узнайте, как InBrows собирает, использует и защищает ваши персональные данные. Ознакомьтесь с правилами обработки данных, файлами cookie и вашими правами."
         }
     },
 }

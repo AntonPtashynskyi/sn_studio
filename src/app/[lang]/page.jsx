@@ -7,9 +7,18 @@ import { SocialBanner } from "@/components/SocialBanner/SocialBanner";
 import { useTranslation } from "../i18n";
 import CoursesHomeSection from "@/components/CoursesHomeSection/CoursesHomeSection";
 import Image from "next/image";
+import JsonLd from "@/components/JsonLd/JsonLd";
+import { faqPageSchema, faqByLang } from "@/libs/schemas";
 
 import aboutMe from "@public/assets/images/main/about-me.webp";
 import { FAQ_services } from "@/components/FAQ/FAQ_services";
+
+const heroH1 = {
+  pl: "Laminacja i Stylizacja Brwi i Rzęs – Wrocław",
+  en: "Brow & Lash Lamination and Styling – Wrocław",
+  ua: "Ламінування і Стилізація Брів та Вій – Вроцлав",
+  ru: "Ламинирование и Стилизация Бровей и Ресниц – Вроцлав",
+};
 
 export default async function Home({ params }) {
   const { lang } = params;
@@ -17,14 +26,15 @@ export default async function Home({ params }) {
 
   return (
     <>
+      <JsonLd schema={faqPageSchema(faqByLang[lang] || faqByLang.pl)} />
       <HeroSection
         h1MobileTitle="In </br> Brows"
+        h1Title={heroH1[lang] || heroH1.pl}
         mobileSubtitle={t("Studio")}
         className="main-page"
         description={t(
           "Do you want to enhance your natural beauty or learn to do it professionally? Contact me today!"
         )}
-        h2Title="Cześć!"
         CTAText={t("Make an appointment!")}
         lang={lang}
       />

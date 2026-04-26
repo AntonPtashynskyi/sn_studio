@@ -6,11 +6,14 @@ export async function generateMetadata({ params }) {
   const { lang } = params;
   const meta = await getMetadata(lang);
 
-  return generatePageMetadata({
-    lang,
-    slug: "privacy-policy",
-    meta: meta.privacyPolicy,
-  });
+  return {
+    ...generatePageMetadata({
+      lang,
+      slug: "privacy-policy",
+      meta: meta.privacyPolicy,
+    }),
+    robots: { index: false, follow: false },
+  };
 }
 
 

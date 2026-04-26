@@ -17,7 +17,7 @@ const TrainingAdvantage = ({
         </div>
       </div>
       <div className="right-block">
-        <h2 className=" font-bold">{stepTitle}</h2>
+        <h3 className=" font-bold">{stepTitle}</h3>
         <p className="font-light">{stepDescription}</p>
       </div>
     </div>

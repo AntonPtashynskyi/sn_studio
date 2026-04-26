@@ -3,101 +3,141 @@
 
   <url>
     <loc>https://inbrows.pl/pl/</loc>
-    <lastmod>2025-12-18T08:43:52.900Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/pl/basic-brows/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/pl/lash-lamination/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/pl/privacy-policy/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/pl/services/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/en/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/en/basic-brows/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/en/lash-lamination/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/en/privacy-policy/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/en/services/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/ua/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/ua/basic-brows/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/ua/lash-lamination/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/ua/privacy-policy/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/ua/services/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/ru/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/ru/basic-brows/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/ru/lash-lamination/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/ru/privacy-policy/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 
   <url>
     <loc>https://inbrows.pl/ru/services/</loc>
-    <lastmod>2025-12-18T08:43:52.901Z</lastmod>
+    <lastmod>2026-04-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
