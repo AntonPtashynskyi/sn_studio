@@ -35,11 +35,11 @@
         }
 
         .title {
-            @apply text-[#6C6C6C] font-medium font-sans text-lg md:text-2xl leading-5 text-start;
+            @apply text-[#6C6C6C] font-medium font-sans text-xs md:text-xl leading-5 text-start;
         }
 
         .description {
-            @apply uppercase text-lg font-normal;
+            @apply uppercase text-[clamp(10px,2vw,12px)] md:text-base font-normal text-left leading-4;
         }
     }
 
